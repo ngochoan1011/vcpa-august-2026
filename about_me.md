@@ -99,6 +99,19 @@ Nền tảng **AI marketing all-in-one** — tự động tạo nội dung & qu�
 - Enterprise Governance: RBAC, audit, observability toàn bộ runtime
 - Định vị: giải bài toán **coordination**, không phải bài toán truy cập dữ liệu
 
+## 5b. Đội ngũ (những người liên quan tại event)
+
+| Người | Vai trò |
+|---|---|
+| **Đỗ Ngọc Hoan** | CEO, Tech/AI Lead |
+| **Lộc Steve** | Co-founder, wizy.ca |
+| **Joey** | **Brand Ambassador & Head of Strategic Partnerships (Business Development)** — gương mặt đại diện thương hiệu tại các sự kiện, mạng xã hội & cộng đồng doanh nghiệp Toronto/GTA; mở rộng quan hệ đối tác, tiếp cận chủ doanh nghiệp, mang về hợp đồng chiến lược. Đãi ngộ: thưởng chốt hợp đồng (one-time) + % revenue share hàng tháng (recurring); có ngân sách ngoại giao & tham gia networking cao cấp tại Canada |
+| **Annie** | MC, biên kịch, quay phim |
+| **Phung** | Photo / Video |
+| **Hảo** | Phụ tá sản xuất |
+
+**Cấu trúc vận hành:** đội **Tech/AI (Hoan) và Operation đặt tại Việt Nam** hỗ trợ 100% về giải pháp, tài liệu và kỹ thuật; đội tại **Canada/GTA** phụ trách khách hàng, quay phim tại chỗ, chạy ads và báo cáo.
+
 ## 6. Phương pháp nội dung tâm đắc
 
 **Nguồn:** https://www.dongochoan.com/blog/struggle-content-outsells-success-jun-yuh
