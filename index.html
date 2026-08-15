@@ -1,0 +1,1105 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Tăng trưởng bằng công nghệ trong kỷ nguyên AI — Đỗ Ngọc Hoan | VCPA 20.08.2026</title>
+<meta name="description" content="Slide deck VCPA Monthly Meeting 20/08/2026 — Thang 4 nấc × 3 dòng chảy.">
+<meta name="theme-color" content="#0A1D33">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%230A1D33'/><text y='72' x='50' font-size='64' text-anchor='middle' fill='%23F0C24A' font-family='system-ui'>4</text></svg>">
+<style>
+/* ============================================================
+   VCPA 20.08.2026 — Đỗ Ngọc Hoan
+   Deck 17 slide · tông navy + gold theo poster VCPA
+   Không dùng font/CDN ngoài — chạy được khi hội trường mất mạng.
+   ============================================================ */
+
+:root{
+  --navy-900:#071626;
+  --navy-800:#0A1D33;
+  --navy-700:#0E2743;
+  --navy-600:#123252;
+  --navy-500:#1A4067;
+  --line:#20486F;
+  --gold:#F0C24A;
+  --gold-dim:#C79A2E;
+  --gold-soft:#F7DC96;
+  --sky:#9FC4E8;
+  --sky-dim:#6E93BA;
+  --ink:#F3F7FB;
+  --ink-dim:#B9CDE0;
+  --red:#E8785B;
+  --green:#6FCF97;
+
+  --stage-w:1280px;
+  --stage-h:720px;
+
+  --f-display: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", "Noto Sans", Roboto, Arial, sans-serif;
+}
+
+*,*::before,*::after{box-sizing:border-box;}
+html,body{height:100%;}
+body{
+  margin:0;
+  background:var(--navy-900);
+  color:var(--ink);
+  font-family:var(--f-display);
+  overflow:hidden;
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+}
+
+/* ---------- Sân khấu cố định 1280×720, scale vừa mọi máy chiếu ---------- */
+#viewport{
+  position:fixed; inset:0;
+  display:flex; align-items:center; justify-content:center;
+  background:
+    radial-gradient(120% 90% at 50% 0%, #10294A 0%, #071626 70%);
+}
+#stage{
+  position:relative;
+  width:var(--stage-w); height:var(--stage-h);
+  transform-origin:center center;
+  box-shadow:0 40px 120px rgba(0,0,0,.55);
+}
+
+/* ---------- Slide ---------- */
+.slide{
+  position:absolute; inset:0;
+  padding:64px 84px;
+  display:none;
+  flex-direction:column;
+  background:linear-gradient(160deg,#0E2743 0%,#0A1D33 55%,#071626 100%);
+  overflow:hidden;
+}
+.slide.is-active{display:flex;animation:fade .32s ease both;}
+@keyframes fade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+
+.slide::after{ /* vệt gold mảnh dưới cùng */
+  content:""; position:absolute; left:0; right:0; bottom:0; height:4px;
+  background:linear-gradient(90deg,var(--gold) 0%,var(--gold-dim) 40%,transparent 100%);
+  opacity:.65;
+}
+
+/* biến thể */
+.slide--bleed{padding:0;}
+.slide--center{justify-content:center;align-items:center;text-align:center;}
+.slide--dark{background:linear-gradient(160deg,#081A2D,#050F1B);}
+
+/* ---------- Kiểu chữ ---------- */
+.eyebrow{
+  font-size:19px; letter-spacing:.16em; text-transform:uppercase;
+  color:var(--gold); font-weight:700; margin:0 0 22px;
+  display:flex; align-items:center; gap:14px;
+}
+.eyebrow::after{content:"";height:1px;flex:1;background:linear-gradient(90deg,var(--gold-dim),transparent);opacity:.5;}
+
+h1{font-size:76px;line-height:1.06;margin:0;font-weight:800;letter-spacing:-.02em;}
+h2{font-size:54px;line-height:1.12;margin:0 0 30px;font-weight:800;letter-spacing:-.015em;}
+h3{font-size:30px;line-height:1.2;margin:0;font-weight:700;}
+.lead{font-size:34px;line-height:1.34;color:var(--ink-dim);font-weight:400;margin:0;}
+.gold{color:var(--gold);}
+.sky{color:var(--sky);}
+.dim{color:var(--sky-dim);}
+strong{color:#fff;font-weight:800;}
+
+.quote{
+  font-size:46px; line-height:1.28; font-weight:700; letter-spacing:-.01em;
+  max-width:23ch; text-wrap:balance;
+}
+.quote--wide{max-width:26ch;}
+
+/* ---------- Slide 1 : tiêu đề ---------- */
+.title-wrap{margin:auto 0;}
+.title-kicker{
+  display:inline-flex;align-items:center;gap:12px;
+  font-size:17px;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--navy-800);background:var(--gold);
+  padding:9px 20px;border-radius:999px;font-weight:800;margin-bottom:34px;
+}
+.title-sub{font-size:29px;color:var(--sky);margin:26px 0 0;line-height:1.4;max-width:38ch;}
+.speaker-row{
+  display:flex;align-items:center;gap:18px;margin-top:52px;
+  padding-top:28px;border-top:1px solid var(--line);
+}
+.speaker-name{font-size:27px;font-weight:800;}
+.speaker-role{font-size:20px;color:var(--sky-dim);margin-top:3px;}
+.avatar{
+  width:60px;height:60px;border-radius:50%;flex:none;
+  background:linear-gradient(140deg,var(--gold),var(--gold-dim));
+  color:var(--navy-800);display:grid;place-items:center;
+  font-weight:800;font-size:23px;letter-spacing:-.02em;
+}
+
+/* ---------- Slide 2 : hai câu hỏi ---------- */
+.hand-q{margin:auto 0;display:flex;flex-direction:column;gap:40px;}
+.hand-q .q{
+  font-size:48px;line-height:1.24;font-weight:700;
+  padding-left:34px;border-left:5px solid var(--line);
+}
+.hand-q .q.q2{border-left-color:var(--gold);}
+.hand-q .tag{display:block;font-size:22px;color:var(--sky-dim);margin-top:12px;font-weight:500;font-style:italic;}
+.punch{
+  margin-top:52px;font-size:38px;font-weight:800;color:var(--gold);line-height:1.26;
+}
+
+/* ---------- Slide 3 : thang 4 nấc ---------- */
+.ladder{display:flex;flex-direction:column-reverse;gap:11px;margin-top:6px;}
+.rung{
+  display:grid;grid-template-columns:82px 1fr 1.15fr 200px;align-items:center;gap:24px;
+  background:linear-gradient(90deg,var(--navy-600),var(--navy-700));
+  border:1px solid var(--line);border-left:5px solid var(--sky-dim);
+  border-radius:12px;padding:16px 22px;
+}
+.rung--4{border-left-color:var(--gold);background:linear-gradient(90deg,#1B3B60,#122945);}
+.rung--3{border-left-color:#8FB6DD;}
+.rung__n{
+  font-size:40px;font-weight:800;color:var(--gold);opacity:.5;line-height:1;
+  font-variant-numeric:tabular-nums;
+}
+.rung--4 .rung__n{opacity:1;}
+.rung__name{font-size:27px;font-weight:800;}
+.rung__name span{display:block;font-size:16px;color:var(--sky-dim);font-weight:600;letter-spacing:.04em;text-transform:uppercase;margin-top:3px;}
+.rung__desc{font-size:20px;color:var(--ink-dim);line-height:1.34;}
+.rung__gain{
+  font-size:17px;color:var(--gold-soft);text-align:right;line-height:1.3;font-weight:600;
+}
+.ladder-note{
+  margin-top:26px;font-size:26px;color:var(--ink);font-weight:700;
+  background:rgba(240,194,74,.1);border:1px solid rgba(240,194,74,.32);
+  border-radius:12px;padding:16px 24px;
+}
+
+/* ---------- Slide 4 : 3 dòng chảy ---------- */
+.flows{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:12px;flex:1;}
+.flow{
+  background:linear-gradient(170deg,var(--navy-600),var(--navy-700));
+  border:1px solid var(--line);border-radius:16px;padding:34px 30px;
+  display:flex;flex-direction:column;
+}
+.flow__icon{
+  width:56px;height:56px;border-radius:14px;display:grid;place-items:center;
+  background:rgba(240,194,74,.14);border:1px solid rgba(240,194,74,.35);
+  font-size:28px;margin-bottom:22px;
+}
+.flow__name{font-size:30px;font-weight:800;margin-bottom:6px;}
+.flow__en{font-size:16px;color:var(--sky-dim);letter-spacing:.08em;text-transform:uppercase;font-weight:700;margin-bottom:20px;}
+.flow__q{font-size:22px;color:var(--ink-dim);line-height:1.42;margin-top:auto;}
+.flows-foot{
+  margin-top:26px;text-align:center;font-size:27px;font-weight:800;color:var(--gold);
+}
+
+/* ---------- Slide 5 : lưới 4×3 ---------- */
+.grid-wrap{flex:1;display:flex;flex-direction:column;}
+.matrix{
+  flex:1;display:grid;
+  grid-template-columns:132px repeat(3,1fr);
+  grid-template-rows:44px repeat(4,1fr);
+  gap:7px;
+}
+.mx-h{
+  display:grid;place-items:center;text-align:center;
+  font-size:17px;font-weight:800;letter-spacing:.05em;text-transform:uppercase;color:var(--gold);
+}
+.mx-r{
+  display:flex;flex-direction:column;justify-content:center;align-items:flex-end;
+  text-align:right;padding-right:12px;
+}
+.mx-r b{font-size:20px;font-weight:800;line-height:1.1;}
+.mx-r span{font-size:13px;color:var(--sky-dim);letter-spacing:.06em;text-transform:uppercase;font-weight:700;margin-top:2px;}
+.mx-c{
+  background:var(--navy-700);border:1px solid var(--line);border-radius:9px;
+  padding:11px 14px;font-size:16.5px;line-height:1.32;color:var(--ink-dim);
+  display:flex;align-items:center;
+}
+.mx-c > span{display:block;} /* gộp nội dung thành MỘT flex item — nếu không, mỗi text node bị tách ra */
+.mx-c.t4{background:linear-gradient(150deg,rgba(240,194,74,.17),rgba(240,194,74,.05));border-color:rgba(240,194,74,.42);color:var(--gold-soft);}
+.mx-c.t1{opacity:.62;}
+.matrix-foot{
+  margin-top:22px;display:flex;align-items:center;justify-content:center;gap:16px;
+  font-size:27px;font-weight:800;
+}
+.xmark{
+  display:inline-grid;place-items:center;width:40px;height:40px;border-radius:8px;
+  border:2.5px dashed var(--gold);color:var(--gold);font-size:24px;font-weight:800;
+}
+
+/* ---------- Slide 6 : bài tập 60 giây ---------- */
+.timer-big{
+  font-size:184px;font-weight:800;line-height:1;color:var(--gold);
+  font-variant-numeric:tabular-nums;letter-spacing:-.03em;margin:22px 0 10px;
+}
+.timer-big.is-done{color:var(--red);}
+.timer-ring{width:100%;max-width:520px;height:8px;border-radius:99px;background:var(--navy-600);overflow:hidden;margin:0 auto 26px;}
+.timer-ring i{display:block;height:100%;width:100%;background:linear-gradient(90deg,var(--gold),var(--gold-dim));transition:width 1s linear;}
+.timer-hint{font-size:19px;color:var(--sky-dim);}
+.examples{display:flex;gap:14px;flex-wrap:wrap;justify-content:center;margin-top:34px;}
+.chip{
+  background:var(--navy-600);border:1px solid var(--line);border-radius:999px;
+  padding:11px 22px;font-size:20px;color:var(--ink-dim);
+}
+
+/* ---------- Slide 7 : ảnh 8m² ---------- */
+.photo-stage{
+  position:absolute;inset:0;display:grid;place-items:center;
+  background:radial-gradient(70% 70% at 50% 45%,#12294500,#050F1B 100%),#050F1B;
+}
+.photo-stage img{
+  max-height:78%;max-width:64%;border-radius:6px;
+  box-shadow:0 30px 90px rgba(0,0,0,.75), 0 0 0 1px rgba(240,194,74,.22);
+}
+.photo-credit{
+  position:absolute;left:34px;bottom:26px;font-size:14px;color:#5E7B99;
+  letter-spacing:.04em;
+}
+
+/* ---------- Slide 8 : 3 chữ ---------- */
+.three{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;width:100%;margin-top:20px;}
+.three .card{
+  background:linear-gradient(170deg,var(--navy-600),var(--navy-700));
+  border:1px solid var(--line);border-top:4px solid var(--gold);
+  border-radius:16px;padding:44px 30px;text-align:center;
+}
+.three .num{font-size:17px;color:var(--gold);font-weight:800;letter-spacing:.14em;margin-bottom:16px;}
+.three .word{font-size:42px;font-weight:800;line-height:1.12;}
+
+/* ---------- Slide 10 : số liệu Wizy ---------- */
+.badge-rung{
+  display:inline-flex;align-items:center;gap:12px;
+  background:var(--gold);color:var(--navy-800);
+  font-size:22px;font-weight:800;letter-spacing:.06em;
+  padding:11px 26px;border-radius:999px;margin-bottom:30px;
+}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;width:100%;}
+.stat{
+  background:linear-gradient(170deg,#1B3B60,#102743);
+  border:1px solid rgba(240,194,74,.34);border-radius:18px;
+  padding:38px 26px;text-align:center;
+}
+.stat .v{font-size:104px;font-weight:800;line-height:1;color:var(--gold);letter-spacing:-.04em;font-variant-numeric:tabular-nums;}
+.stat .k{font-size:23px;font-weight:700;margin-top:14px;line-height:1.25;}
+.stat .s{font-size:16px;color:var(--sky-dim);margin-top:7px;}
+.stats-foot{margin-top:34px;font-size:25px;color:var(--ink-dim);line-height:1.42;text-align:center;max-width:56ch;}
+
+/* ---------- Slide 11–12 : case ---------- */
+.cases{display:grid;grid-template-columns:1fr 1fr;gap:28px;flex:1;}
+.case{
+  background:linear-gradient(170deg,var(--navy-600),var(--navy-700));
+  border:1px solid var(--line);border-radius:16px;padding:32px 30px;
+  display:flex;flex-direction:column;
+}
+.case--solo{grid-column:1/-1;}
+.case__tag{
+  display:inline-flex;align-self:flex-start;align-items:center;gap:9px;
+  font-size:15px;font-weight:800;letter-spacing:.09em;text-transform:uppercase;
+  color:var(--gold);background:rgba(240,194,74,.12);
+  border:1px solid rgba(240,194,74,.3);border-radius:999px;padding:7px 16px;margin-bottom:20px;
+}
+.case__ind{font-size:31px;font-weight:800;margin-bottom:22px;}
+.case__row{display:flex;gap:14px;margin-bottom:16px;font-size:20px;line-height:1.42;}
+.case__row .lbl{
+  flex:none;width:104px;font-size:14px;font-weight:800;letter-spacing:.07em;
+  text-transform:uppercase;color:var(--sky-dim);padding-top:5px;
+}
+.case__row.is-fix .lbl{color:var(--gold);}
+.case__row .val{color:var(--ink-dim);}
+.case__row.is-fix .val{color:var(--ink);}
+.case__step{
+  margin-top:auto;padding-top:18px;border-top:1px solid var(--line);
+  font-size:18px;color:var(--gold-soft);font-weight:700;
+}
+.case__pull{
+  margin:26px 0 0;padding:24px 30px;border-radius:14px;
+  background:rgba(240,194,74,.09);border:1px solid rgba(240,194,74,.28);
+  font-size:31px;line-height:1.34;font-weight:700;text-align:center;
+}
+.honest{
+  margin-top:24px;background:rgba(159,196,232,.08);border:1px solid var(--line);
+  border-radius:12px;padding:18px 26px;font-size:21px;color:var(--ink-dim);line-height:1.42;
+}
+
+/* ---------- Slide 13 : video ---------- */
+.video-box{
+  flex:1;margin-top:10px;border-radius:16px;overflow:hidden;
+  border:1px solid var(--line);background:#050F1B;
+  display:grid;place-items:center;position:relative;
+}
+.video-box video{width:100%;height:100%;object-fit:contain;background:#050F1B;}
+.video-missing{text-align:center;padding:40px;}
+.video-missing .ic{font-size:64px;margin-bottom:20px;opacity:.5;}
+.video-missing p{font-size:23px;color:var(--sky-dim);margin:0 0 8px;line-height:1.45;}
+.video-missing code{
+  font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:19px;
+  background:var(--navy-600);border:1px solid var(--line);border-radius:7px;padding:4px 11px;color:var(--gold-soft);
+}
+
+/* ---------- Slide 15 : rủi ro ---------- */
+.risks{display:grid;grid-template-columns:1fr 1fr;gap:24px;flex:1;}
+.risk{
+  background:linear-gradient(170deg,var(--navy-600),var(--navy-700));
+  border:1px solid var(--line);border-left:4px solid var(--red);
+  border-radius:14px;padding:28px 30px;
+}
+.risk h3{font-size:26px;margin-bottom:11px;line-height:1.2;}
+.risk p{font-size:19.5px;color:var(--ink-dim);line-height:1.44;margin:0;}
+
+/* ---------- Slide 16 : 3 câu hỏi ---------- */
+.qlist{display:flex;flex-direction:column;gap:22px;flex:1;justify-content:center;}
+.qitem{
+  display:flex;gap:26px;align-items:flex-start;
+  background:linear-gradient(90deg,var(--navy-600),var(--navy-700));
+  border:1px solid var(--line);border-radius:14px;padding:28px 32px;
+}
+.qitem .n{
+  flex:none;width:54px;height:54px;border-radius:12px;display:grid;place-items:center;
+  background:var(--gold);color:var(--navy-800);font-size:27px;font-weight:800;
+}
+.qitem .txt{font-size:29px;line-height:1.32;font-weight:600;padding-top:8px;}
+
+/* ---------- Slide 17 : chốt ---------- */
+.close{display:grid;grid-template-columns:1fr auto;gap:56px;flex:1;align-items:center;min-height:0;}
+.commit{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:20px;}
+.commit li{display:flex;gap:20px;align-items:flex-start;font-size:26px;line-height:1.34;}
+.commit .n{
+  flex:none;width:44px;height:44px;border-radius:11px;display:grid;place-items:center;
+  background:rgba(240,194,74,.15);border:1px solid rgba(240,194,74,.4);
+  color:var(--gold);font-weight:800;font-size:21px;
+}
+.qr-card{
+  background:linear-gradient(170deg,var(--navy-600),var(--navy-700));
+  border:1px solid var(--line);border-radius:18px;padding:26px;text-align:center;
+  width:292px;
+}
+.qr-slot{
+  width:240px;height:240px;border-radius:12px;background:#fff;
+  display:grid;place-items:center;overflow:hidden;margin:0 auto 18px;
+}
+.qr-slot img{width:100%;height:100%;object-fit:contain;}
+.qr-ph{color:#0A1D33;text-align:center;padding:20px;}
+.qr-ph b{display:block;font-size:22px;margin-bottom:8px;}
+.qr-ph span{font-size:14px;opacity:.65;line-height:1.4;display:block;}
+.qr-card .lbl{font-size:20px;font-weight:700;line-height:1.35;}
+.contact{margin-top:22px;padding-top:20px;border-top:1px solid var(--line);font-size:19px;color:var(--sky-dim);line-height:1.7;}
+.contact b{color:var(--gold);font-weight:700;}
+
+/* ---------- Thanh trạng thái ---------- */
+#hud{
+  position:fixed;left:0;right:0;bottom:0;height:3px;background:rgba(255,255,255,.07);z-index:40;
+}
+#hud i{display:block;height:100%;background:linear-gradient(90deg,var(--gold-dim),var(--gold));transition:width .3s ease;}
+#meta{
+  position:fixed;right:18px;bottom:14px;z-index:41;
+  display:flex;align-items:center;gap:14px;
+  font-size:13px;color:#4E6C8B;font-variant-numeric:tabular-nums;
+  background:rgba(7,22,38,.72);padding:7px 13px;border-radius:999px;
+  backdrop-filter:blur(6px);
+}
+#meta .clock{color:var(--sky-dim);font-weight:700;}
+#meta .clock.over{color:var(--red);}
+#meta .clock.run{color:var(--gold);}
+#meta kbd{
+  font-family:inherit;background:rgba(255,255,255,.08);border-radius:4px;padding:2px 6px;font-size:11px;
+}
+
+/* ---------- Speaker notes ---------- */
+#notes{
+  position:fixed;right:0;top:0;bottom:0;width:410px;z-index:60;
+  background:rgba(5,15,27,.97);border-left:1px solid var(--line);
+  padding:26px 28px;overflow-y:auto;transform:translateX(100%);
+  transition:transform .26s ease;backdrop-filter:blur(10px);
+}
+#notes.is-open{transform:none;}
+#notes h4{
+  font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);
+  margin:0 0 6px;font-weight:800;
+}
+#notes .n-title{font-size:20px;font-weight:800;margin:0 0 4px;line-height:1.25;}
+#notes .n-time{font-size:13px;color:var(--sky-dim);margin-bottom:20px;font-weight:700;}
+#notes .n-body{font-size:15px;line-height:1.62;color:var(--ink-dim);}
+#notes .n-body p{margin:0 0 13px;}
+#notes .n-body em{color:var(--gold-soft);font-style:normal;font-weight:700;}
+#notes .n-body .say{
+  display:block;border-left:3px solid var(--gold);padding:9px 0 9px 14px;
+  margin:0 0 14px;color:var(--ink);font-size:15.5px;
+}
+#notes .n-body .warn{
+  display:block;background:rgba(232,120,91,.1);border:1px solid rgba(232,120,91,.32);
+  border-radius:8px;padding:11px 14px;margin:0 0 13px;color:#F0AE99;font-size:14.5px;
+}
+#notes .n-foot{margin-top:26px;padding-top:18px;border-top:1px solid var(--line);font-size:12px;color:#4E6C8B;line-height:1.9;}
+#notes .n-foot kbd{background:rgba(255,255,255,.08);border-radius:4px;padding:2px 7px;font-family:inherit;}
+
+/* ---------- Overview ---------- */
+#overview{
+  position:fixed;inset:0;z-index:70;background:var(--navy-900);
+  padding:44px;overflow-y:auto;display:none;
+}
+#overview.is-open{display:block;}
+#overview h3{font-size:15px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin:0 0 26px;}
+.ov-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(212px,1fr));gap:16px;}
+.ov-item{
+  background:var(--navy-700);border:1px solid var(--line);border-radius:11px;
+  padding:16px 18px;cursor:pointer;transition:.15s;
+}
+.ov-item:hover{border-color:var(--gold);background:var(--navy-600);}
+.ov-item.is-cur{border-color:var(--gold);box-shadow:0 0 0 1px var(--gold);}
+.ov-item .n{font-size:11px;color:var(--gold);font-weight:800;letter-spacing:.1em;}
+.ov-item .t{font-size:15px;font-weight:700;margin-top:6px;line-height:1.28;}
+.ov-item .p{font-size:11.5px;color:var(--sky-dim);margin-top:6px;}
+
+/* ---------- Help ---------- */
+#help{
+  position:fixed;inset:0;z-index:80;background:rgba(5,15,27,.94);
+  display:none;place-items:center;
+}
+#help.is-open{display:grid;}
+.help-card{
+  background:var(--navy-700);border:1px solid var(--line);border-radius:18px;
+  padding:40px 46px;max-width:560px;
+}
+.help-card h3{font-size:22px;margin:0 0 24px;}
+.help-card dl{display:grid;grid-template-columns:auto 1fr;gap:13px 22px;margin:0;font-size:16px;}
+.help-card dt{color:var(--gold);font-weight:800;}
+.help-card dd{margin:0;color:var(--ink-dim);}
+
+/* ---------- Máy nhỏ ---------- */
+@media (max-width:640px){
+  #notes{width:100%;}
+}
+
+/* ---------- In ra PDF ---------- */
+@media print{
+  @page{size:1280px 720px;margin:0;}
+  body{overflow:visible;background:#fff;}
+  #viewport{position:static;display:block;}
+  #stage{width:1280px;height:auto;transform:none!important;box-shadow:none;}
+  .slide{display:flex!important;position:relative;page-break-after:always;height:720px;}
+  #hud,#meta,#notes,#overview,#help{display:none!important;}
+}
+</style>
+</head>
+<body>
+
+<div id="viewport">
+  <div id="stage">
+
+  <!-- ══════════ 1 · TIÊU ĐỀ ══════════ -->
+  <section class="slide" data-title="Tiêu đề" data-part="Mở">
+    <div class="title-wrap">
+      <span class="title-kicker">VCPA · 20.08.2026 · Mississauga</span>
+      <h1>Tăng trưởng <span class="gold">bằng công nghệ</span><br>trong kỷ nguyên AI</h1>
+      <p class="title-sub">Một khung chiến lược 4 nấc để biết nên đầu tư vào đâu — và đâu là chỗ đang đốt tiền.</p>
+      <div class="speaker-row">
+        <div class="avatar">HD</div>
+        <div>
+          <div class="speaker-name">Đỗ Ngọc Hoan</div>
+          <div class="speaker-role">CEO, Wizy Corp. — wizy.ca</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ 2 · HAI CÂU HỎI GIƠ TAY ══════════ -->
+  <section class="slide" data-title="Hai câu hỏi giơ tay" data-part="Mở">
+    <div class="hand-q">
+      <div class="q">
+        Ai ở đây đã dùng ChatGPT trong 6 tháng qua?
+        <span class="tag">— gần hết phòng giơ tay —</span>
+      </div>
+      <div class="q q2">
+        <span class="gold">Giữ tay lên</span> nếu doanh thu tháng này cao hơn nhờ nó.
+        <span class="tag">— gần hết phòng hạ tay —</span>
+      </div>
+      <p class="punch">Bài nói hôm nay nằm đúng trong khoảng cách<br>giữa hai lần giơ tay đó.</p>
+    </div>
+  </section>
+
+  <!-- ══════════ 3 · THANG 4 NẤC ══════════ -->
+  <section class="slide" data-title="Thang 4 nấc" data-part="Khung">
+    <p class="eyebrow">Khung · trục dọc</p>
+    <h2>Thang 4 nấc</h2>
+    <div class="ladder">
+      <div class="rung rung--1">
+        <div class="rung__n">1</div>
+        <div class="rung__name">Trợ lý<span>Assist</span></div>
+        <div class="rung__desc">AI giúp <em>bạn</em> làm nhanh hơn — viết caption, dịch, soạn email</div>
+        <div class="rung__gain">Vài giờ / tuần<br><span class="dim">90% dừng ở đây</span></div>
+      </div>
+      <div class="rung rung--2">
+        <div class="rung__n">2</div>
+        <div class="rung__name">Tự động<span>Automate</span></div>
+        <div class="rung__desc">Hệ thống làm <em>thay bạn</em> — nhắc lịch, xin review, follow-up lead</div>
+        <div class="rung__gain">Vài chục giờ / tháng<br><span class="dim">+ doanh thu rơi vãi</span></div>
+      </div>
+      <div class="rung rung--3">
+        <div class="rung__n">3</div>
+        <div class="rung__name">AI Agent<span>Agent</span></div>
+        <div class="rung__desc">AI <em>ra quyết định</em> trong khuôn khổ bạn đặt — lễ tân AI 24/7</div>
+        <div class="rung__gain">Một vị trí nhân sự</div>
+      </div>
+      <div class="rung rung--4">
+        <div class="rung__n">4</div>
+        <div class="rung__name">Lợi thế<span>Advantage</span></div>
+        <div class="rung__desc">Thứ đối thủ <em>không copy được</em> — dữ liệu, thương hiệu, hệ thống riêng</div>
+        <div class="rung__gain">Không phải tiết kiệm<br>mà là <b class="gold">định giá cao hơn</b></div>
+      </div>
+    </div>
+    <p class="ladder-note">Đa số mình đang ở <span class="gold">nấc 1</span> và tưởng mình đang làm AI. Tiền thật nằm ở <span class="gold">nấc 2 và 3</span>.</p>
+  </section>
+
+  <!-- ══════════ 4 · BA DÒNG CHẢY ══════════ -->
+  <section class="slide" data-title="Ba dòng chảy" data-part="Khung">
+    <p class="eyebrow">Khung · trục ngang</p>
+    <h2>Ba dòng chảy của một doanh nghiệp</h2>
+    <div class="flows">
+      <div class="flow">
+        <div class="flow__icon">↘</div>
+        <div class="flow__name">Khách vào</div>
+        <div class="flow__en">Lead</div>
+        <p class="flow__q">Mỗi tháng có bao nhiêu người hỏi?<br>Bao nhiêu <strong>rơi</strong> vì không ai gọi lại?</p>
+      </div>
+      <div class="flow">
+        <div class="flow__icon">⚙</div>
+        <div class="flow__name">Vận hành</div>
+        <div class="flow__en">Delivery</div>
+        <p class="flow__q">Mỗi giao dịch tốn bao nhiêu <strong>giờ người</strong>?<br>Bao nhiêu giờ đó là việc lặp lại?</p>
+      </div>
+      <div class="flow">
+        <div class="flow__icon">↺</div>
+        <div class="flow__name">Khách quay lại</div>
+        <div class="flow__en">Retention</div>
+        <p class="flow__q">Bao nhiêu <strong>%</strong> khách quay lại trong 90 ngày?<br>Bạn có biết con số đó không?</p>
+      </div>
+    </div>
+    <p class="flows-foot">Đo 3 con số. Chỗ nào tệ nhất — đổ công nghệ vào đó trước.</p>
+  </section>
+
+  <!-- ══════════ 5 · LƯỚI 4 × 3 ══════════ -->
+  <section class="slide" data-title="LƯỚI 4 × 3 — slide chủ đạo" data-part="Khung">
+    <p class="eyebrow">Strategic Framework</p>
+    <h2 style="margin-bottom:20px">Bạn đang ở ô nào?</h2>
+    <div class="grid-wrap">
+      <div class="matrix">
+        <div></div>
+        <div class="mx-h">Khách vào</div>
+        <div class="mx-h">Vận hành</div>
+        <div class="mx-h">Khách quay lại</div>
+
+        <div class="mx-r"><b>Lợi thế</b><span>4 · Advantage</span></div>
+        <div class="mx-c t4"><span>Khách tìm đến <b>tên bạn</b>, không tìm dịch vụ</span></div>
+        <div class="mx-c t4"><span>Hệ thống riêng — đối thủ không mua được</span></div>
+        <div class="mx-c t4"><span>Dữ liệu khách tích luỹ — càng dùng càng khó rời</span></div>
+
+        <div class="mx-r"><b>AI Agent</b><span>3 · Agent</span></div>
+        <div class="mx-c"><span>Chatbot tư vấn &amp; chốt lịch trong khung bạn đặt</span></div>
+        <div class="mx-c"><span>Lễ tân AI 24/7 · agent xếp thợ, cảnh báo hết hàng</span></div>
+        <div class="mx-c"><span>Agent lọc review tốt/xấu, tự soạn win-back</span></div>
+
+        <div class="mx-r"><b>Tự động</b><span>2 · Automate</span></div>
+        <div class="mx-c"><span>Form → CRM, tự chia lead, tự nhắc gọi lại</span></div>
+        <div class="mx-c"><span>Booking online, nhắc lịch SMS, bill chạy thẳng vào báo cáo</span></div>
+        <div class="mx-c"><span>Tự xin review sau khi khách về, tự gửi ưu đãi</span></div>
+
+        <div class="mx-r"><b>Trợ lý</b><span>1 · Assist</span></div>
+        <div class="mx-c t1"><span>Tự viết caption, tự soạn tin nhắn trả lời</span></div>
+        <div class="mx-c t1"><span>Tra cứu, dịch, soạn email bằng AI</span></div>
+        <div class="mx-c t1"><span>Tự nhớ, tự nhắn khách</span></div>
+      </div>
+      <p class="matrix-foot"><span class="xmark">✕</span> <span>Chấm một dấu X vào ô bạn đang đứng — rồi đi <b class="gold">một bước</b>.</span></p>
+    </div>
+  </section>
+
+  <!-- ══════════ 6 · BÀI TẬP 60 GIÂY ══════════ -->
+  <section class="slide slide--center" data-title="Bài tập 60 giây" data-part="Khung" data-timer="60">
+    <p class="eyebrow" style="justify-content:center">Bài tập tại chỗ</p>
+    <h2 style="max-width:22ch">Viết ra <span class="gold">một con số</span><br>bạn KHÔNG biết về tiệm mình.</h2>
+    <div class="timer-big" data-countdown>60</div>
+    <div class="timer-ring"><i data-countbar></i></div>
+    <p class="timer-hint">Nhấn <b class="gold">C</b> để bắt đầu / dừng · <b class="gold">R</b> để đặt lại</p>
+    <div class="examples">
+      <span class="chip">% khách quay lại</span>
+      <span class="chip">Cuộc gọi nhỡ mỗi tuần</span>
+      <span class="chip">Lead nhắn tin không ai trả lời</span>
+    </div>
+  </section>
+
+  <!-- ══════════ 7 · ẢNH PHÒNG TRỌ 8m² ══════════ -->
+  <section class="slide slide--bleed" data-title="Ảnh phòng trọ 8m²" data-part="WHY">
+    <div class="photo-stage">
+      <img src="assets/8m2-room-photo@2x.jpg" alt="Đỗ Ngọc Hoan ngồi bên chiếc máy tính cũ trong phòng trọ 8m², thời học sinh cấp 3">
+    </div>
+    <div class="photo-credit">Ảnh: Báo Phú Yên</div>
+  </section>
+
+  <!-- ══════════ 8 · BA THỨ ══════════ -->
+  <section class="slide slide--center" data-title="Kỷ luật · Hệ thống · Công nghệ" data-part="WHY">
+    <p class="eyebrow" style="justify-content:center">Không phải tài năng</p>
+    <h2 style="margin-bottom:14px">Ba thứ đưa tôi ra khỏi ô vuông đó</h2>
+    <div class="three">
+      <div class="card"><div class="num">01</div><div class="word">Kỷ luật<br>với bản thân</div></div>
+      <div class="card"><div class="num">02</div><div class="word">Làm việc<br>có hệ thống</div></div>
+      <div class="card"><div class="num">03</div><div class="word">Ứng dụng<br>công nghệ</div></div>
+    </div>
+  </section>
+
+  <!-- ══════════ 9 · NẤC 1 CỦA TÔI ══════════ -->
+  <section class="slide slide--center slide--dark" data-title="Chiếc máy tính cũ = nấc 1 của tôi" data-part="WHY">
+    <p class="quote quote--wide">
+      Chiếc máy tính cũ đó là <span class="gold">nấc 1 của tôi</span>, năm 2005.
+      <br><br>
+      Hôm nay, nó chính là <span class="gold">ChatGPT</span> trong điện thoại của anh chị.
+    </p>
+    <p class="lead" style="margin-top:44px;font-size:28px;max-width:34ch">Công cụ không còn là thứ tạo ra khác biệt nữa. <strong>Hệ thống</strong> mới là.</p>
+  </section>
+
+  <!-- ══════════ 10 · WIZY 4 THÁNG ══════════ -->
+  <section class="slide slide--center" data-title="Wizy 4 tháng — nấc 4" data-part="Bằng chứng">
+    <span class="badge-rung">★ NẤC 4 · ADVANTAGE</span>
+    <h2 style="margin-bottom:34px">Wizy — 4 tháng hoạt động</h2>
+    <div class="stats">
+      <div class="stat"><div class="v">5</div><div class="k">sản phẩm MVP</div><div class="s">Salon · F&amp;B · Sản xuất</div></div>
+      <div class="stat"><div class="v">6</div><div class="k">đơn hàng đã chốt</div><div class="s">khách đang dùng thật</div></div>
+      <div class="stat"><div class="v">7</div><div class="k">lead đang triển khai</div><div class="s">chuẩn bị lên hệ thống</div></div>
+    </div>
+    <p class="stats-foot">Không phải vì chúng tôi giỏi hơn ai — mà vì AI nằm trong <strong>toàn bộ quy trình phát triển</strong>, chứ không phải là một trợ lý viết caption.</p>
+  </section>
+
+  <!-- ══════════ 11 · CASE 1 + 2 ══════════ -->
+  <section class="slide" data-title="Case ẩn danh — Salon &amp; Nhà hàng" data-part="Bằng chứng">
+    <p class="eyebrow">Case thực tế · đã ẩn danh</p>
+    <div class="cases">
+      <div class="case">
+        <span class="case__tag">Nail salon · nấc 1 → 2</span>
+        <div class="case__ind">Cuộc gọi rơi mỗi ngày</div>
+        <div class="case__row"><div class="lbl">Nghẽn</div><div class="val">Điện thoại reo khi thợ đang làm khách. Không ai bắt máy — khách gọi tiệm kế bên.</div></div>
+        <div class="case__row is-fix"><div class="lbl">Hệ thống</div><div class="val">Booking online một link · nhắc lịch tự động · lễ tân AI tiếng Việt trực 24/7.</div></div>
+        <div class="case__step">Dòng chảy: Vận hành + Khách quay lại</div>
+      </div>
+      <div class="case">
+        <span class="case__tag">Nhà hàng dine-in · nấc 2 → 3</span>
+        <div class="case__ind">Ba hệ thống không nói chuyện với nhau</div>
+        <div class="case__row"><div class="lbl">Nghẽn</div><div class="val">Sàn, bếp và quầy ghi ba nơi. Sai order, hao hụt nguyên liệu không ai biết.</div></div>
+        <div class="case__row is-fix"><div class="lbl">Hệ thống</div><div class="val">POS + bàn + luồng bếp + tồn kho trong một hệ thống. Chạy cả khi Wi-Fi rớt.</div></div>
+        <div class="case__step">Dòng chảy: Vận hành</div>
+      </div>
+    </div>
+    <p class="honest">Wizy mới 4 tháng. Đây là <strong>những gì đang chạy</strong>, không phải báo cáo 6 tháng — tôi sẽ mang số liệu quay lại VCPA lần sau.</p>
+  </section>
+
+  <!-- ══════════ 12 · CASE 3 ══════════ -->
+  <section class="slide" data-title="Case ẩn danh — Professional" data-part="Bằng chứng">
+    <p class="eyebrow">Case thực tế · dành riêng cho khán phòng này</p>
+    <div class="cases">
+      <div class="case case--solo">
+        <span class="case__tag">Kế toán · Real estate · Broker — nấc 1 → 4</span>
+        <div class="case__ind">Người bán chuyên môn, sống bằng lead</div>
+        <div class="case__row"><div class="lbl">Nghẽn</div><div class="val">Giỏi nghề nhưng vô hình. Lead đến từ giới thiệu miệng — tháng có tháng không. Nhắn tin xong rồi quên follow-up.</div></div>
+        <div class="case__row is-fix"><div class="lbl">Hệ thống</div><div class="val">Nội dung đều đặn kể chuyện nghề → lead pipeline có giai đoạn rõ ràng → follow-up tự động, không ai rơi qua kẽ tay.</div></div>
+        <p class="case__pull">Anh chị không thiếu chuyên môn.<br>Thứ thiếu là <span class="gold">để người khác biết anh chị tồn tại</span>.</p>
+        <div class="case__step">Dòng chảy: Khách vào · leo tới nấc 4 vì thương hiệu cá nhân là thứ đối thủ không copy được</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ 13 · VIDEO DEMO ══════════ -->
+  <section class="slide" data-title="Video demo — lễ tân AI" data-part="Bằng chứng">
+    <p class="eyebrow">Nấc 3 · nhìn tận mắt</p>
+    <h2 style="margin-bottom:16px">Lễ tân AI nói tiếng Việt, trực 24/7</h2>
+    <div class="video-box">
+      <video id="demoVideo" controls preload="metadata" playsinline>
+        <source src="assets/demo.mp4" type="video/mp4">
+      </video>
+      <div class="video-missing" id="videoFallback" hidden>
+        <div class="ic">▶</div>
+        <p>Chưa có file video demo.</p>
+        <p>Đặt video vào <code>assets/demo.mp4</code></p>
+        <p style="font-size:18px;margin-top:14px">Nhớ <strong>burn phụ đề</strong> vào video — loa hội trường không đáng tin.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ 14 · TỰ ĐỘNG HOÁ ≠ CÓ KHÁCH ══════════ -->
+  <section class="slide slide--center slide--dark" data-title="Tự động hoá ≠ có khách" data-part="Cỗ máy nhu cầu">
+    <p class="quote">
+      Tự động hoá giúp bạn <span class="sky">phục&nbsp;vụ</span> tốt hơn.
+      <br><br>
+      Nhưng nếu <span class="gold">không&nbsp;ai&nbsp;gọi&nbsp;đến</span><br>thì tự động hoá cái gì?
+    </p>
+  </section>
+
+  <!-- ══════════ 15 · BỐN RỦI RO ══════════ -->
+  <section class="slide" data-title="Bốn rủi ro" data-part="Rủi ro">
+    <p class="eyebrow">Ranh giới</p>
+    <h2>Bốn thứ dễ làm sai</h2>
+    <div class="risks">
+      <div class="risk">
+        <h3>Tự động hoá một quy trình vốn đã hỏng</h3>
+        <p>Bạn không sửa được nó — bạn chỉ làm nó hỏng nhanh hơn.</p>
+      </div>
+      <div class="risk">
+        <h3>Quên rằng dữ liệu khách là tài sản của bạn</h3>
+        <p>Ngày mai ngừng dùng tool — có mang dữ liệu đi được không? (PIPEDA)</p>
+      </div>
+      <div class="risk">
+        <h3>Giao quyền cho AI mà không có cổng duyệt</h3>
+        <p>Không giao quyền chi tiền hay gửi ra ngoài cho AI. Việc nhạy cảm phải có người bấm nút.</p>
+      </div>
+      <div class="risk">
+        <h3>Tưởng AI tạo được uy tín</h3>
+        <p>AI viết được nội dung. Nội dung 100% AI, không có câu chuyện của bạn, đọc như rác.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ 16 · BA CÂU HỎI ══════════ -->
+  <section class="slide" data-title="3 câu hỏi trước khi chi tiền" data-part="Chốt">
+    <p class="eyebrow">Mang về nhà</p>
+    <h2>3 câu hỏi trước khi chi 1 đồng cho công nghệ</h2>
+    <div class="qlist">
+      <div class="qitem"><div class="n">1</div><div class="txt">Nó thay thế <span class="gold">giờ người</span> — hay chỉ thêm một màn hình nữa để nhìn?</div></div>
+      <div class="qitem"><div class="n">2</div><div class="txt">Sau 90 ngày, <span class="gold">con số nào</span> sẽ đổi? Và <span class="gold">ai</span> chịu trách nhiệm?</div></div>
+      <div class="qitem"><div class="n">3</div><div class="txt">Nếu ngày mai ngừng dùng — <span class="gold">dữ liệu</span> có còn là của bạn không?</div></div>
+    </div>
+  </section>
+
+  <!-- ══════════ 17 · CHỐT ══════════ -->
+  <section class="slide" data-title="Cam kết 7 ngày + QR" data-part="Chốt">
+    <p class="eyebrow">Bắt đầu từ tối nay</p>
+    <h2 style="margin-bottom:26px">Cam kết 7 ngày</h2>
+    <div class="close">
+      <ul class="commit">
+        <li><span class="n">1</span><span>Đo <strong>1 con số</strong> bạn đang không biết.</span></li>
+        <li><span class="n">2</span><span>Tự động hoá <strong>1 việc</strong> bạn làm tay mỗi ngày.</span></li>
+        <li><span class="n">3</span><span>Đăng <strong>1 câu chuyện thật</strong> — không phải khoe thành tích.</span></li>
+      </ul>
+      <div class="qr-card">
+        <div class="qr-slot">
+          <img id="qrImg" src="assets/qr.png" alt="Mã QR trang tài nguyên">
+          <div class="qr-ph" id="qrPh" hidden>
+            <b>QR</b>
+            <span>Đặt file vào<br>assets/qr.png</span>
+          </div>
+        </div>
+        <div class="lbl">Slide · checklist 3 câu hỏi<br>· tư vấn 15 phút</div>
+      </div>
+    </div>
+    <div class="contact">
+      <b>Đỗ Ngọc Hoan</b> · CEO, Wizy Corp. &nbsp;·&nbsp; wizy.ca &nbsp;·&nbsp; dongochoan.com
+    </div>
+  </section>
+
+  </div><!-- /#stage -->
+</div><!-- /#viewport -->
+
+<div id="hud"><i></i></div>
+<div id="meta">
+  <span class="clock" id="clock">00:00</span>
+  <span id="counter">1 / 17</span>
+  <span><kbd>?</kbd> phím tắt</span>
+</div>
+
+<aside id="notes">
+  <h4>Ghi chú diễn giả</h4>
+  <p class="n-title" id="nTitle"></p>
+  <p class="n-time" id="nTime"></p>
+  <div class="n-body" id="nBody"></div>
+  <div class="n-foot">
+    <kbd>←</kbd> <kbd>→</kbd> chuyển slide · <kbd>S</kbd> đóng ghi chú<br>
+    <kbd>T</kbd> chạy/dừng đồng hồ · <kbd>R</kbd> đặt lại<br>
+    <kbd>C</kbd> đếm ngược 60 giây · <kbd>O</kbd> xem toàn bộ · <kbd>F</kbd> toàn màn hình
+  </div>
+</aside>
+
+<div id="overview">
+  <h3>Toàn bộ slide — bấm để nhảy tới</h3>
+  <div class="ov-grid" id="ovGrid"></div>
+</div>
+
+<div id="help">
+  <div class="help-card">
+    <h3>Phím tắt</h3>
+    <dl>
+      <dt>← → · Space</dt><dd>Chuyển slide</dd>
+      <dt>S</dt><dd>Ghi chú diễn giả</dd>
+      <dt>T</dt><dd>Chạy / dừng đồng hồ bài nói</dd>
+      <dt>R</dt><dd>Đặt lại đồng hồ</dd>
+      <dt>C</dt><dd>Đếm ngược 60 giây (slide bài tập)</dd>
+      <dt>O</dt><dd>Xem toàn bộ slide</dd>
+      <dt>F</dt><dd>Toàn màn hình</dd>
+      <dt>Home / End</dt><dd>Slide đầu / cuối</dd>
+      <dt>Esc</dt><dd>Đóng lớp phủ</dd>
+    </dl>
+  </div>
+</div>
+
+<script>
+(function(){
+"use strict";
+
+/* ═══════════ Ghi chú diễn giả — rút từ plan.md v3 ═══════════ */
+var NOTES = [
+{t:"0:00 – 0:30 · Mở", h:
+  '<p><em>Đừng đọc slide.</em> Chào ngắn, rồi vào thẳng hai câu hỏi ở slide sau.</p>'+
+  '<p>Chưa giới thiệu học vị. Phần đó để dành cho câu chuyện ở slide 7.</p>'},
+{t:"0:00 – 2:30 · Mở", h:
+  '<span class="say">"Ai ở đây đã dùng ChatGPT trong 6 tháng qua?"</span>'+
+  '<p><em>Chờ tay giơ lên. Nhìn quanh phòng. Đếm thầm 3 nhịp.</em></p>'+
+  '<span class="say">"Giữ tay lên nếu doanh thu tháng này của anh chị cao hơn nhờ nó."</span>'+
+  '<p><em>Tay hạ xuống. Đây là khoảnh khắc — để im lặng làm việc.</em></p>'+
+  '<span class="say">"Đó chính xác là bài nói hôm nay. Khoảng cách giữa hai cái giơ tay đó."</span>'+
+  '<p>Giới thiệu bản thân <strong>30 giây</strong>, kiểu struggle, không phải CV.</p>'+
+  '<p><em>Câu chuyển:</em> "Để lấp khoảng cách đó, anh chị cần một tấm bản đồ. Tôi có một tấm — và nó chỉ có 4 nấc."</p>'},
+{t:"2:30 – 4:30 · Khung (2 phút)", h:
+  '<p>Đi từ nấc 1 lên nấc 4. <strong>Mỗi nấc mời giơ tay</strong> — "ai đang ở đây?"</p>'+
+  '<p><em>Mục tiêu:</em> cả phòng nhìn thấy đa số đang ở nấc 1 → cảm giác "không phải mình tôi".</p>'+
+  '<span class="say">"Đa số mình đang ở nấc 1 và tưởng mình đang làm AI. Tiền thật nằm ở nấc 2 và 3."</span>'+
+  '<div class="warn">Đừng sa vào giải thích kỹ thuật. Mỗi nấc tối đa 30 giây.</div>'},
+{t:"4:30 – 6:00 · Khung (1.5 phút)", h:
+  '<p>Ba dòng chảy = <em>chỗ nào</em> nên leo trước. Đây là trục ngang.</p>'+
+  '<p>Đọc to ba câu hỏi. Không trả lời hộ — để khán giả tự thấy mình không biết.</p>'+
+  '<span class="say">"Đo 3 con số. Chỗ nào tệ nhất thì đổ công nghệ vào đó trước."</span>'},
+{t:"6:00 – 7:00 · Khung (1 phút)", h:
+  '<p><em>Slide quan trọng nhất của cả bài.</em> Cả phòng sẽ giơ điện thoại lên chụp — <strong>dừng lại và để họ chụp</strong>.</p>'+
+  '<span class="say">"Chấm một dấu X vào ô anh chị đang đứng. Rồi đi sang phải, hoặc lên một nấc. Chỉ một bước thôi."</span>'+
+  '<p>Nhấn: <em>không ai phải nhảy từ nấc 1 lên nấc 4.</em></p>'},
+{t:"7:00 – 8:30 · Khung (1.5 phút)", h:
+  '<p>Nhấn <strong>C</strong> để chạy đồng hồ 60 giây.</p>'+
+  '<div class="warn">Sự im lặng CHÍNH LÀ điểm nhấn. Đừng lấp nó bằng lời nói. Đếm đủ 60 giây — sẽ thấy dài, cứ để nó dài.</div>'+
+  '<p><em>Câu chuyển:</em> "Giờ anh chị đã biết mình đang ở nấc nào. Để tôi kể anh chị nghe tôi đã bắt đầu từ nấc nào."</p>'},
+{t:"8:30 – 11:30 · WHY (3 phút)", h:
+  '<div class="warn">Chiếu ảnh lên → IM LẶNG 3 GIÂY → mới nói. Đừng giải thích ảnh.</div>'+
+  '<p><strong>Nhịp 1 (1 phút) — điểm thấp.</strong> 9 tuổi ba mẹ ly hôn, sống với mẹ. Chuyển trường nhiều lần. Phòng trọ 8m². Ba mua cho một chiếc máy tính cũ, yếu, chỉ đủ chạy Pascal.</p>'+
+  '<p><em>Chỉ vào cây guitar treo trên tường — một câu thôi.</em></p>'+
+  '<p><strong>Nhịp 2 (1 phút) — đam mê trong giới hạn.</strong> Máy yếu nhưng viết được rất nhiều game.</p>'+
+  '<span class="say">"Cái máy đó không đủ mạnh. Nhưng nó đủ."</span>'+
+  '<p><strong>Nhịp 3 (45 giây) — kết quả.</strong> Giải nhất quốc gia Tin học → tuyển thẳng Bách Khoa → học bổng Thuỵ Sĩ → Master EPFL → về VN khởi nghiệp, 10 năm.</p>'+
+  '<div class="warn">KỂ NHANH, giọng bình thường, KHÔNG tự hào. Đây là bằng chứng, không phải điểm nhấn. Dừng lâu ở đây = rơi vào bẫy khoe thành công.</div>'+
+  '<div class="warn">Kiểm tra lại NĂM đoạt giải trước khi lên sân khấu (2005 hay 2015?).</div>'},
+{t:"11:30 – 12:30 · WHY (1 phút)", h:
+  '<p><strong>HẠ GIỌNG.</strong> Đây mới là điểm nhấn của cả phần.</p>'+
+  '<span class="say">"Xuất phát điểm của tôi thấp. Và thành tựu của tôi không lớn — chỉ là niềm tự hào khi so với chính mình của ngày hôm qua."</span>'+
+  '<p>Rồi mới đọc ba thứ. Nhấn: <em>không phải tài năng.</em></p>'},
+{t:"12:30 – 13:30 · WHY (1 phút)", h:
+  '<p>Đây là <strong>cây cầu</strong> nối đời mình vào chính cái thang vừa dạy.</p>'+
+  '<span class="say">"Chiếc máy tính cũ trong căn phòng đó — đấy là nấc 1 của tôi, năm 2005. Máy yếu, tự học, làm tay tất cả. Mất mười mấy năm tôi mới hiểu: cái đưa tôi lên các nấc trên không phải là cái máy mạnh hơn. Là hệ thống."</span>'+
+  '<span class="say">"Và hôm nay, chiếc máy tính cũ đó chính là ChatGPT trong điện thoại anh chị. Ai cũng có."</span>'+
+  '<p><em>Câu chuyển:</em> "Vậy tư duy hệ thống thật sự làm được gì? Để tôi đưa anh chị con số gần nhất."</p>'},
+{t:"13:30 – 16:30 · Bằng chứng (3 phút)", h:
+  '<p><strong>Đỉnh cảm xúc của cả bài.</strong> Đây là chỗ được phép tự hào — vừa kể xong phòng trọ 8m², giờ là con số của 4 tháng gần nhất.</p>'+
+  '<span class="say">"Một công ty 4 tháng tuổi, đội nhỏ, làm ra 5 sản phẩm và 6 đơn hàng. Không phải vì chúng tôi giỏi hơn ai. Mà vì chúng tôi đứng ở nấc 4 — AI nằm trong toàn bộ quy trình phát triển, chứ không phải dùng AI như một trợ lý viết caption. Đó chính là cái thang tôi vừa vẽ cho anh chị 10 phút trước."</span>'+
+  '<div class="warn">Chỗ dễ bị hỏi vặn nhất. Chuẩn bị sẵn:<br>· "MVP nghĩa là gì?" → chạy được, có khách dùng thật, không phải demo trình chiếu<br>· "AI làm khâu nào?" → viết code, thiết kế, nội dung, QA — nêu 2–3 ví dụ CỤ THỂ</div>'+
+  '<p>Nói thêm (không có trên slide): đội ngũ &amp; kênh phân phối tại Ontario.</p>'},
+{t:"16:30 – 18:00 · Bằng chứng (1.5 phút)", h:
+  '<p>Khung <strong>Nghẽn → Hệ thống</strong>, không phải "kết quả sau 6 tháng". Đây là lựa chọn có chủ ý.</p>'+
+  '<div class="warn">TUYỆT ĐỐI không bịa con số. Cộng đồng nhỏ, sẽ bị kiểm chứng qua truyền miệng.</div>'+
+  '<p>Đọc to dòng cuối — sự trung thực này là điểm mạnh, không phải điểm yếu:</p>'+
+  '<span class="say">"Wizy mới 4 tháng. Tôi sẽ mang số liệu quay lại VCPA lần sau."</span>'},
+{t:"18:00 – 19:00 · Bằng chứng (1 phút)", h:
+  '<p><strong>Case ăn tiền nhất với khán phòng này</strong> — rất nhiều CPA, real estate agent, broker đang ngồi dưới.</p>'+
+  '<p>Nhìn thẳng vào nhóm đó khi nói "giỏi nghề nhưng vô hình".</p>'+
+  '<p><em>Cầu sang Nam Tran nếu anh ấy nói sau:</em> người bán chuyên môn.</p>'},
+{t:"19:00 – 21:30 · Bằng chứng (2.5 phút)", h:
+  '<p>Phát video. <strong>Không demo live</strong> — đã chốt.</p>'+
+  '<div class="warn">Test video trên đúng máy chiếu hội trường trước 6:45 PM. Phụ đề phải burn sẵn — giả định loa hỏng.</div>'+
+  '<p>Sau video, để im 2 giây rồi mới nói tiếp. Để chủ tiệm ngấm.</p>'},
+{t:"21:30 – 24:30 · Cỗ máy nhu cầu (3 phút)", h:
+  '<p><strong>Nói chay trên slide này suốt 3 phút.</strong> Không đổi slide.</p>'+
+  '<p>Luận điểm: nấc 2–3 giúp phục vụ tốt hơn — nhưng không ai gọi đến thì tự động hoá cái gì?</p>'+
+  '<p>Nói gọn về phương pháp nội dung: <em>"Đừng đăng bằng chứng thành công. Hãy đăng bằng chứng chuyển hoá."</em> Bán chỉ 1 lần trên 7 bài — cố ý. Viết cho chính mình của 2–3 năm trước.</p>'+
+  '<p><strong>Khoảnh khắc vòng tròn khép lại — NHÌN THẲNG XUỐNG KHÁN PHÒNG, không nhìn màn hình:</strong></p>'+
+  '<span class="say">"Nãy giờ tôi đã làm đúng những gì tôi vừa nói. Tôi mở bằng một căn phòng trọ 8 mét vuông, không mở bằng tấm bằng. Và tối nay tôi không bán gì cả."</span>'+
+  '<p>Cầu nối: AI không nghĩ ra câu chuyện của bạn — nhưng khi đã có, AI nhân bản được nó.</p>'+
+  '<div class="warn">Nếu đang trễ giờ: cắt phần này xuống 90 giây. Giữ luận điểm + khoảnh khắc vòng tròn. Bỏ phần phương pháp nội dung.</div>'},
+{t:"24:30 – 26:30 · Rủi ro (2 phút)", h:
+  '<p>Nói phần xấu để xây tin cậy. Mỗi ý 30 giây.</p>'+
+  '<div class="warn">Đây là phần được phép CẮT nếu tràn giờ — giữ 2 ý đầu.</div>'+
+  '<p><em>Cầu sang Nam Tran:</em> nền của mọi automation là dữ liệu đúng — sổ sách sạch, số liệu chuẩn.</p>'},
+{t:"26:30 – 27:30 · Chốt (1 phút)", h:
+  '<p>Đây là thứ khán giả mang về nhà. Đọc chậm, rõ từng câu.</p>'+
+  '<p>Nói thêm: <em>"Ba câu này dùng được với bất kỳ ai đang chào hàng công nghệ cho anh chị — kể cả Wizy."</em></p>'},
+{t:"27:30 – 28:30 · Chốt (1 phút)", h:
+  '<p>Ba cam kết — nhỏ, ai cũng làm được.</p>'+
+  '<p><strong>Câu kết — quay lại tấm ảnh trong đầu khán giả:</strong></p>'+
+  '<span class="say">"Tôi bắt đầu ở nấc 1, với một chiếc máy tính cũ, trong căn phòng 8 mét vuông. Anh chị hôm nay có công cụ mạnh hơn cái máy đó hàng triệu lần — ngay trong túi áo. Câu hỏi không phải là anh chị đã có đủ công cụ chưa. Câu hỏi là đã có hệ thống chưa."</span>'+
+  '<div class="warn">KHÔNG bán trên sân khấu. Để slide này trên màn suốt Q&amp;A.</div>'}
+];
+
+/* ═══════════ Trạng thái ═══════════ */
+var slides = [].slice.call(document.querySelectorAll(".slide"));
+var N = slides.length;
+var cur = 0;
+
+var stage = document.getElementById("stage");
+var hudBar = document.querySelector("#hud i");
+var counter = document.getElementById("counter");
+var clockEl = document.getElementById("clock");
+var notesEl = document.getElementById("notes");
+var overviewEl = document.getElementById("overview");
+var helpEl = document.getElementById("help");
+
+/* ═══════════ Scale sân khấu vừa màn hình ═══════════ */
+function fit(){
+  // Khi mở ghi chú, thu hẹp sân khấu lại để slide không bị che.
+  var reserved = notesEl.classList.contains("is-open") && innerWidth > 900 ? 410 : 0;
+  var w = innerWidth - reserved;
+  var k = Math.min(w / 1280, innerHeight / 720);
+  stage.style.transform = "translateX(" + (-reserved / 2) + "px) scale(" + k + ")";
+}
+addEventListener("resize", fit);
+fit();
+
+/* ═══════════ Điều hướng ═══════════ */
+function show(i, push){
+  i = Math.max(0, Math.min(N - 1, i));
+  slides[cur].classList.remove("is-active");
+  cur = i;
+  slides[cur].classList.add("is-active");
+
+  hudBar.style.width = ((cur + 1) / N * 100) + "%";
+  counter.textContent = (cur + 1) + " / " + N;
+  renderNotes();
+  markOverview();
+  resetCountdown();
+
+  if (push !== false) history.replaceState(null, "", "#" + (cur + 1));
+}
+function next(){ show(cur + 1); }
+function prev(){ show(cur - 1); }
+
+/* ═══════════ Ghi chú ═══════════ */
+function renderNotes(){
+  var n = NOTES[cur] || {t:"", h:"<p class='dim'>—</p>"};
+  document.getElementById("nTitle").textContent = slides[cur].dataset.title || "";
+  document.getElementById("nTime").textContent = n.t;
+  document.getElementById("nBody").innerHTML = n.h;
+  notesEl.scrollTop = 0;
+}
+
+/* ═══════════ Overview ═══════════ */
+var ovGrid = document.getElementById("ovGrid");
+slides.forEach(function(s, i){
+  var d = document.createElement("div");
+  d.className = "ov-item";
+  d.innerHTML = '<div class="n">SLIDE ' + (i + 1) + '</div>' +
+                '<div class="t">' + (s.dataset.title || "") + '</div>' +
+                '<div class="p">' + (s.dataset.part || "") + '</div>';
+  d.addEventListener("click", function(){
+    show(i);
+    overviewEl.classList.remove("is-open");
+  });
+  ovGrid.appendChild(d);
+});
+function markOverview(){
+  [].forEach.call(ovGrid.children, function(c, i){
+    c.classList.toggle("is-cur", i === cur);
+  });
+}
+
+/* ═══════════ Đồng hồ bài nói (mục tiêu 28:30) ═══════════ */
+var TARGET = 28.5 * 60;
+var elapsed = 0, running = false, tick = null;
+function paintClock(){
+  var m = Math.floor(elapsed / 60), s = elapsed % 60;
+  clockEl.textContent = (m < 10 ? "0" : "") + m + ":" + (s < 10 ? "0" : "") + s;
+  clockEl.classList.toggle("over", elapsed > TARGET);
+  clockEl.classList.toggle("run", running && elapsed <= TARGET);
+}
+function toggleClock(){
+  running = !running;
+  if (running) tick = setInterval(function(){ elapsed++; paintClock(); }, 1000);
+  else clearInterval(tick);
+  paintClock();
+}
+function resetClock(){
+  running = false; clearInterval(tick); elapsed = 0; paintClock();
+}
+paintClock();
+
+/* ═══════════ Đếm ngược 60 giây (slide bài tập) ═══════════ */
+var cdLeft = 60, cdTimer = null;
+function cdEls(){
+  var s = slides[cur];
+  return { num: s.querySelector("[data-countdown]"), bar: s.querySelector("[data-countbar]") };
+}
+function paintCountdown(){
+  var e = cdEls();
+  if (!e.num) return;
+  e.num.textContent = cdLeft;
+  e.num.classList.toggle("is-done", cdLeft === 0);
+  if (e.bar) e.bar.style.width = (cdLeft / 60 * 100) + "%";
+}
+function toggleCountdown(){
+  var s = slides[cur];
+  if (!s.dataset.timer) return;
+  if (cdTimer){ clearInterval(cdTimer); cdTimer = null; return; }
+  cdTimer = setInterval(function(){
+    cdLeft--;
+    paintCountdown();
+    if (cdLeft <= 0){ clearInterval(cdTimer); cdTimer = null; }
+  }, 1000);
+}
+function resetCountdown(){
+  clearInterval(cdTimer); cdTimer = null; cdLeft = 60; paintCountdown();
+}
+
+/* ═══════════ Bàn phím ═══════════ */
+addEventListener("keydown", function(e){
+  if (e.metaKey || e.ctrlKey || e.altKey) return;
+  var k = e.key;
+
+  if (k === "Escape"){
+    overviewEl.classList.remove("is-open");
+    helpEl.classList.remove("is-open");
+    return;
+  }
+  if (k === "ArrowRight" || k === "PageDown" || k === " "){ e.preventDefault(); next(); return; }
+  if (k === "ArrowLeft"  || k === "PageUp"){ e.preventDefault(); prev(); return; }
+  if (k === "Home"){ show(0); return; }
+  if (k === "End"){ show(N - 1); return; }
+
+  switch (k.toLowerCase()){
+    case "s": notesEl.classList.toggle("is-open"); fit(); break;
+    case "t": toggleClock(); break;
+    case "r": resetClock(); resetCountdown(); break;
+    case "c": toggleCountdown(); break;
+    case "o": overviewEl.classList.toggle("is-open"); break;
+    case "f":
+      if (document.fullscreenElement) document.exitFullscreen();
+      else document.documentElement.requestFullscreen();
+      break;
+    case "?": case "/": helpEl.classList.toggle("is-open"); break;
+  }
+});
+
+/* ═══════════ Chuột & chạm ═══════════ */
+document.getElementById("viewport").addEventListener("click", function(e){
+  if (e.target.closest("video")) return;
+  if (e.clientX < innerWidth * 0.25) prev(); else next();
+});
+var tx = 0;
+addEventListener("touchstart", function(e){ tx = e.changedTouches[0].clientX; }, {passive:true});
+addEventListener("touchend", function(e){
+  var d = e.changedTouches[0].clientX - tx;
+  if (Math.abs(d) > 55){ d < 0 ? next() : prev(); }
+}, {passive:true});
+
+/* ═══════════ Ảnh thiếu → hiện chỗ trống lịch sự ═══════════ */
+var qrImg = document.getElementById("qrImg");
+qrImg.addEventListener("error", function(){
+  qrImg.hidden = true;
+  document.getElementById("qrPh").hidden = false;
+});
+var vid = document.getElementById("demoVideo");
+vid.addEventListener("error", function(){
+  vid.hidden = true;
+  document.getElementById("videoFallback").hidden = false;
+}, true);
+
+/* ═══════════ Khởi động ═══════════ */
+var start = parseInt((location.hash || "").replace("#",""), 10);
+show(isNaN(start) ? 0 : start - 1, false);
+
+})();
+</script>
+</body>
+</html>
