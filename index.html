@@ -170,6 +170,10 @@ strong{color:#fff;font-weight:800;}
   background:rgba(240,194,74,.1);border:1px solid rgba(240,194,74,.32);
   border-radius:12px;padding:16px 24px;
 }
+/* Hiện dần từng nấc: nấc chưa tới vẫn giữ chỗ để layout không nhảy */
+.rung.is-off,.ladder-note.is-off{visibility:hidden;}
+@keyframes rungIn{from{opacity:0;transform:translateY(14px);}to{opacity:1;transform:none;}}
+.slide.is-active .rung.is-new,.slide.is-active .ladder-note.is-new{animation:rungIn .42s cubic-bezier(.22,.68,.32,1) both;}
 
 /* ---------- Slide 4 : 3 dòng chảy ---------- */
 .flows{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:12px;flex:1;}
@@ -530,8 +534,104 @@ body.is-black #viewport{background:#000;}
     </div>
   </section>
 
-  <!-- ══════════ 3 · THANG 4 NẤC ══════════ -->
-  <section class="slide" data-title="Thang 4 nấc" data-part="Khung">
+  <!-- ══════════ 3 · THANG 4 NẤC — hiện dần nấc 1 → 4 (4 slide) ══════════ -->
+  <section class="slide" data-title="Thang 4 nấc · 1" data-part="Khung">
+    <p class="eyebrow">Khung · trục dọc</p>
+    <h2>Thang 4 nấc</h2>
+    <div class="ladder">
+      <div class="rung rung--1 is-new">
+        <div class="rung__n">1</div>
+        <div class="rung__name">Trợ lý<span>Assist</span></div>
+        <div class="rung__desc">AI giúp <em>bạn</em> làm nhanh hơn — viết caption, dịch, soạn email</div>
+        <div class="rung__gain">Vài giờ / tuần<br><span class="dim">90% dừng ở đây</span></div>
+      </div>
+      <div class="rung rung--2 is-off">
+        <div class="rung__n">2</div>
+        <div class="rung__name">Tự động<span>Automate</span></div>
+        <div class="rung__desc">Hệ thống làm <em>thay bạn</em> — nhắc lịch, xin review, follow-up lead</div>
+        <div class="rung__gain">Vài chục giờ / tháng<br><span class="dim">+ doanh thu rơi vãi</span></div>
+      </div>
+      <div class="rung rung--3 is-off">
+        <div class="rung__n">3</div>
+        <div class="rung__name">AI Agent<span>Agent</span></div>
+        <div class="rung__desc">AI <em>ra quyết định</em> trong khuôn khổ bạn đặt — lễ tân AI 24/7</div>
+        <div class="rung__gain">Một vị trí nhân sự</div>
+      </div>
+      <div class="rung rung--4 is-off">
+        <div class="rung__n">4</div>
+        <div class="rung__name">Lợi thế<span>Advantage</span></div>
+        <div class="rung__desc">Thứ đối thủ <em>không copy được</em> — dữ liệu, thương hiệu, hệ thống riêng</div>
+        <div class="rung__gain">Không phải tiết kiệm<br>mà là <b class="gold">định giá cao hơn</b></div>
+      </div>
+    </div>
+    <p class="ladder-note is-off">Đa số mình đang ở <span class="gold">nấc 1</span> và tưởng mình đang làm AI. Tiền thật nằm ở <span class="gold">nấc 2 và 3</span>.</p>
+  </section>
+
+  <section class="slide" data-title="Thang 4 nấc · 2" data-part="Khung">
+    <p class="eyebrow">Khung · trục dọc</p>
+    <h2>Thang 4 nấc</h2>
+    <div class="ladder">
+      <div class="rung rung--1">
+        <div class="rung__n">1</div>
+        <div class="rung__name">Trợ lý<span>Assist</span></div>
+        <div class="rung__desc">AI giúp <em>bạn</em> làm nhanh hơn — viết caption, dịch, soạn email</div>
+        <div class="rung__gain">Vài giờ / tuần<br><span class="dim">90% dừng ở đây</span></div>
+      </div>
+      <div class="rung rung--2 is-new">
+        <div class="rung__n">2</div>
+        <div class="rung__name">Tự động<span>Automate</span></div>
+        <div class="rung__desc">Hệ thống làm <em>thay bạn</em> — nhắc lịch, xin review, follow-up lead</div>
+        <div class="rung__gain">Vài chục giờ / tháng<br><span class="dim">+ doanh thu rơi vãi</span></div>
+      </div>
+      <div class="rung rung--3 is-off">
+        <div class="rung__n">3</div>
+        <div class="rung__name">AI Agent<span>Agent</span></div>
+        <div class="rung__desc">AI <em>ra quyết định</em> trong khuôn khổ bạn đặt — lễ tân AI 24/7</div>
+        <div class="rung__gain">Một vị trí nhân sự</div>
+      </div>
+      <div class="rung rung--4 is-off">
+        <div class="rung__n">4</div>
+        <div class="rung__name">Lợi thế<span>Advantage</span></div>
+        <div class="rung__desc">Thứ đối thủ <em>không copy được</em> — dữ liệu, thương hiệu, hệ thống riêng</div>
+        <div class="rung__gain">Không phải tiết kiệm<br>mà là <b class="gold">định giá cao hơn</b></div>
+      </div>
+    </div>
+    <p class="ladder-note is-off">Đa số mình đang ở <span class="gold">nấc 1</span> và tưởng mình đang làm AI. Tiền thật nằm ở <span class="gold">nấc 2 và 3</span>.</p>
+  </section>
+
+  <section class="slide" data-title="Thang 4 nấc · 3" data-part="Khung">
+    <p class="eyebrow">Khung · trục dọc</p>
+    <h2>Thang 4 nấc</h2>
+    <div class="ladder">
+      <div class="rung rung--1">
+        <div class="rung__n">1</div>
+        <div class="rung__name">Trợ lý<span>Assist</span></div>
+        <div class="rung__desc">AI giúp <em>bạn</em> làm nhanh hơn — viết caption, dịch, soạn email</div>
+        <div class="rung__gain">Vài giờ / tuần<br><span class="dim">90% dừng ở đây</span></div>
+      </div>
+      <div class="rung rung--2">
+        <div class="rung__n">2</div>
+        <div class="rung__name">Tự động<span>Automate</span></div>
+        <div class="rung__desc">Hệ thống làm <em>thay bạn</em> — nhắc lịch, xin review, follow-up lead</div>
+        <div class="rung__gain">Vài chục giờ / tháng<br><span class="dim">+ doanh thu rơi vãi</span></div>
+      </div>
+      <div class="rung rung--3 is-new">
+        <div class="rung__n">3</div>
+        <div class="rung__name">AI Agent<span>Agent</span></div>
+        <div class="rung__desc">AI <em>ra quyết định</em> trong khuôn khổ bạn đặt — lễ tân AI 24/7</div>
+        <div class="rung__gain">Một vị trí nhân sự</div>
+      </div>
+      <div class="rung rung--4 is-off">
+        <div class="rung__n">4</div>
+        <div class="rung__name">Lợi thế<span>Advantage</span></div>
+        <div class="rung__desc">Thứ đối thủ <em>không copy được</em> — dữ liệu, thương hiệu, hệ thống riêng</div>
+        <div class="rung__gain">Không phải tiết kiệm<br>mà là <b class="gold">định giá cao hơn</b></div>
+      </div>
+    </div>
+    <p class="ladder-note is-off">Đa số mình đang ở <span class="gold">nấc 1</span> và tưởng mình đang làm AI. Tiền thật nằm ở <span class="gold">nấc 2 và 3</span>.</p>
+  </section>
+
+  <section class="slide" data-title="Thang 4 nấc · 4" data-part="Khung">
     <p class="eyebrow">Khung · trục dọc</p>
     <h2>Thang 4 nấc</h2>
     <div class="ladder">
@@ -553,14 +653,14 @@ body.is-black #viewport{background:#000;}
         <div class="rung__desc">AI <em>ra quyết định</em> trong khuôn khổ bạn đặt — lễ tân AI 24/7</div>
         <div class="rung__gain">Một vị trí nhân sự</div>
       </div>
-      <div class="rung rung--4">
+      <div class="rung rung--4 is-new">
         <div class="rung__n">4</div>
         <div class="rung__name">Lợi thế<span>Advantage</span></div>
         <div class="rung__desc">Thứ đối thủ <em>không copy được</em> — dữ liệu, thương hiệu, hệ thống riêng</div>
         <div class="rung__gain">Không phải tiết kiệm<br>mà là <b class="gold">định giá cao hơn</b></div>
       </div>
     </div>
-    <p class="ladder-note">Đa số mình đang ở <span class="gold">nấc 1</span> và tưởng mình đang làm AI. Tiền thật nằm ở <span class="gold">nấc 2 và 3</span>.</p>
+    <p class="ladder-note is-new">Đa số mình đang ở <span class="gold">nấc 1</span> và tưởng mình đang làm AI. Tiền thật nằm ở <span class="gold">nấc 2 và 3</span>.</p>
   </section>
 
   <!-- ══════════ 4 · BA DÒNG CHẢY ══════════ -->

@@ -4,7 +4,14 @@
 **Thời gian:** Thứ Năm 20/08/2026, 7:00 PM – 9:30 PM
 **Địa điểm:** 3279 Lenworth Dr Unit A, Mississauga, ON L4X 2G6
 **Bài nói của Hoan:** *Growing Your Business with Technology in the AI Era: Strategic Framework*
-**Trạng thái:** BRAINSTORM v1 — chờ chốt
+**Trạng thái:** **v2 — đã chốt lịch hai buổi quay**
+
+## 📅 Hai buổi quay
+
+| | Khi nào | Nội dung | Chi tiết |
+|---|---|---|---|
+| **Buổi 1 — quay riêng** | **Tối thứ Tư 19/08/2026, 17:30–22:00** | Cảnh before · toàn bộ phỏng vấn · **tổng duyệt + chạy thử thiết bị** | §4.5 · §4.6 · §4.7 |
+| **Buổi 2 — sự kiện** | Thứ Năm 20/08/2026, 16:30–21:30 | Bài thuyết trình · b-roll · vox-pop khán giả | §5 · §6 |
 
 ---
 
@@ -13,7 +20,8 @@
 | Ưu tiên | Sản phẩm | Dùng để làm gì |
 |---|---|---|
 | **P0** | **Video full bài thuyết trình của Hoan** (có tiếng sạch) | Tài sản gốc — cắt ra hàng chục clip trong nhiều tháng |
-| **P0** | **7–10 video ngắn hỏi–đáp** (30–60s) | Đăng trước & sau event; giới thiệu Wizy + đội ngũ |
+| **P0** | **12 clip ngắn về ĐỀ TÀI** (T1–T12, 30–90s) | Kho nội dung evergreen — dạy khung 4 nấc, dùng được cả năm |
+| **P0** | **7–10 video ngắn hỏi–đáp về Wizy** (30–60s) | Đăng trước & sau event; giới thiệu Wizy + đội ngũ |
 | **P1** | **B-roll sự kiện** (networking, khán phòng, bắt tay) | Nền cho mọi clip khác, chứng minh "chúng tôi có mặt thật" |
 | **P1** | **Ảnh chụp** (chân dung Hoan/Steve/Joey trên sân khấu + không khí) | Blog, LinkedIn, hồ sơ năng lực, poster tháng sau |
 | **P2** | **Recap video 60–90s** cả sự kiện | Đăng trong 48h — nóng nhất |
@@ -27,7 +35,7 @@
 
 | Người | Vai trò tại Wizy | Vai trò tại buổi quay | Ghi chú |
 |---|---|---|---|
-| **Hoan Do** | CEO, Wizy Corp. | **Diễn giả chính** + nhân vật chính mọi clip | Ưu tiên số 1: giữ sức cho bài nói. Quay phỏng vấn **trước** khi lên sân khấu |
+| **Hoan Do** | CEO, Wizy Corp. | **Diễn giả chính** + nhân vật chính mọi clip | Ưu tiên số 1: giữ sức cho bài nói. Phần lớn phỏng vấn đã quay **tối thứ Tư**, thứ Năm chỉ còn 3 câu |
 | **Annie** | MC + biên kịch + quay được | **Interviewer / MC của Wizy** + biên kịch + **camera B** | ⚠️ Không nhầm với **Linh Ho** — MC chính thức của VCPA trên sân khấu |
 | **Phung** | Photo/Video | **DP — camera A** (máy chính) + chụp ảnh | Chịu trách nhiệm chất lượng hình |
 | **Lộc Steve** | Co-founder wizy.ca | **Người trả lời phụ** (sản phẩm, đội ngũ, tầm nhìn) | Cân bằng: Hoan = chiến lược/AI, Steve = sản phẩm/vận hành |
@@ -42,10 +50,10 @@
 
 > **Đây là việc blocking. Làm ngay, đừng để đến ngày event.**
 
-- [ ] **Xin phép VCPA (Linh Ho / Ban tổ chức)** được quay phim trong hội trường: quay sân khấu, quay khán phòng, quay networking.
-- [ ] Hỏi rõ: có được **quay mặt người tham dự** và đăng lên mạng xã hội không? Nhiều hội có quy định riêng.
-- [ ] Nếu được: đề nghị BTC **thông báo miệng đầu buổi** ("hôm nay có ekip quay phim") — vừa đúng luật, vừa giúp mọi người thoải mái.
-- [ ] Xin phép **quay/đăng bài của Nam Tran (đồng diễn giả)** nếu định dùng hình ảnh anh ấy. Nếu không được → chỉ dùng cảnh bài của Hoan.
+- [ ] **Xin phép VCPA (Linh Ho / Ban tổ chức)** được quay phim trong hội trường: quay sân khấu, quay khán phòng, quay networking. => đã xin phép xong, cập nhật done.
+- [ ] Hỏi rõ: có được **quay mặt người tham dự** và đăng lên mạng xã hội không? Nhiều hội có quy định riêng. => đã xin phép xong, cập nhật done.
+- [ ] Nếu được: đề nghị BTC **thông báo miệng đầu buổi** ("hôm nay có ekip quay phim") — vừa đúng luật, vừa giúp mọi người thoải mái. => đã xin phép xong, cập nhật done.
+- [ ] Xin phép **quay/đăng bài của Nam Tran (đồng diễn giả)** nếu định dùng hình ảnh anh ấy. Nếu không được → chỉ dùng cảnh bài của Hoan. => đã xin phép xong, cập nhật done.
 - [ ] Khi phỏng vấn khách tham dự: **xin đồng ý bằng miệng, quay lại luôn câu đồng ý** ("Anh/chị cho phép Wizy dùng clip này đăng mạng xã hội nhé?") — đó là consent hợp lệ và tiện lưu.
 - [ ] Hỏi trước về **điện & vị trí đặt tripod** — được cắm điện ở đâu, đứng chỗ nào không chắn lối đi.
 - [ ] Hỏi có **đường line-out âm thanh** từ hệ thống loa của hội trường không (cho tiếng bài nói).
@@ -85,17 +93,22 @@
 
 ## 4. BLOCK 1 — Quay video ngắn TRƯỚC event
 
-### 4.1. Nên quay khi nào?
+### 4.1. Quay khi nào — ✅ ĐÃ CHỐT
 
-| Phương án | Ưu | Nhược |
+**Hai buổi:**
+
+| Buổi | Thời gian | Quay gì |
 |---|---|---|
-| **A. Buổi riêng trước ngày event** (studio/văn phòng) | Ánh sáng đẹp, tiếng sạch, quay lại thoải mái, đăng được trước để kéo người đến | Tốn thêm 1 buổi của cả đội |
-| **B. Tại hội trường, 5:30–6:45 PM ngày event** | Gọn 1 buổi, có backdrop sự kiện thật, khí thế | Gấp, ồn, dễ ảnh hưởng tâm lý Hoan trước khi lên nói |
-| **C. Cả hai** ✅ ĐỀ XUẤT | Câu "thương hiệu" quay trước ở A (chỉn chu); câu "bối cảnh sự kiện" quay ở B | Cần kỷ luật thời gian |
+| **Buổi riêng** ⭐ | **Tối thứ Tư 19/08/2026** (trước ngày present 1 ngày) | Cảnh before · toàn bộ phỏng vấn · **chạy thử nguyên quy trình và thiết bị** |
+| **Tại hội trường** | Thứ Năm 20/08, 5:45–6:30 PM | Chỉ nhóm câu gắn bối cảnh sự kiện (Q1, Q2, Q3) + clip Joey + b-roll |
 
-> **Đề xuất: Phương án C.** Nhóm câu về Wizy (dịch vụ, sản phẩm, đội ngũ, AI) quay trước ở nơi yên tĩnh. Nhóm câu về sự kiện (VCPA là gì, khán giả hôm nay là ai, hôm nay chia sẻ gì) quay tại hội trường trước giờ mở cửa — có không khí thật.
->
-> 🔴 **Luật cứng: dừng mọi việc quay lúc 6:45 PM.** 15 phút cuối là của Hoan — uống nước, xem lại slide, thở.
+**Vì sao buổi riêng tối thứ Tư là quyết định đúng:**
+- Ánh sáng đẹp, tiếng sạch, quay hỏng thì quay lại — không bị áp lực giờ giấc như tại hội trường.
+- **Đây thực chất là buổi tổng duyệt.** Sai sót thiết bị lộ ra tối thứ Tư thì còn cả ngày thứ Năm để sửa. Lộ ra lúc 6:30 PM thứ Năm thì hết cứu.
+- Có clip đăng **trước sự kiện** để kéo người đến (xem lịch đăng §8).
+- Thứ Năm cả đội chỉ còn lo đúng một việc: quay bài nói.
+
+> 🔴 **Luật cứng ngày thứ Năm vẫn giữ nguyên: dừng mọi việc quay Hoan lúc 6:45 PM.** 15 phút cuối là của Hoan — uống nước, xem lại slide, thở.
 
 ### 4.2. Cách quay để cắt được nhiều
 
@@ -150,7 +163,8 @@ Mỗi câu kèm **hook mở** + **ý cần chạm** + **người trả lời** +
 
 **Q7 — Wizy có ứng dụng AI vào quy trình phát triển không?** · Hoan · 60s · **⭐ clip "position" mạnh nhất**
 - **Hook:** "Chúng tôi không chỉ bán AI cho khách. Chúng tôi vận hành bằng chính nó."
-- Chạm: AI trong **viết code & phát triển sản phẩm** (vì sao một team nhỏ ra được 5 sản phẩm) · AI trong **sản xuất nội dung** (CremyX chạy chính marketing của Wizy) · AI trong **vận hành & chăm sóc khách** · **nhưng luôn có con người duyệt trước hành động nhạy cảm**.
+- Chạm: AI trong **viết code & phát triển sản phẩm** — *4 tháng, 5 sản phẩm MVP, 6 đơn hàng, 7 lead đang triển khai* · AI trong **sản xuất nội dung** (CremyX chạy chính marketing của Wizy) · AI trong **vận hành & chăm sóc khách** · **nhưng luôn có con người duyệt trước hành động nhạy cảm**.
+- ⚠️ **Dùng đúng bộ số ở [plan.md](plan.md) §3.1** — clip này và slide 11 phải khớp nhau tuyệt đối. Ai đó xem clip rồi đi nghe bài nói mà thấy số vênh là hỏng.
 - Chốt: *"Chúng tôi ăn chính món mình nấu."* — đây là bằng chứng mạnh hơn mọi lời quảng cáo.
 
 ---
@@ -188,6 +202,131 @@ Mỗi câu kèm **hook mở** + **ý cần chạm** + **người trả lời** +
 18. **"Thang 4 nấc" dựng thành clip đồ hoạ** — Hoan voice-over, chữ chạy trên màn hình. *Clip evergreen, đăng lại được nhiều lần.*
 19. **Demo lễ tân AI tiếng Việt gọi điện thật** — quay màn hình + phản ứng người xem. *Chủ tiệm nail sẽ dừng lướt ngay.*
 20. **"Một ngày của team Wizy Việt Nam"** — quay sau, nối vào Q4. *Biến "team ở Việt Nam" từ điểm nghi ngờ thành điểm tự hào.*
+
+---
+
+### 4.5. ⭐ Bộ câu hỏi VỀ ĐỀ TÀI — dành riêng cho Hoan
+
+> **Đây là nhóm câu quan trọng nhất của buổi thứ Tư.** Các câu ở §4.3 nói về *Wizy là ai*; nhóm này nói về *nội dung Hoan sắp trình bày* — nên nó vừa là clip kéo người đến sự kiện, vừa là **kho nội dung evergreen** dùng được cả năm sau đó.
+>
+> Nguồn: [plan.md](plan.md) §1 và [nac-4.md](nac-4.md). Người hỏi: **Annie**. Người trả lời: **Hoan** (trừ khi ghi khác).
+>
+> 🔴 **Luật vàng: mỗi clip dạy đúng MỘT ý.** Đừng gộp cả cái thang vào một clip 60 giây — cắt ra 12 clip nhỏ thì mỗi clip mới đứng riêng được.
+
+**T1 — "Thang 4 nấc là gì?"** · 60–90s · *clip nền của cả bộ*
+- **Hook:** "Mọi khoản đầu tư công nghệ đều rơi vào một trong bốn nấc. Và hầu hết mọi người kẹt ở nấc thấp nhất."
+- Chạm: Trợ lý → Tự động → AI Agent → Lợi thế. Mỗi nấc đúng một câu, không giải thích dài.
+- 📌 *Giữ lại đăng SAU sự kiện* — đây là phần thịt của bài nói.
+
+**T2 — "Làm sao biết mình đang ở nấc nào?"** · 30s · **⭐⭐ clip mạnh nhất cả bộ**
+- **Hook:** "Chỉ cần một câu hỏi là biết."
+- Chạm: *"Nếu sáng mai đối thủ mua đúng phần mềm bạn đang dùng, họ có đuổi kịp bạn không?"* → Có = nấc 2–3. Không = nấc 4.
+- 💡 Người xem **tự chấm được cho mình ngay trong 30 giây** → đây là loại clip được lưu và gửi cho người khác. Quay kỹ câu này nhất.
+
+**T3 — "Vì sao dùng ChatGPT mỗi ngày mà doanh thu không tăng?"** · 45s · *teaser trước event*
+- **Hook:** "Vì anh chị đang ở nấc 1 — và nấc 1 không đẻ ra tiền."
+- Chạm: nấc 1 tiết kiệm vài giờ mỗi tuần cho *cá nhân bạn*, nó không thay đổi cách doanh nghiệp vận hành.
+- Đây chính là câu hỏi giơ tay mở màn bài nói — **đăng trước sự kiện, không tiết lộ đáp án đầy đủ**.
+
+**T4 — "Nấc 2 trông như thế nào ở một tiệm nail?"** · 45s
+- **Hook:** "Điện thoại reo lúc thợ đang làm khách. Không ai bắt máy. Khách gọi tiệm kế bên."
+- Chạm: booking online một link · nhắc lịch tự động · tự xin review sau khi khách về. **Hệ thống làm thay bạn, không cần ai ngồi canh.**
+
+**T5 — "AI agent khác gì automation?"** · 60s · *câu hay bị nhầm nhất*
+- **Hook:** "Automation làm đúng thứ bạn đã dặn. Agent tự quyết trong khuôn khổ bạn đặt."
+- Chạm: nhắc lịch = automation (nấc 2) · lễ tân AI nghe máy, hỏi lại khách, chọn giờ trống, chốt lịch = agent (nấc 3).
+- ⚠️ Kèm luôn ranh giới: **cổng duyệt của con người** — agent không được chi tiền hay gửi ra ngoài.
+
+**T6 — "Nấc 4 là gì, và vì sao tiền không mua được?"** · 60–90s · *clip có chiều sâu nhất*
+- **Hook:** "Ba nấc đầu leo bằng tiền. Nấc 4 thì không."
+- Chạm: nấc 4 = thứ đối thủ không copy được · bốn cơ chế (dữ liệu tích luỹ, thương hiệu cá nhân, quy trình riêng, chi phí chuyển đổi) — **chọn 2 cơ chế thôi cho một clip**, để dành 2 cái kia cho clip khác.
+- 📌 *Đăng sau sự kiện.*
+
+**T7 — "Nấc 1–3 không giúp bạn thắng, chỉ giúp bạn không thua"** · 45s · **⭐ câu gây tranh cãi nhất**
+- **Hook:** "Cái gì mua được bằng tiền thì đối thủ cũng mua được."
+- Chạm: khi cả phố đều có, nó thôi là lợi thế và thành điều kiện tối thiểu để còn mở cửa · ví dụ máy POS năm 2005 so với bây giờ.
+- 💡 Loại clip dễ có bình luận tranh luận → tốt cho reach.
+
+**T8 — "Một con số mà 90% chủ tiệm không biết về tiệm mình"** · 30s · *teaser trước event*
+- **Hook:** "Bao nhiêu phần trăm khách của anh chị quay lại trong 90 ngày?"
+- Chạm: ba dòng chảy — khách vào / vận hành / khách quay lại. **Không trả lời hộ.** Kết bằng: "Nếu chưa biết con số đó, đừng mua thêm phần mềm nào cả."
+
+**T9 — "3 câu hỏi trước khi chi 1 đồng cho công nghệ"** · 60s · *clip được lưu nhiều nhất*
+- **Hook:** "Trước khi ký hợp đồng phần mềm nào, hỏi ba câu này."
+- Chạm: (1) Nó thay **giờ người** hay chỉ thêm một màn hình để nhìn? (2) Sau 90 ngày **con số nào** đổi, **ai** chịu trách nhiệm? (3) Ngừng dùng thì **dữ liệu** có còn là của bạn không?
+- 💡 Nói thẳng: *"Ba câu này dùng được với bất kỳ ai đang chào hàng công nghệ — kể cả Wizy."* Câu đó tạo thiện cảm mạnh hơn mọi lời quảng cáo.
+
+**T10 — "Đừng tự động hoá một quy trình vốn đã hỏng"** · 30s
+- **Hook:** "Anh chị không sửa được nó. Anh chị chỉ làm nó hỏng nhanh hơn."
+- Chạm: sửa quy trình trước, tự động hoá sau.
+
+**T11 — "Dữ liệu khách của anh chị có còn là của anh chị không?"** · 45s
+- **Hook:** "Ngày mai ngừng dùng tool đó — anh chị mang dữ liệu đi được không?"
+- Chạm: dữ liệu khách là tài sản · quyền xuất dữ liệu · PIPEDA, dữ liệu khách tại Canada.
+
+**T12 — "Tự động hoá giúp phục vụ tốt hơn. Nhưng nếu không ai gọi đến thì tự động hoá cái gì?"** · 45s
+- **Hook:** đọc thẳng chính câu đó.
+- Chạm: cần **cỗ máy nhu cầu** · nội dung kể chuyện thật thay vì khoe thành tích.
+
+#### Thứ tự ưu tiên nếu thiếu thời gian
+> **T2 → T3 → T8 → T9 → T7.** Năm câu này đủ làm cả chiến dịch trước và sau sự kiện.
+
+#### ⚠️ Đăng trước hay sau sự kiện?
+
+| Đăng TRƯỚC (tạo tò mò, kéo người đến) | Giữ lại đăng SAU (phần thịt) |
+|---|---|
+| T3 · T8 · T2 | T1 · T5 · T6 · T7 · T9 |
+
+**Đừng đăng hết trước sự kiện.** Nếu người ta xem clip là đã biết hết cái thang thì không còn lý do đến nghe. Trước sự kiện chỉ đăng **câu hỏi**, để dành **câu trả lời** cho sân khấu.
+
+---
+
+### 4.6. Call sheet — buổi quay riêng, tối thứ Tư 19/08
+
+| Giờ | Việc | Ai |
+|---|---|---|
+| **17:30** | Tập trung, dựng phông phỏng vấn, set đèn, test tiếng | Phung, Hảo |
+| **18:00** | **Chạy thử thiết bị** theo §4.7 — làm TRƯỚC khi quay | Hảo chủ trì |
+| **18:30** | Quay nhóm **đề tài §4.5** — T2, T3, T8 trước (ưu tiên cao nhất) | Annie hỏi, Phung quay |
+| **19:30** | Nghỉ 10 phút. Đổi áo cho Hoan → **bộ thứ hai** | |
+| **19:40** | Quay tiếp T1, T5, T6, T7, T9 | |
+| **20:20** | Quay nhóm Wizy §4.3 — Q4, Q5, Q6, Q7 (có Steve) | Steve + Hoan |
+| **20:50** | Clip ra mắt Joey (§4.4 nhóm C) | Joey |
+| **21:00** | **Tổng duyệt bài nói** — Hoan chạy nguyên 28.5 phút, bấm giờ, 3 máy quay thật | Tất cả |
+| **21:35** | Xem lại, ghi chú chỗ cần sửa | Tất cả |
+| **21:50** | Copy dữ liệu ra 2 nơi. Kiểm đồ theo checklist §3 | Hảo, Phung |
+
+> 💡 **Đổi áo giữa buổi.** Quay 10+ clip cùng một bộ đồ thì khi rải ra đăng nhiều tuần, ai cũng nhận ra là quay một lần. Hai bộ áo = hai "đợt" nội dung.
+>
+> 💡 **Tổng duyệt lúc 21:00 là phần đáng giá nhất của cả buổi** — và tiện thể có luôn bản quay dự phòng của bài nói, phòng khi tối thứ Năm có sự cố.
+
+### 4.7. Chạy thử thiết bị & quy trình — làm lúc 18:00 thứ Tư
+
+> Mục đích: **mọi thứ hỏng thì hỏng tối nay**, không phải 6:30 PM thứ Năm.
+
+**Đường hình**
+- [ ] Cả 3 máy quay cùng lúc trong 2 phút → **copy về máy tính ngay** → mở lên xem có file thật không
+- [ ] Kiểm tra 3 máy có **cùng khung hình / cùng tông màu** không (white balance)
+- [ ] Đo thời lượng pin thật của mỗi máy · thẻ nhớ còn trống bao nhiêu phút quay
+
+**Đường tiếng** *(quan trọng nhất)*
+- [ ] Gắn lav mic lên áo Hoan **đúng bộ đồ sẽ mặc hôm sau** — nút áo, cổ áo, chỗ giấu dây
+- [ ] Quay thử 2 phút → nghe lại bằng tai nghe: có rè, có rớt sóng, có tiếng sột soạt vải không
+- [ ] Test recorder rời + điện thoại ghi âm dự phòng chạy song song
+- [ ] Thử vỗ tay đồng bộ và kiểm tra khớp tiếng khi dựng
+
+**Deck & máy chiếu** *(xem [README.md](README.md))*
+- [ ] Mở `index.html` trên **đúng laptop sẽ dùng thứ Năm**, chạy toàn màn hình (`F`)
+- [ ] **Test remote trình chiếu (clicker) với deck** — bấm tới/lùi qua cả 18 slide. Deck nhận `→ ↓ Space PageDown` và `← ↑ PageUp`; nếu clicker không chuyển được slide thì phải biết TỐI NAY
+- [ ] Bật ghi chú diễn giả (`S`), chạy đồng hồ (`T`), test đếm ngược 60 giây ở slide 7 (`C`)
+- [ ] **Phát video demo ở slide 14 từ file, ngắt Wi-Fi** để chắc chắn không phụ thuộc internet
+- [ ] Kiểm tra ảnh phòng trọ 8m² ở slide 8 khi chiếu lớn — có vỡ hạt không
+- [ ] Copy deck + video vào **USB và laptop thứ hai**
+- [ ] Thử cáp HDMI / adapter sẽ mang theo
+
+**Quy trình**
+- [ ] Diễn thử một vòng: Annie hỏi → Hoan trả lời → Hảo đánh dấu take tốt vào `06_LOG.md` → Phung đổi góc
+- [ ] Thống nhất ký hiệu ra dấu im lặng khi máy đang quay
 
 ---
 
@@ -261,20 +400,29 @@ Mỗi câu kèm **hook mở** + **ý cần chạm** + **người trả lời** +
 
 ## 7. Quy ước file & lưu trữ
 
-**Đặt tên:** `VCPA0820_<khối>_<nội dung>_<máy>_take<N>`
-- Ví dụ: `VCPA0820_Q7_AI-in-workflow_CamA_take2`
+**Đặt tên:** `VCPA<ngày>_<mã>_<nội dung>_<máy>_take<N>`
+- Ví dụ: `VCPA0819_T2_biet-minh-o-nac-nao_CamA_take2`
+- Ví dụ: `VCPA0819_TALK_tongduyet_CamA`
 - Ví dụ: `VCPA0820_TALK_full_CamA`
 
-**Cấu trúc thư mục:**
+**Cấu trúc thư mục — tách theo hai ngày quay:**
 ```
-VCPA-2026-08-20/
-├── 01_TALK/          (A, B, C + audio)
-├── 02_SHORTS/        (theo mã câu hỏi Q1..Q7 + nhóm A–E)
-├── 03_BROLL/
-├── 04_PHOTO/
-├── 05_AUDIO/         (lav, line-out, backup)
-└── 06_LOG.md         (Hảo ghi: take nào tốt, mốc thời gian, ghi chú)
+VCPA-2026/
+├── 0819_BUOI-RIENG/
+│   ├── 01_TOPIC/     (T1..T12 — clip về đề tài)
+│   ├── 02_WIZY/      (Q4..Q7 + clip Joey)
+│   ├── 03_TONGDUYET/ (bản quay thử bài nói — cũng là bản dự phòng)
+│   └── 06_LOG.md
+└── 0820_SUKIEN/
+    ├── 01_TALK/      (A, B, C + audio)
+    ├── 02_SHORTS/    (Q1, Q2, Q3 + vox-pop)
+    ├── 03_BROLL/
+    ├── 04_PHOTO/
+    ├── 05_AUDIO/     (lav, line-out, backup)
+    └── 06_LOG.md
 ```
+
+> 💾 **Bản tổng duyệt tối thứ Tư là tài sản dự phòng thật sự.** Nếu tối thứ Năm hỏng tiếng hoặc hỏng file, vẫn còn một bản bài nói đầy đủ để dựng. Đừng xoá nó sau sự kiện.
 
 - 🔴 **Quy tắc 3-2-1 rút gọn: tối thiểu 2 bản sao ở 2 thiết bị khác nhau trước khi format thẻ.** Không ai được format thẻ trong ngày event.
 - Hảo ghi `06_LOG.md` **ngay tại chỗ** — "take 3 của Q5 là bản hay nhất" → tiết kiệm hàng giờ dựng.
@@ -287,16 +435,21 @@ VCPA-2026-08-20/
 
 | Thời điểm | Nội dung | Loại |
 |---|---|---|
-| **Trước event 5–7 ngày** | Q3 "Hoan sẽ chia sẻ gì" + Q1 VCPA là hội gì | Attract |
-| **Trước event 1–2 ngày** | Clip nhắc lịch + Q2 khán giả là ai | Attract |
+| **Thứ Năm 20/08 sáng** *(quay tối thứ Tư)* | **T3** "Dùng ChatGPT mỗi ngày mà doanh thu không tăng?" + **T8** "Một con số 90% chủ tiệm không biết" | Attract |
+| **Thứ Năm 20/08 chiều** | **T2** "Làm sao biết mình đang ở nấc nào?" + clip nhắc lịch tối nay | Attract |
 | **Ngay trong tối event** | Story/Reel hậu trường, ảnh sân khấu | Nurture |
 | **Trong 48h** ⚡ | **Recap 60–90s** — nóng nhất, đăng sớm nhất có thể | Attract |
-| **Tuần 1** | Clip "Thang 4 nấc" + vox-pop khán giả | Position |
-| **Tuần 2** | Q7 "Wizy dùng AI trong chính quy trình" + Q6 tổng quan sản phẩm | Position |
-| **Tuần 3** | 5 micro-clip sản phẩm, rải ra | Position |
-| **Tuần 3–4** | Q6 "vì sao anh bỏ nghề kỹ sư" + "thất bại lớn nhất" | Attract/Nurture |
+| **Tuần 1** | **T1** "Thang 4 nấc là gì" + vox-pop khán giả | Position |
+| **Tuần 2** | **T7** "Nấc 1–3 không giúp bạn thắng" + **T9** "3 câu hỏi trước khi chi tiền" | Position |
+| **Tuần 2–3** | **T5** agent khác automation + **T6** nấc 4 · Q7 "Wizy dùng AI trong chính quy trình" | Position |
+| **Tuần 3** | 5 micro-clip sản phẩm, rải ra · **T4**, **T10**, **T11**, **T12** xen kẽ | Position |
+| **Tuần 3–4** | "Vì sao anh bỏ nghề kỹ sư" + "thất bại lớn nhất của Wizy" | Attract/Nurture |
 | **Tuần 4** | Clip ra mắt Joey + Q5 dịch vụ Wizy + CTA tư vấn 15 phút | Convert |
 | **Bất kỳ lúc nào** | **Video full bài nói** lên YouTube + nhúng vào blog trên dongochoan.com | Position |
+
+> 💡 Buổi quay tối thứ Tư cho phép đăng **ngay sáng thứ Năm, đúng ngày sự kiện** — thời điểm kéo người đến hiệu quả nhất. Trước đó không có buổi riêng thì không làm được việc này.
+>
+> 🔗 Bài blog **"Thang 4 nấc AI"** trên dongochoan.com (đang ở draft, slug `ai-ladder-what-competitors-cannot-buy`) là bản chữ của chính nhóm câu T1–T9 — publish cùng tuần 1 và dẫn link từ các clip.
 
 **Sản phẩm phái sinh (không cần quay thêm):**
 - 1 bài blog dài trên dongochoan.com từ transcript bài nói (song ngữ EN/VI)
@@ -314,7 +467,9 @@ VCPA-2026-08-20/
 | **Thẻ đầy / hết pin giữa bài nói** | Trung bình | Thẻ & pin dư gấp 2–3. Máy C điện thoại chạy song song |
 | **BTC không cho quay khán giả** | Trung bình | Chỉ quay hướng sân khấu; vox-pop mời ra ngoài hành lang |
 | **Sân khấu ngược sáng / màn chiếu quá sáng** | Cao | Khảo sát lúc 5:20 PM, mang đèn LED, chỉnh phơi sáng theo **mặt Hoan** không theo màn chiếu |
-| **Hoan bị cuốn vào networking, không kịp quay Block 1** | **Cao** ⚠️ | Ưu tiên tuyệt đối: Q3 → Q7 → Q6. Các câu còn lại quay bù buổi khác |
+| **Hoan bị cuốn vào networking thứ Năm, không kịp quay** | Trung bình | Đã giảm nhiều nhờ buổi riêng tối thứ Tư. Thứ Năm chỉ còn Q1, Q2, Q3 — ưu tiên **Q3** trước |
+| **Buổi thứ Tư kéo dài, Hoan mệt trước ngày present** | **Cao** ⚠️ | **Kết thúc đúng 22:00, không nhân nhượng.** Quay thiếu câu nào thì bỏ, đừng lấy sức của Hoan cho ngày hôm sau |
+| **Clicker không chuyển được slide** | Trung bình | Phát hiện ở bước test 18:00 thứ Tư. Dự phòng: bấm bàn phím trực tiếp, hoặc cử Hảo ngồi cạnh laptop bấm theo hiệu |
 | **Hội trường quá ồn khi quay phỏng vấn** | Cao | Tìm phòng/góc yên tĩnh sẵn từ lúc khảo sát. Lav mic gắn sát áo |
 | **Demo live trong bài nói thất bại** | Trung bình | **Video 60s quay sẵn** — bắt buộc có |
 | **Trễ giờ, chương trình đẩy lùi** | Cao | Máy A + C cứ chạy. Đừng chờ "đúng lúc" |
@@ -323,7 +478,7 @@ VCPA-2026-08-20/
 
 ## 10. Cần chốt
 
-1. **Quay Block 1 theo phương án A, B hay C?** Nếu có buổi riêng → chốt ngày & địa điểm.
+1. ✅ **ĐÃ CHỐT — buổi quay riêng tối thứ Tư 19/08.** Còn thiếu: **địa điểm** (văn phòng Wizy hay studio thuê?)
 2. **Khung hình chính: dọc 9:16 hay ngang rồi crop?** (ảnh hưởng cách Phung set máy)
 3. **Đã xin phép VCPA quay chưa?** Ai liên hệ Linh Ho — Hoan hay Annie?
 4. **Có quay bài của Nam Tran không?** Cần hỏi trước.
