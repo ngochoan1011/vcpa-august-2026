@@ -125,7 +125,7 @@ Mỗi câu kèm **hook mở** + **ý cần chạm** + **người trả lời** +
 
 ---
 
-**Q1 — VCPA là hội gì?** · Hoan hoặc Joey · 30–45s · *(quay tại hội trường)*
+**Q1 — VCPA là hội gì?** · Hoan hoặc Steve · 30–45s · *(quay tại hội trường)*
 - **Hook:** "Nếu bạn là người Việt làm ăn ở Toronto mà chưa biết VCPA thì bạn đang bỏ lỡ một thứ."
 - Chạm: hội của các chuyên gia & doanh nhân gốc Việt tại Canada · gặp nhau hàng tháng · networking + học hỏi + kết nối cộng đồng · vì sao Wizy có mặt ở đây.
 - ⚠️ Nói về VCPA **một cách tôn trọng và chính xác** — kiểm tra lại mô tả với BTC trước khi đăng.
