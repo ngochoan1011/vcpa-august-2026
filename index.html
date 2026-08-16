@@ -264,6 +264,40 @@ strong{color:#fff;font-weight:800;}
   letter-spacing:.04em;
 }
 
+/* ---------- Timeline — từ 8m² đến Wizy Canada ---------- */
+.tl{
+  list-style:none;margin:0;padding:0;flex:1;
+  display:grid;grid-template-columns:repeat(5,1fr) 1.22fr;
+  align-items:start;align-content:center;  /* canh giữa theo chiều dọc */
+  position:relative;
+}
+.tl__i{
+  position:relative;padding:0 8px;text-align:center;
+  display:flex;flex-direction:column;align-items:center;
+}
+/* Đoạn ray nối từ chấm này sang chấm kế — vẽ trên từng mốc để nó
+   luôn bám theo hàng, kể cả khi cả hàng được canh giữa. */
+.tl__i::before{
+  content:"";position:absolute;top:37px;left:50%;width:100%;height:2px;
+  background:var(--line);
+}
+.tl__i:last-child::before{display:none;}
+.tl__i:nth-last-child(2)::before{background:linear-gradient(90deg,var(--sky-dim),var(--gold));}
+.tl__d{
+  width:24px;height:24px;border-radius:50%;flex:none;
+  background:var(--navy-700);border:3px solid var(--sky-dim);
+  margin:26px 0 26px;position:relative;z-index:1;
+}
+.tl__t{margin:0;font-size:20px;line-height:1.38;color:var(--ink-dim);text-wrap:balance;}
+.tl__t b{color:var(--ink);font-weight:800;}
+.tl__s{display:block;margin-top:7px;font-size:16px;color:var(--sky-dim);font-style:italic;}
+/* Điểm cuối — hiện tại */
+.tl__i--now .tl__d{
+  background:var(--gold);border-color:var(--gold);
+  box-shadow:0 0 0 6px rgba(240,194,74,.16);
+}
+.tl__i--now .tl__t b{color:var(--gold);font-size:25px;white-space:nowrap;}
+
 /* ---------- Slide 8 : 3 chữ ---------- */
 .three{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;width:100%;margin-top:20px;}
 .three .card{
@@ -748,7 +782,39 @@ body.is-black #viewport{background:#000;}
     <div class="photo-credit">Ảnh: Báo Phú Yên</div>
   </section>
 
-  <!-- ══════════ 8 · BA THỨ ══════════ -->
+  <!-- ══════════ 8 · TIMELINE — TỪ CĂN PHÒNG ĐÓ ĐẾN HÔM NAY ══════════ -->
+  <section class="slide" data-title="Timeline — từ 8m² đến Wizy Canada" data-part="WHY">
+    <p class="eyebrow">Hành trình</p>
+    <h2 style="margin-bottom:8px">Từ căn phòng đó đến hôm nay</h2>
+    <ol class="tl">
+      <li class="tl__i">
+        <span class="tl__d"></span>
+        <p class="tl__t">Giải nhất quốc gia<br>môn <b>Tin học</b></p>
+      </li>
+      <li class="tl__i">
+        <span class="tl__d"></span>
+        <p class="tl__t">Tuyển thẳng<br><b>Bách Khoa TP.HCM</b></p>
+      </li>
+      <li class="tl__i">
+        <span class="tl__d"></span>
+        <p class="tl__t">Học bổng<br><b>Thuỵ Sĩ</b></p>
+      </li>
+      <li class="tl__i">
+        <span class="tl__d"></span>
+        <p class="tl__t">Master tại<br><b>EPFL</b></p>
+      </li>
+      <li class="tl__i">
+        <span class="tl__d"></span>
+        <p class="tl__t">Khởi nghiệp<br><b>Wizy Vietnam</b><br><span class="tl__s">hơn 10 năm</span></p>
+      </li>
+      <li class="tl__i tl__i--now">
+        <span class="tl__d"></span>
+        <p class="tl__t"><b>Wizy Canada</b><br><span class="tl__s">hôm nay</span></p>
+      </li>
+    </ol>
+  </section>
+
+  <!-- ══════════ 9 · BA THỨ ══════════ -->
   <section class="slide slide--center" data-title="Kỷ luật · Hệ thống · Công nghệ" data-part="WHY">
     <p class="eyebrow" style="justify-content:center">Không phải tài năng</p>
     <h2 style="margin-bottom:14px">Ba thứ đưa tôi ra khỏi ô vuông đó</h2>
@@ -997,15 +1063,19 @@ var NOTES = [
   '<p>Nhấn <strong>C</strong> để chạy đồng hồ 60 giây.</p>'+
   '<div class="warn">Sự im lặng CHÍNH LÀ điểm nhấn. Đừng lấp nó bằng lời nói. Đếm đủ 60 giây — sẽ thấy dài, cứ để nó dài.</div>'+
   '<p><em>Câu chuyển:</em> "Giờ anh chị đã biết mình đang ở nấc nào. Để tôi kể anh chị nghe tôi đã bắt đầu từ nấc nào."</p>'},
-{t:"8:30 – 11:30 · WHY (3 phút)", h:
+{t:"8:30 – 10:30 · WHY (2 phút)", h:
   '<div class="warn">Chiếu ảnh lên → IM LẶNG 3 GIÂY → mới nói. Đừng giải thích ảnh.</div>'+
   '<p><strong>Nhịp 1 (1 phút) — điểm thấp.</strong> 9 tuổi ba mẹ ly hôn, sống với mẹ. Chuyển trường nhiều lần. Phòng trọ 8m². Ba mua cho một chiếc máy tính cũ, yếu, chỉ đủ chạy Pascal.</p>'+
   '<p><em>Chỉ vào cây guitar treo trên tường — một câu thôi.</em></p>'+
   '<p><strong>Nhịp 2 (1 phút) — đam mê trong giới hạn.</strong> Máy yếu nhưng viết được rất nhiều game.</p>'+
   '<span class="say">"Cái máy đó không đủ mạnh. Nhưng nó đủ."</span>'+
-  '<p><strong>Nhịp 3 (45 giây) — kết quả.</strong> Giải nhất quốc gia Tin học → tuyển thẳng Bách Khoa → học bổng Thuỵ Sĩ → Master EPFL → về VN khởi nghiệp, 10 năm.</p>'+
-  '<div class="warn">KỂ NHANH, giọng bình thường, KHÔNG tự hào. Đây là bằng chứng, không phải điểm nhấn. Dừng lâu ở đây = rơi vào bẫy khoe thành công.</div>'+
-  '<div class="warn">Kiểm tra lại NĂM đoạt giải trước khi lên sân khấu (2005 hay 2015?).</div>'},
+  '<p><em>Chuyển slide khi bắt đầu kể phần sau đó.</em></p>'},
+{t:"10:30 – 11:30 · WHY (45 giây – 1 phút)", h:
+  '<p><strong>Nhịp 3 — kết quả.</strong> Đọc lướt cả chuỗi, mỗi mốc một hơi:</p>'+
+  '<span class="say">"Giải nhất quốc gia Tin học → tuyển thẳng Bách Khoa → học bổng Thuỵ Sĩ → Master EPFL → về Việt Nam khởi nghiệp, Wizy Vietnam chạy hơn mười năm → và bây giờ là Wizy Canada."</span>'+
+  '<div class="warn">KỂ NHANH, giọng bình thường, KHÔNG tự hào. Đây là bằng chứng, không phải điểm nhấn.<br><br>Cả slide này chỉ nên tốn 45 giây. Dừng lâu ở đây = rơi đúng vào bẫy khoe thành công mà chính phương pháp anh tin đã cảnh báo.</div>'+
+  '<p><em>Chỉ tay lướt theo đường ray từ trái sang phải, dừng ở chấm vàng cuối cùng — Wizy Canada. Đó là điểm nối sang phần sau.</em></p>'+
+  '<div class="warn">Slide này KHÔNG ghi năm nào cả — cố ý, vì năm đoạt giải chưa xác minh (2005 hay 2015?). Đừng tự thêm mốc năm khi nói.</div>'},
 {t:"11:30 – 12:30 · WHY (1 phút)", h:
   '<p><strong>HẠ GIỌNG.</strong> Đây mới là điểm nhấn của cả phần.</p>'+
   '<span class="say">"Xuất phát điểm của tôi thấp. Và thành tựu của tôi không lớn — chỉ là niềm tự hào khi so với chính mình của ngày hôm qua."</span>'+

@@ -164,7 +164,7 @@ Mỗi câu kèm **hook mở** + **ý cần chạm** + **người trả lời** +
 **Q7 — Wizy có ứng dụng AI vào quy trình phát triển không?** · Hoan · 60s · **⭐ clip "position" mạnh nhất**
 - **Hook:** "Chúng tôi không chỉ bán AI cho khách. Chúng tôi vận hành bằng chính nó."
 - Chạm: AI trong **viết code & phát triển sản phẩm** — *4 tháng, 5 sản phẩm MVP, 6 đơn hàng, 7 lead đang triển khai* · AI trong **sản xuất nội dung** (CremyX chạy chính marketing của Wizy) · AI trong **vận hành & chăm sóc khách** · **nhưng luôn có con người duyệt trước hành động nhạy cảm**.
-- ⚠️ **Dùng đúng bộ số ở [plan.md](plan.md) §3.1** — clip này và slide 14 phải khớp nhau tuyệt đối. Ai đó xem clip rồi đi nghe bài nói mà thấy số vênh là hỏng.
+- ⚠️ **Dùng đúng bộ số ở [plan.md](plan.md) §3.1** — clip này và slide 15 phải khớp nhau tuyệt đối. Ai đó xem clip rồi đi nghe bài nói mà thấy số vênh là hỏng.
 - Chốt: *"Chúng tôi ăn chính món mình nấu."* — đây là bằng chứng mạnh hơn mọi lời quảng cáo.
 
 ---
@@ -317,10 +317,10 @@ Mỗi câu kèm **hook mở** + **ý cần chạm** + **người trả lời** +
 
 **Deck & máy chiếu** *(xem [README.md](README.md))*
 - [ ] Mở `index.html` trên **đúng laptop sẽ dùng thứ Năm**, chạy toàn màn hình (`F`)
-- [ ] **Test remote trình chiếu (clicker) với deck** — bấm tới/lùi qua cả 21 slide. Deck nhận `→ ↓ Space PageDown` và `← ↑ PageUp`; nếu clicker không chuyển được slide thì phải biết TỐI NAY
+- [ ] **Test remote trình chiếu (clicker) với deck** — bấm tới/lùi qua cả 22 slide. Deck nhận `→ ↓ Space PageDown` và `← ↑ PageUp`; nếu clicker không chuyển được slide thì phải biết TỐI NAY
 - [ ] ⚠️ **Tập nhịp bấm ở slide 4–7 (thang 4 nấc hiện dần từng nấc)** — mỗi lần bấm chỉ thêm một nấc. Hoan phải quen: nói xong nấc nào mới bấm ra nấc đó, đừng nói trước cả bốn nấc khi màn hình mới hiện nấc 1
 - [ ] Bật ghi chú diễn giả (`S`), chạy đồng hồ (`T`), test đếm ngược 60 giây ở slide 10 (`C`)
-- [ ] **Phát video demo ở slide 17 từ file, ngắt Wi-Fi** để chắc chắn không phụ thuộc internet
+- [ ] **Phát video demo ở slide 18 từ file, ngắt Wi-Fi** để chắc chắn không phụ thuộc internet
 - [ ] Kiểm tra ảnh phòng trọ 8m² ở slide 11 khi chiếu lớn — có vỡ hạt không
 - [ ] Copy deck + video vào **USB và laptop thứ hai**
 - [ ] Thử cáp HDMI / adapter sẽ mang theo
