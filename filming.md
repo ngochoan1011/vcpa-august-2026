@@ -50,11 +50,11 @@
 
 > **Đây là việc blocking. Làm ngay, đừng để đến ngày event.**
 
-- [ ] **Xin phép VCPA (Linh Ho / Ban tổ chức)** được quay phim trong hội trường: quay sân khấu, quay khán phòng, quay networking. => đã xin phép xong, cập nhật done.
-- [ ] Hỏi rõ: có được **quay mặt người tham dự** và đăng lên mạng xã hội không? Nhiều hội có quy định riêng. => đã xin phép xong, cập nhật done.
-- [ ] Nếu được: đề nghị BTC **thông báo miệng đầu buổi** ("hôm nay có ekip quay phim") — vừa đúng luật, vừa giúp mọi người thoải mái. => đã xin phép xong, cập nhật done.
-- [ ] Xin phép **quay/đăng bài của Nam Tran (đồng diễn giả)** nếu định dùng hình ảnh anh ấy. Nếu không được → chỉ dùng cảnh bài của Hoan. => đã xin phép xong, cập nhật done.
-- [ ] Khi phỏng vấn khách tham dự: **xin đồng ý bằng miệng, quay lại luôn câu đồng ý** ("Anh/chị cho phép Wizy dùng clip này đăng mạng xã hội nhé?") — đó là consent hợp lệ và tiện lưu.
+- [x] ✅ **Xin phép VCPA (Linh Ho / Ban tổ chức)** quay phim trong hội trường: sân khấu, khán phòng, networking.
+- [x] ✅ Đã hỏi rõ việc **quay mặt người tham dự** và đăng lên mạng xã hội.
+- [x] ✅ BTC sẽ **thông báo miệng đầu buổi** rằng hôm nay có ekip quay phim.
+- [x] ✅ Đã xin phép **quay/đăng bài của Nam Tran** (đồng diễn giả).
+- [ ] Khi phỏng vấn khách tham dự: **xin đồng ý bằng miệng, quay lại luôn câu đồng ý** ("Anh/chị cho phép Wizy dùng clip này đăng mạng xã hội nhé?") — đó là consent hợp lệ và tiện lưu. *(vẫn phải làm tại chỗ với từng người)*
 - [ ] Hỏi trước về **điện & vị trí đặt tripod** — được cắm điện ở đâu, đứng chỗ nào không chắn lối đi.
 - [ ] Hỏi có **đường line-out âm thanh** từ hệ thống loa của hội trường không (cho tiếng bài nói).
 
@@ -164,7 +164,7 @@ Mỗi câu kèm **hook mở** + **ý cần chạm** + **người trả lời** +
 **Q7 — Wizy có ứng dụng AI vào quy trình phát triển không?** · Hoan · 60s · **⭐ clip "position" mạnh nhất**
 - **Hook:** "Chúng tôi không chỉ bán AI cho khách. Chúng tôi vận hành bằng chính nó."
 - Chạm: AI trong **viết code & phát triển sản phẩm** — *4 tháng, 5 sản phẩm MVP, 6 đơn hàng, 7 lead đang triển khai* · AI trong **sản xuất nội dung** (CremyX chạy chính marketing của Wizy) · AI trong **vận hành & chăm sóc khách** · **nhưng luôn có con người duyệt trước hành động nhạy cảm**.
-- ⚠️ **Dùng đúng bộ số ở [plan.md](plan.md) §3.1** — clip này và slide 11 phải khớp nhau tuyệt đối. Ai đó xem clip rồi đi nghe bài nói mà thấy số vênh là hỏng.
+- ⚠️ **Dùng đúng bộ số ở [plan.md](plan.md) §3.1** — clip này và slide 14 phải khớp nhau tuyệt đối. Ai đó xem clip rồi đi nghe bài nói mà thấy số vênh là hỏng.
 - Chốt: *"Chúng tôi ăn chính món mình nấu."* — đây là bằng chứng mạnh hơn mọi lời quảng cáo.
 
 ---
@@ -317,10 +317,11 @@ Mỗi câu kèm **hook mở** + **ý cần chạm** + **người trả lời** +
 
 **Deck & máy chiếu** *(xem [README.md](README.md))*
 - [ ] Mở `index.html` trên **đúng laptop sẽ dùng thứ Năm**, chạy toàn màn hình (`F`)
-- [ ] **Test remote trình chiếu (clicker) với deck** — bấm tới/lùi qua cả 18 slide. Deck nhận `→ ↓ Space PageDown` và `← ↑ PageUp`; nếu clicker không chuyển được slide thì phải biết TỐI NAY
-- [ ] Bật ghi chú diễn giả (`S`), chạy đồng hồ (`T`), test đếm ngược 60 giây ở slide 7 (`C`)
-- [ ] **Phát video demo ở slide 14 từ file, ngắt Wi-Fi** để chắc chắn không phụ thuộc internet
-- [ ] Kiểm tra ảnh phòng trọ 8m² ở slide 8 khi chiếu lớn — có vỡ hạt không
+- [ ] **Test remote trình chiếu (clicker) với deck** — bấm tới/lùi qua cả 21 slide. Deck nhận `→ ↓ Space PageDown` và `← ↑ PageUp`; nếu clicker không chuyển được slide thì phải biết TỐI NAY
+- [ ] ⚠️ **Tập nhịp bấm ở slide 4–7 (thang 4 nấc hiện dần từng nấc)** — mỗi lần bấm chỉ thêm một nấc. Hoan phải quen: nói xong nấc nào mới bấm ra nấc đó, đừng nói trước cả bốn nấc khi màn hình mới hiện nấc 1
+- [ ] Bật ghi chú diễn giả (`S`), chạy đồng hồ (`T`), test đếm ngược 60 giây ở slide 10 (`C`)
+- [ ] **Phát video demo ở slide 17 từ file, ngắt Wi-Fi** để chắc chắn không phụ thuộc internet
+- [ ] Kiểm tra ảnh phòng trọ 8m² ở slide 11 khi chiếu lớn — có vỡ hạt không
 - [ ] Copy deck + video vào **USB và laptop thứ hai**
 - [ ] Thử cáp HDMI / adapter sẽ mang theo
 
