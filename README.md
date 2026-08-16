@@ -43,7 +43,8 @@ Deck là static thuần: `index.html` ở thư mục gốc, không build step.
 
 | Phím | Tác dụng |
 |---|---|
-| `→` `Space` / `←` | Chuyển slide |
+| `→` `↓` `Space` `PageDown` / `←` `↑` `PageUp` | Chuyển slide — nhận cả **remote trình chiếu** |
+| `B` | Màn hình đen — khi muốn khán giả nhìn mình, không nhìn slide |
 | `S` | **Ghi chú diễn giả** (kịch bản + mốc thời gian từng slide) |
 | `T` | Chạy / dừng đồng hồ bài nói (mục tiêu **28:30**) |
 | `R` | Đặt lại đồng hồ |

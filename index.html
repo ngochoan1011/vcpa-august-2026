@@ -468,6 +468,12 @@ strong{color:#fff;font-weight:800;}
 .help-card dt{color:var(--gold);font-weight:800;}
 .help-card dd{margin:0;color:var(--ink-dim);}
 
+/* ---------- Màn hình đen (phím B) — khi muốn khán giả nhìn mình, không nhìn slide ---------- */
+body.is-black #stage,
+body.is-black #hud,
+body.is-black #meta{visibility:hidden;}
+body.is-black #viewport{background:#000;}
+
 /* ---------- Máy nhỏ ---------- */
 @media (max-width:640px){
   #notes{width:100%;}
@@ -827,7 +833,8 @@ strong{color:#fff;font-weight:800;}
   <div class="help-card">
     <h3>Phím tắt</h3>
     <dl>
-      <dt>← → · Space</dt><dd>Chuyển slide</dd>
+      <dt>← → ↑ ↓ · Space</dt><dd>Chuyển slide (hỗ trợ remote trình chiếu)</dd>
+      <dt>B</dt><dd>Màn hình đen — khi muốn khán giả nhìn mình</dd>
       <dt>S</dt><dd>Ghi chú diễn giả</dd>
       <dt>T</dt><dd>Chạy / dừng đồng hồ bài nói</dd>
       <dt>R</dt><dd>Đặt lại đồng hồ</dd>
@@ -1051,31 +1058,56 @@ function resetCountdown(){
 }
 
 /* ═══════════ Bàn phím ═══════════ */
+/* Chuẩn hoá phím về một tên duy nhất.
+   KHÔNG chỉ dựa vào e.key: nhiều remote trình chiếu (presenter clicker) và
+   một số trình duyệt gửi event với e.key rỗng — lúc đó phải đọc keyCode. */
+var CODE = {
+  37:"prev", 33:"prev", 38:"prev",              // ←  PageUp  ↑
+  39:"next", 34:"next", 40:"next", 32:"next",   // →  PageDown ↓  Space
+  36:"first", 35:"last", 27:"esc",
+  83:"notes", 84:"clock", 82:"reset", 67:"count",
+  79:"overview", 70:"full", 66:"black", 191:"help", 111:"help"
+};
+var NAME = {
+  "ArrowLeft":"prev", "PageUp":"prev", "ArrowUp":"prev",
+  "ArrowRight":"next", "PageDown":"next", "ArrowDown":"next", " ":"next", "Spacebar":"next",
+  "Home":"first", "End":"last", "Escape":"esc", "Esc":"esc",
+  "s":"notes", "t":"clock", "r":"reset", "c":"count",
+  "o":"overview", "f":"full", "b":"black", "?":"help", "/":"help"
+};
+function actionFor(e){
+  var k = e.key;
+  if (k && NAME[k]) return NAME[k];
+  if (k && k.length === 1 && NAME[k.toLowerCase()]) return NAME[k.toLowerCase()];
+  return CODE[e.keyCode || e.which] || null;
+}
+
 addEventListener("keydown", function(e){
   if (e.metaKey || e.ctrlKey || e.altKey) return;
-  var k = e.key;
+  var a = actionFor(e);
+  if (!a) return;
 
-  if (k === "Escape"){
-    overviewEl.classList.remove("is-open");
-    helpEl.classList.remove("is-open");
-    return;
-  }
-  if (k === "ArrowRight" || k === "PageDown" || k === " "){ e.preventDefault(); next(); return; }
-  if (k === "ArrowLeft"  || k === "PageUp"){ e.preventDefault(); prev(); return; }
-  if (k === "Home"){ show(0); return; }
-  if (k === "End"){ show(N - 1); return; }
-
-  switch (k.toLowerCase()){
-    case "s": notesEl.classList.toggle("is-open"); fit(); break;
-    case "t": toggleClock(); break;
-    case "r": resetClock(); resetCountdown(); break;
-    case "c": toggleCountdown(); break;
-    case "o": overviewEl.classList.toggle("is-open"); break;
-    case "f":
+  switch (a){
+    case "esc":
+      overviewEl.classList.remove("is-open");
+      helpEl.classList.remove("is-open");
+      document.body.classList.remove("is-black");
+      break;
+    case "next":  e.preventDefault(); next(); break;
+    case "prev":  e.preventDefault(); prev(); break;
+    case "first": show(0); break;
+    case "last":  show(N - 1); break;
+    case "notes": notesEl.classList.toggle("is-open"); fit(); break;
+    case "clock": toggleClock(); break;
+    case "reset": resetClock(); resetCountdown(); break;
+    case "count": toggleCountdown(); break;
+    case "overview": overviewEl.classList.toggle("is-open"); break;
+    case "black": document.body.classList.toggle("is-black"); break;
+    case "full":
       if (document.fullscreenElement) document.exitFullscreen();
       else document.documentElement.requestFullscreen();
       break;
-    case "?": case "/": helpEl.classList.toggle("is-open"); break;
+    case "help": helpEl.classList.toggle("is-open"); break;
   }
 });
 
