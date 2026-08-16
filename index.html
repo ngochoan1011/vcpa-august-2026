@@ -139,8 +139,9 @@ strong{color:#fff;font-weight:800;}
   max-width:26ch;text-wrap:balance;
 }
 .hand-q .q.q2{border-left-color:var(--gold);}
+.hand-q .q--solo{font-size:60px;max-width:22ch;} /* đứng một mình thì to hơn */
 .punch{
-  margin-top:76px;font-size:38px;font-weight:800;color:var(--gold);line-height:1.3;
+  margin-top:88px;font-size:38px;font-weight:800;color:var(--gold);line-height:1.3;
   text-wrap:balance;
 }
 
@@ -511,13 +512,19 @@ body.is-black #viewport{background:#000;}
     </div>
   </section>
 
-  <!-- ══════════ 2 · HAI CÂU HỎI GIƠ TAY ══════════ -->
-  <section class="slide" data-title="Hai câu hỏi giơ tay" data-part="Mở">
+  <!-- ══════════ 2 · CÂU HỎI GIƠ TAY THỨ NHẤT ══════════ -->
+  <section class="slide" data-title="Câu hỏi giơ tay 1" data-part="Mở">
     <div class="hand-q">
-      <div class="q">
+      <div class="q q--solo">
         Ai ở đây đã dùng ChatGPT trong 6 tháng qua?
       </div>
-      <div class="q q2">
+    </div>
+  </section>
+
+  <!-- ══════════ 3 · CÂU HỎI GIƠ TAY THỨ HAI ══════════ -->
+  <section class="slide" data-title="Câu hỏi giơ tay 2" data-part="Mở">
+    <div class="hand-q">
+      <div class="q q2 q--solo">
         <span class="gold">Giữ tay lên</span> nếu doanh thu tháng này cao hơn nhờ nó.
       </div>
       <p class="punch">Bài nói hôm nay nằm đúng trong khoảng cách<br>giữa hai lần giơ tay đó.</p>
@@ -853,12 +860,15 @@ body.is-black #viewport{background:#000;}
 var NOTES = [
 {t:"0:00 – 0:30 · Mở", h:
   '<p><em>Đừng đọc slide.</em> Chào ngắn, rồi vào thẳng hai câu hỏi ở slide sau.</p>'+
-  '<p>Chưa giới thiệu học vị. Phần đó để dành cho câu chuyện ở slide 7.</p>'},
-{t:"0:00 – 2:30 · Mở", h:
+  '<p>Chưa giới thiệu học vị. Phần đó để dành cho câu chuyện ở slide 8.</p>'},
+{t:"0:30 – 1:15 · Mở", h:
   '<span class="say">"Ai ở đây đã dùng ChatGPT trong 6 tháng qua?"</span>'+
-  '<p><em>Chờ tay giơ lên. Nhìn quanh phòng. Đếm thầm 3 nhịp.</em></p>'+
+  '<p><em>Chờ tay giơ lên. Nhìn quanh phòng. Đếm thầm 3 nhịp — để cả phòng kịp thấy gần như ai cũng giơ tay.</em></p>'+
+  '<div class="warn">ĐỪNG chuyển slide vội. Tay còn đang giơ thì mới sang slide sau.</div>'},
+{t:"1:15 – 2:30 · Mở", h:
+  '<p><em>Chuyển slide ngay khi tay đang còn giơ.</em></p>'+
   '<span class="say">"Giữ tay lên nếu doanh thu tháng này của anh chị cao hơn nhờ nó."</span>'+
-  '<p><em>Tay hạ xuống. Đây là khoảnh khắc — để im lặng làm việc.</em></p>'+
+  '<p><em>Tay hạ xuống gần hết. Đây là khoảnh khắc — để im lặng làm việc, đừng nói gì trong 2–3 giây.</em></p>'+
   '<span class="say">"Đó chính xác là bài nói hôm nay. Khoảng cách giữa hai cái giơ tay đó."</span>'+
   '<p>Giới thiệu bản thân <strong>30 giây</strong>, kiểu struggle, không phải CV.</p>'+
   '<p><em>Câu chuyển:</em> "Để lấp khoảng cách đó, anh chị cần một tấm bản đồ. Tôi có một tấm — và nó chỉ có 4 nấc."</p>'},

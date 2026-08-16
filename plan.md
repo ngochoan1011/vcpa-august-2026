@@ -16,7 +16,7 @@
 | **Độ đậm bán hàng** | **Mềm** — nhấn "việc này làm được, nếu bạn muốn", không pitch |
 | **Thời lượng** | **30 phút nói + 10 phút Q&A** |
 | **Ngôn ngữ slide** | **Tiếng Việt** (giữ nguyên thuật ngữ tiếng Anh: AI agent, automation, CRM…) |
-| **Số slide** | **17** (đã bỏ 2 slide phần cỗ máy nhu cầu — xem §3) |
+| **Số slide** | **18** (bỏ 2 slide cỗ máy nhu cầu, tách slide giơ tay làm 2 — xem §3) |
 
 ---
 
@@ -99,9 +99,9 @@
 ---
 
 ### PHẦN 0 — Mở (2.5 phút) · *Hook*
-- **Không** giới thiệu bản thân trước. Mở bằng hai câu hỏi giơ tay:
-  > "Ai ở đây đã từng dùng ChatGPT trong 6 tháng qua?" *(gần hết phòng giơ tay)*
-  > "Giữ tay lên nếu doanh thu tháng này của bạn cao hơn nhờ nó." *(gần hết hạ tay)*
+- **Không** giới thiệu bản thân trước. Mở bằng hai câu hỏi giơ tay — **mỗi câu một slide riêng**:
+  > *(slide 2)* "Ai ở đây đã từng dùng ChatGPT trong 6 tháng qua?" *(gần hết phòng giơ tay — đợi, đừng chuyển slide vội)*
+  > *(slide 3)* "Giữ tay lên nếu doanh thu tháng này của bạn cao hơn nhờ nó." *(gần hết hạ tay)*
 - **Câu chốt:** *"Đó chính xác là bài nói hôm nay. Khoảng cách giữa hai cái giơ tay đó."*
 - Giới thiệu bản thân **30 giây**, kiểu struggle chứ không phải CV. **Không đọc học vị** — để dành cho Phần 2.
 - **Câu chuyển sang Phần 1:**
@@ -284,50 +284,53 @@ Cấu trúc mỗi case: **Trước → Nghẽn ở đâu → Làm gì → Kết 
 | "AI có thay thợ / nhân viên của tôi không?" | Trả lời thẳng, không né. AI thay **việc lặp lại**, không thay **quan hệ với khách** |
 | "Tôi 55 tuổi, không rành công nghệ, bắt đầu sao?" | Một việc, một tuần. Không cần hiểu AI để dùng được nó |
 | "Dữ liệu khách của tôi có an toàn không?" | PIPEDA · dữ liệu nằm ở đâu · quyền xuất dữ liệu ra |
-| "Làm sao biết agency/tool đang bán khống cho tôi?" | Dùng đúng **3 câu hỏi** ở slide 16 |
+| "Làm sao biết agency/tool đang bán khống cho tôi?" | Dùng đúng **3 câu hỏi** ở slide 17 |
 | **"Wizy có đang bán hàng ở đây không?"** | ⚠️ *Câu khó nhất — phải có sẵn.* Trả lời thẳng, nhẹ, có chút hài: *"Có chứ, tôi làm nghề này mà. Nhưng tối nay tôi không bán. Framework này dùng được kể cả khi anh chị không bao giờ làm việc với Wizy — và tôi nghĩ đó mới là cách bán tử tế."* |
 | **"Đội ngũ ở Việt Nam có đáng tin không?"** | ⚠️ *Rất có thể bị hỏi.* Lợi thế **múi giờ** (VN làm khi Canada ngủ) + đội tại **GTA** phụ trách khách hàng & quay phim tại chỗ |
 | **"Wizy mới 4 tháng, sao tôi tin được?"** | ⚠️ *Câu sắc nhất.* **Đừng phòng thủ — biến nó thành điểm mạnh:** *"Anh chị nói đúng. Nhưng chính vì mới 4 tháng mà chúng tôi làm được 5 sản phẩm và 6 đơn — đó chính là điều tôi đang muốn chứng minh về hệ thống."* |
 
 ---
 
-## 3. Kiến trúc slide — **17 slide**, tiếng Việt
+## 3. Kiến trúc slide — **18 slide**, tiếng Việt
 
 | Slide | Nội dung | Ghi chú thiết kế |
 |---|---|---|
 | 1 | Tiêu đề + tên + 1 dòng định vị | |
-| 2 | Hai câu hỏi giơ tay | Chỉ chữ, cực to |
-| **3** | **THANG 4 NẤC** | Slide bị chụp nhiều thứ 2 |
-| 4 | 3 dòng chảy | |
-| **5** | **LƯỚI 4 × 3 — "Bạn đang ở ô nào?"** | ⭐ Slide bị chụp nhiều nhất. Thiết kế kỹ nhất |
-| 6 | Bài tập 60 giây | Có đồng hồ đếm ngược trên slide |
-| **7** | **Ảnh phòng trọ 8m²** | ⭐ Full màn hình, **không chữ**. Nguồn nhỏ ở góc |
-| 8 | Kỷ luật · Hệ thống · Công nghệ | 3 chữ, không hơn |
-| 9 | "Chiếc máy tính cũ đó = nấc 1 của tôi, năm 2005" | Chỉ một câu. Có thể ghép mini-thang 4 nấc mờ ở nền |
-| **10** | **Wizy 4 tháng: 5 MVP · 6 ĐƠN · 7 LEAD** | ⭐ 3 con số khổng lồ + huy hiệu **"NẤC 4"** |
-| 11–12 | 2–3 case ẩn danh | Trước → Sau, **hoặc** Nghẽn → Hệ thống *(xem §3.2)* |
-| 13 | Video demo | Có phụ đề, phát từ file |
-| 14 | "Tự động hoá phục vụ tốt hơn ≠ có khách" | **Slide duy nhất của Phần 4** — để nguyên suốt 3 phút nói chay |
-| 15 | 4 rủi ro | |
-| 16 | 3 câu hỏi trước khi chi tiền | Có trong handout |
-| 17 | Cam kết 7 ngày + QR + liên hệ | **Để slide này trên màn suốt Q&A** |
+| **2** | **Câu hỏi giơ tay 1** — "Ai đã dùng ChatGPT trong 6 tháng qua?" | Chỉ một câu, cực to. **Không có gì khác trên màn hình** |
+| **3** | **Câu hỏi giơ tay 2** — "Giữ tay lên nếu doanh thu cao hơn nhờ nó" + câu chốt | Chuyển slide khi tay còn đang giơ |
+| **4** | **THANG 4 NẤC** | Slide bị chụp nhiều thứ 2 |
+| 5 | 3 dòng chảy | |
+| **6** | **LƯỚI 4 × 3 — "Bạn đang ở ô nào?"** | ⭐ Slide bị chụp nhiều nhất. Thiết kế kỹ nhất |
+| 7 | Bài tập 60 giây | Có đồng hồ đếm ngược trên slide |
+| **8** | **Ảnh phòng trọ 8m²** | ⭐ **Không chữ**. Ảnh nhỏ dạng khung polaroid (ảnh gốc chỉ 216×162) |
+| 9 | Kỷ luật · Hệ thống · Công nghệ | 3 chữ, không hơn |
+| 10 | "Chiếc máy tính cũ đó = nấc 1 của tôi, năm 2005" | Chỉ một câu |
+| **11** | **Wizy 4 tháng: 5 MVP · 6 ĐƠN · 7 LEAD** | ⭐ 3 con số khổng lồ + huy hiệu **"NẤC 4"** |
+| 12–13 | 2–3 case ẩn danh | Trước → Sau, **hoặc** Nghẽn → Hệ thống *(xem §3.2)* |
+| 14 | Video demo | Có phụ đề, phát từ file |
+| 15 | "Tự động hoá phục vụ tốt hơn ≠ có khách" | **Slide duy nhất của Phần 4** — để nguyên suốt 3 phút nói chay |
+| 16 | 4 rủi ro | |
+| 17 | 3 câu hỏi trước khi chi tiền | Có trong handout |
+| 18 | Cam kết 7 ngày + QR + liên hệ | **Để slide này trên màn suốt Q&A** |
 
 **Đã bỏ so với v2:** slide "WHAT / WHO / WHY + nhịp 3-1-2-1" và slide "Tối nay tôi vừa làm đúng điều đó" → nội dung chuyển thành **nói chay ở Phần 4**.
+
+**Tách so với v3 đầu:** slide "hai câu hỏi giơ tay" tách làm **2 slide riêng**. Lý do là sân khấu, không phải thẩm mỹ: nếu cả hai câu hiện cùng lúc, khán giả **đọc câu 2 trước khi kịp giơ tay** cho câu 1 — hỏng luôn cả cái bẫy. Tách ra thì câu 2 chỉ xuất hiện lúc tay đang còn giơ lên.
 
 **Nguyên tắc thiết kế:**
 - Tối đa **~15 chữ/slide** · số liệu **cỡ chữ khổng lồ**
 - **Tiếng Việt**, giữ nguyên thuật ngữ tiếng Anh khi đó là tên gọi chuẩn
 - Dark theme hợp tông poster VCPA — **navy + vàng gold**
-- 🔁 **Slide 3, 5 và 10 nên dùng chung một ngôn ngữ hình ảnh** (cùng kiểu thang, cùng màu nhấn) để khán giả thấy rõ *Wizy đang đứng ở nấc trên cùng của đúng cái thang đã dạy*
-- ⚠️ **Không để logo Wizy trên mọi slide.** Chỉ slide 1, 10 và 17. Logo lặp 17 lần = cảm giác quảng cáo → mất đúng thứ đang cố xây
+- 🔁 **Slide 4, 6 và 11 nên dùng chung một ngôn ngữ hình ảnh** (cùng kiểu thang, cùng màu nhấn) để khán giả thấy rõ *Wizy đang đứng ở nấc trên cùng của đúng cái thang đã dạy*
+- ⚠️ **Không để logo Wizy trên mọi slide.** Chỉ slide 1, 11 và 18. Logo lặp 18 lần = cảm giác quảng cáo → mất đúng thứ đang cố xây
 
 ---
 
 ## 4. Việc cần làm (theo thứ tự ưu tiên)
 
 **🔴 Blocking — làm trước tiên**
-- [ ] **Chốt cách trình bày case khách hàng: (a) có số thật, hay (b) khung "nghẽn → hệ thống"** *(§3.2 — quyết định này chặn slide 11–12)*
-- [ ] **Xác minh năm đoạt giải nhất quốc gia** (bài báo đăng 2015, nhắc kết quả 2005) — con số này xuất hiện trên slide 9
+- [ ] **Chốt cách trình bày case khách hàng: (a) có số thật, hay (b) khung "nghẽn → hệ thống"** *(§3.2 — quyết định này chặn slide 12–13)*
+- [ ] **Xác minh năm đoạt giải nhất quốc gia** (bài báo đăng 2015, nhắc kết quả 2005) — con số này xuất hiện trên slide 10
 - [ ] Kiểm tra **độ phân giải ảnh 8m²** khi phóng lên màn lớn
 - [ ] Hỏi Linh Ho: Hoan nói trước hay sau Nam Tran · giờ chính xác · hội trường có máy chiếu / cổng HDMI / loa không
 
@@ -339,7 +342,7 @@ Cấu trúc mỗi case: **Trước → Nghẽn ở đâu → Làm gì → Kết 
 
 **🟢 Sản xuất**
 - [ ] **Quay & dựng video demo 60–90s, có phụ đề** — lễ tân AI tiếng Việt *(giao Phung/Annie — xem [filming.md](filming.md))*
-- [ ] Thiết kế 17 slide theo tông VCPA
+- [ ] Thiết kế 18 slide theo tông VCPA
 - [ ] Làm trang tài nguyên + QR *(slide + checklist 3 câu hỏi + form tư vấn 15 phút)*
 - [ ] In **handout 1 trang**: lưới 4×3 + 3 câu hỏi — thứ người ta mang về dán lên tường văn phòng
 
