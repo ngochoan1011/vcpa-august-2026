@@ -132,15 +132,16 @@ strong{color:#fff;font-weight:800;}
 }
 
 /* ---------- Slide 2 : hai câu hỏi ---------- */
-.hand-q{margin:auto 0;display:flex;flex-direction:column;gap:40px;}
+.hand-q{margin:auto 0;display:flex;flex-direction:column;gap:58px;}
 .hand-q .q{
-  font-size:48px;line-height:1.24;font-weight:700;
+  font-size:48px;line-height:1.26;font-weight:700;
   padding-left:34px;border-left:5px solid var(--line);
+  max-width:26ch;text-wrap:balance;
 }
 .hand-q .q.q2{border-left-color:var(--gold);}
-.hand-q .tag{display:block;font-size:22px;color:var(--sky-dim);margin-top:12px;font-weight:500;font-style:italic;}
 .punch{
-  margin-top:52px;font-size:38px;font-weight:800;color:var(--gold);line-height:1.26;
+  margin-top:76px;font-size:38px;font-weight:800;color:var(--gold);line-height:1.3;
+  text-wrap:balance;
 }
 
 /* ---------- Slide 3 : thang 4 nấc ---------- */
@@ -382,8 +383,7 @@ strong{color:#fff;font-weight:800;}
 }
 .qr-slot img{width:100%;height:100%;object-fit:contain;}
 .qr-ph{color:#0A1D33;text-align:center;padding:20px;}
-.qr-ph b{display:block;font-size:22px;margin-bottom:8px;}
-.qr-ph span{font-size:14px;opacity:.65;line-height:1.4;display:block;}
+.qr-ph b{display:block;font-size:22px;letter-spacing:.1em;}
 .qr-card .lbl{font-size:20px;font-weight:700;line-height:1.35;}
 .contact{margin-top:22px;padding-top:20px;border-top:1px solid var(--line);font-size:19px;color:var(--sky-dim);line-height:1.7;}
 .contact b{color:var(--gold);font-weight:700;}
@@ -516,11 +516,9 @@ body.is-black #viewport{background:#000;}
     <div class="hand-q">
       <div class="q">
         Ai ở đây đã dùng ChatGPT trong 6 tháng qua?
-        <span class="tag">— gần hết phòng giơ tay —</span>
       </div>
       <div class="q q2">
         <span class="gold">Giữ tay lên</span> nếu doanh thu tháng này cao hơn nhờ nó.
-        <span class="tag">— gần hết phòng hạ tay —</span>
       </div>
       <p class="punch">Bài nói hôm nay nằm đúng trong khoảng cách<br>giữa hai lần giơ tay đó.</p>
     </div>
@@ -627,7 +625,6 @@ body.is-black #viewport{background:#000;}
     <h2 style="max-width:22ch">Viết ra <span class="gold">một con số</span><br>bạn KHÔNG biết về tiệm mình.</h2>
     <div class="timer-big" data-countdown>60</div>
     <div class="timer-ring"><i data-countbar></i></div>
-    <p class="timer-hint">Nhấn <b class="gold">C</b> để bắt đầu / dừng · <b class="gold">R</b> để đặt lại</p>
     <div class="examples">
       <span class="chip">% khách quay lại</span>
       <span class="chip">Cuộc gọi nhỡ mỗi tuần</span>
@@ -723,11 +720,12 @@ body.is-black #viewport{background:#000;}
       <video id="demoVideo" controls preload="metadata" playsinline>
         <source src="assets/demo.mp4" type="video/mp4">
       </video>
+      <!-- Chỗ trống trung tính: nếu lỡ thiếu file video lúc trình chiếu thì
+           trên màn hình chỉ hiện tên demo, KHÔNG hiện đường dẫn file hay
+           ghi chú kỹ thuật. Nhắc việc nằm ở ghi chú diễn giả và README. -->
       <div class="video-missing" id="videoFallback" hidden>
         <div class="ic">▶</div>
-        <p>Chưa có file video demo.</p>
-        <p>Đặt video vào <code>assets/demo.mp4</code></p>
-        <p style="font-size:18px;margin-top:14px">Nhớ <strong>burn phụ đề</strong> vào video — loa hội trường không đáng tin.</p>
+        <p>Lễ tân AI · demo</p>
       </div>
     </div>
   </section>
@@ -789,9 +787,9 @@ body.is-black #viewport{background:#000;}
       <div class="qr-card">
         <div class="qr-slot">
           <img id="qrImg" src="assets/qr.png" alt="Mã QR trang tài nguyên">
+          <!-- Chỗ trống trung tính, không hiện đường dẫn file ra màn hình. -->
           <div class="qr-ph" id="qrPh" hidden>
             <b>QR</b>
-            <span>Đặt file vào<br>assets/qr.png</span>
           </div>
         </div>
         <div class="lbl">Slide · checklist 3 câu hỏi<br>· tư vấn 15 phút</div>
@@ -915,7 +913,7 @@ var NOTES = [
   '<p><em>Cầu sang Nam Tran nếu anh ấy nói sau:</em> người bán chuyên môn.</p>'},
 {t:"19:00 – 21:30 · Bằng chứng (2.5 phút)", h:
   '<p>Phát video. <strong>Không demo live</strong> — đã chốt.</p>'+
-  '<div class="warn">Test video trên đúng máy chiếu hội trường trước 6:45 PM. Phụ đề phải burn sẵn — giả định loa hỏng.</div>'+
+  '<div class="warn">Test video trên đúng máy chiếu hội trường trước 6:45 PM. Phụ đề phải burn sẵn — giả định loa hỏng.<br><br>Nếu slide chỉ hiện ô trống: chưa có file <b>assets/demo.mp4</b>.</div>'+
   '<p>Sau video, để im 2 giây rồi mới nói tiếp. Để chủ tiệm ngấm.</p>'},
 {t:"21:30 – 24:30 · Cỗ máy nhu cầu (3 phút)", h:
   '<p><strong>Nói chay trên slide này suốt 3 phút.</strong> Không đổi slide.</p>'+
@@ -936,7 +934,7 @@ var NOTES = [
   '<p>Ba cam kết — nhỏ, ai cũng làm được.</p>'+
   '<p><strong>Câu kết — quay lại tấm ảnh trong đầu khán giả:</strong></p>'+
   '<span class="say">"Tôi bắt đầu ở nấc 1, với một chiếc máy tính cũ, trong căn phòng 8 mét vuông. Anh chị hôm nay có công cụ mạnh hơn cái máy đó hàng triệu lần — ngay trong túi áo. Câu hỏi không phải là anh chị đã có đủ công cụ chưa. Câu hỏi là đã có hệ thống chưa."</span>'+
-  '<div class="warn">KHÔNG bán trên sân khấu. Để slide này trên màn suốt Q&amp;A.</div>'}
+  '<div class="warn">KHÔNG bán trên sân khấu. Để slide này trên màn suốt Q&amp;A.<br><br>Nếu ô QR trống: chưa có file <b>assets/qr.png</b>.</div>'}
 ];
 
 /* ═══════════ Trạng thái ═══════════ */
