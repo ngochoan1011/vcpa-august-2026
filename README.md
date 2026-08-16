@@ -5,7 +5,7 @@ VCPA Monthly Meeting & Networking · 20/08/2026 · Mississauga, ON.
 
 | File | Nội dung |
 |---|---|
-| [`index.html`](index.html) | Deck 18 slide — một file duy nhất, không phụ thuộc internet |
+| [`index.html`](index.html) | Deck 21 slide — một file duy nhất, không phụ thuộc internet |
 | [`plan.md`](plan.md) | Sườn nội dung v3 (nguồn của deck) |
 | [`nac-4.md`](nac-4.md) | Ghi chú nền về nấc 4 — để hiểu và trả lời chất vấn, không đọc lên slide |
 | [`filming.md`](filming.md) | Kế hoạch quay phim tại sự kiện |
@@ -49,7 +49,7 @@ Deck là static thuần: `index.html` ở thư mục gốc, không build step.
 | `S` | **Ghi chú diễn giả** (kịch bản + mốc thời gian từng slide) |
 | `T` | Chạy / dừng đồng hồ bài nói (mục tiêu **28:30**) |
 | `R` | Đặt lại đồng hồ |
-| `C` | Đếm ngược **60 giây** — dùng ở slide 7 (bài tập tại chỗ) |
+| `C` | Đếm ngược **60 giây** — dùng ở slide 10 (bài tập tại chỗ) |
 | `O` | Xem toàn bộ slide, bấm để nhảy tới |
 | `F` | Toàn màn hình |
 | `?` | Bảng phím tắt |
@@ -63,12 +63,12 @@ Deep link theo slide: `...vercel.app/#10`
 
 | Việc | File | Ghi chú |
 |---|---|---|
-| **Video demo lễ tân AI** | `assets/demo.mp4` | Slide 14. Chưa có → deck hiện chỗ trống lịch sự. **Burn phụ đề vào video** — loa hội trường không đáng tin |
-| **Mã QR trang tài nguyên** | `assets/qr.png` | Slide 18. Chưa có → deck hiện ô trắng ghi "QR" |
-| **Số liệu case khách hàng** | `index.html` slide 12–13 | Đang dùng khung **Nghẽn → Hệ thống** (phương án (b) trong plan.md §3.2). Nếu có số thật thì đổi sang khung "Trước → Sau" |
-| **Xác minh năm giải nhất quốc gia** | `index.html` slide 10 | Đang ghi **2005**. Bài báo Phú Yên đăng 2015 nhưng nhắc kết quả 2005 — phải xác minh trước khi lên sân khấu |
+| **Video demo lễ tân AI** | `assets/demo.mp4` | Slide 17. Chưa có → deck hiện chỗ trống lịch sự. **Burn phụ đề vào video** — loa hội trường không đáng tin |
+| **Mã QR trang tài nguyên** | `assets/qr.png` | Slide 21. Chưa có → deck hiện ô trắng ghi "QR" |
+| **Số liệu case khách hàng** | `index.html` slide 15–16 | Đang dùng khung **Nghẽn → Hệ thống** (phương án (b) trong plan.md §3.2). Nếu có số thật thì đổi sang khung "Trước → Sau" |
+| **Xác minh năm giải nhất quốc gia** | `index.html` slide 13 | Đang ghi **2005**. Bài báo Phú Yên đăng 2015 nhưng nhắc kết quả 2005 — phải xác minh trước khi lên sân khấu |
 
-## 📸 Về ảnh phòng trọ 8m² (slide 8)
+## 📸 Về ảnh phòng trọ 8m² (slide 11)
 
 Deck đang dùng **`assets/060415-DNH.jpg`** — file gốc từ báo Phú Yên, **216 × 162 px**.
 
@@ -83,7 +83,7 @@ Vì ảnh rất nhỏ, slide cố ý trình bày nó **nhỏ như một tấm �
 | `8m2-room-photo@2x.jpg` | 1482 × 1106 | bản trên upscale Lanczos 2× |
 | `8m2-room.jpg` | 1080 × 1080 | ảnh bìa blog gốc (có chữ tiếng Anh + watermark) |
 
-> 💡 Nếu muốn chiếu ảnh **to hơn**, đổi `src` ở slide 8 sang `assets/8m2-room-photo.jpg` và bỏ class `photo-frame`.
+> 💡 Nếu muốn chiếu ảnh **to hơn**, đổi `src` ở slide 11 sang `assets/8m2-room-photo.jpg` và bỏ class `photo-frame`.
 >
 > Tốt nhất vẫn là **xin bản scan gốc từ gia đình hoặc toà soạn báo Phú Yên** — đây là slide quan trọng nhất của cả bài.
 
