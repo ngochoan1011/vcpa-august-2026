@@ -244,9 +244,15 @@ strong{color:#fff;font-weight:800;}
   position:absolute;inset:0;display:grid;place-items:center;
   background:radial-gradient(70% 70% at 50% 45%,#12294500,#050F1B 100%),#050F1B;
 }
-.photo-stage img{
-  max-height:78%;max-width:64%;border-radius:6px;
-  box-shadow:0 30px 90px rgba(0,0,0,.75), 0 0 0 1px rgba(240,194,74,.22);
+/* Ảnh gốc chỉ 216×162 — cố ý trình bày NHỎ, như một tấm ảnh cũ ghim trên
+   tường tối, để không bị vỡ hạt khi chiếu lớn. Nhỏ mà sắc > to mà nhoè. */
+.photo-frame{
+  margin:0;padding:16px 16px 46px;background:#EDE7DC;border-radius:3px;
+  box-shadow:0 34px 80px rgba(0,0,0,.72), 0 2px 0 rgba(255,255,255,.14) inset;
+  transform:rotate(-1.1deg);
+}
+.photo-frame img{
+  display:block;width:430px;height:auto;background:#111;
 }
 .photo-credit{
   position:absolute;left:34px;bottom:26px;font-size:14px;color:#5E7B99;
@@ -626,7 +632,9 @@ strong{color:#fff;font-weight:800;}
   <!-- ══════════ 7 · ẢNH PHÒNG TRỌ 8m² ══════════ -->
   <section class="slide slide--bleed" data-title="Ảnh phòng trọ 8m²" data-part="WHY">
     <div class="photo-stage">
-      <img src="assets/8m2-room-photo@2x.jpg" alt="Đỗ Ngọc Hoan ngồi bên chiếc máy tính cũ trong phòng trọ 8m², thời học sinh cấp 3">
+      <figure class="photo-frame">
+        <img src="assets/060415-DNH.jpg" alt="Đỗ Ngọc Hoan ngồi bên chiếc máy tính cũ trong phòng trọ 8m², thời học sinh cấp 3">
+      </figure>
     </div>
     <div class="photo-credit">Ảnh: Báo Phú Yên</div>
   </section>

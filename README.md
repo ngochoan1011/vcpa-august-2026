@@ -66,11 +66,24 @@ Deep link theo slide: `...vercel.app/#10`
 | **Số liệu case khách hàng** | `index.html` slide 11–12 | Đang dùng khung **Nghẽn → Hệ thống** (phương án (b) trong plan.md §3.2). Nếu có số thật thì đổi sang khung "Trước → Sau" |
 | **Xác minh năm giải nhất quốc gia** | `index.html` slide 9 | Đang ghi **2005**. Bài báo Phú Yên đăng 2015 nhưng nhắc kết quả 2005 — phải xác minh trước khi lên sân khấu |
 
-## 📸 Về ảnh phòng trọ 8m²
+## 📸 Về ảnh phòng trọ 8m² (slide 7)
 
-`assets/8m2-room-photo.jpg` được **cắt ra từ** ảnh bìa blog (`8m2-room.jpg`) để bỏ dòng chữ tiếng Anh và watermark — deck là tiếng Việt và slide này theo thiết kế là **không chữ**.
+Deck đang dùng **`assets/060415-DNH.jpg`** — file gốc từ báo Phú Yên, **216 × 162 px**.
 
-Ảnh gốc chỉ **741 × 553 px**. Deck cố ý giới hạn ảnh ở ~64% chiều rộng màn hình để tránh vỡ hạt khi chiếu lớn. **Nếu xin được bản scan gốc từ gia đình hoặc báo Phú Yên, hãy thay file này** — đây là slide quan trọng nhất của cả bài.
+Vì ảnh rất nhỏ, slide cố ý trình bày nó **nhỏ như một tấm ảnh cũ ghim trên tường tối** (khung polaroid, rộng 430px, hơi nghiêng) thay vì phóng to full màn hình. **Nhỏ mà sắc tốt hơn to mà nhoè** — và một tấm ảnh cũ nhỏ giữa khán phòng tối cũng đúng tinh thần câu chuyện hơn.
+
+**Các bản khác của cùng tấm ảnh này** (giữ lại để chọn thay thế):
+
+| File | Kích thước | Ghi chú |
+|---|---|---|
+| `060415-DNH.jpg` | 216 × 162 | **đang dùng** — gốc từ báo Phú Yên |
+| `8m2-room-photo.jpg` | 741 × 553 | cùng ảnh, **nhiều pixel hơn 3.4×** — cắt ra từ ảnh bìa blog |
+| `8m2-room-photo@2x.jpg` | 1482 × 1106 | bản trên upscale Lanczos 2× |
+| `8m2-room.jpg` | 1080 × 1080 | ảnh bìa blog gốc (có chữ tiếng Anh + watermark) |
+
+> 💡 Nếu muốn chiếu ảnh **to hơn**, đổi `src` ở slide 7 sang `assets/8m2-room-photo.jpg` và bỏ class `photo-frame`.
+>
+> Tốt nhất vẫn là **xin bản scan gốc từ gia đình hoặc toà soạn báo Phú Yên** — đây là slide quan trọng nhất của cả bài.
 
 ---
 
