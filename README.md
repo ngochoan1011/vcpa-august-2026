@@ -82,13 +82,15 @@ Vì ảnh rất nhỏ, slide cố ý trình bày nó **nhỏ như một tấm �
 | `8m2-room-photo@2x.jpg` | 1482 × 1106 | bản trên upscale Lanczos 2× |
 | `8m2-room.jpg` | 1080 × 1080 | ảnh bìa blog gốc (có chữ tiếng Anh + watermark) |
 
-## 👤 Avatar slide 1
-
-`assets/hoan-avatar.png` (512 × 512) được tạo từ `assets/hoan-do-avatar-final.png`: xoá nền trắng bằng flood-fill từ viền (không đụng vào áo sáng màu), cắt vuông quanh đầu, ghép lên đĩa tròn navy và cắt tròn kèm viền gold. Muốn đổi ảnh khác thì thay file và chạy lại bước xử lý, hoặc đưa thẳng ảnh vuông đã cắt tròn vào `assets/hoan-avatar.png`.
-
 > 💡 Nếu muốn chiếu ảnh **to hơn**, đổi `src` ở slide 8 sang `assets/8m2-room-photo.jpg` và bỏ class `photo-frame`.
 >
 > Tốt nhất vẫn là **xin bản scan gốc từ gia đình hoặc toà soạn báo Phú Yên** — đây là slide quan trọng nhất của cả bài.
+
+## 👤 Avatar slide 1
+
+`assets/hoan-avatar.png` (512 × 512) được tạo từ `assets/hoan-do-avatar-final.png`: xoá nền trắng bằng flood-fill từ viền (không đụng vào áo sơ mi sáng màu), cắt vuông quanh đầu, ghép lên đĩa tròn navy rồi cắt tròn + viền gold.
+
+Muốn đổi ảnh khác: thay `assets/hoan-avatar.png` bằng một ảnh **vuông** đã cắt tròn sẵn — không cần sửa CSS.
 
 ---
 
