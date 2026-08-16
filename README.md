@@ -5,7 +5,7 @@ VCPA Monthly Meeting & Networking · 20/08/2026 · Mississauga, ON.
 
 | File | Nội dung |
 |---|---|
-| [`index.html`](index.html) | Deck 22 slide — một file duy nhất, không phụ thuộc internet |
+| [`index.html`](index.html) | Deck 23 slide — một file duy nhất, không phụ thuộc internet |
 | [`plan.md`](plan.md) | Sườn nội dung v3 (nguồn của deck) |
 | [`nac-4.md`](nac-4.md) | Ghi chú nền về nấc 4 — để hiểu và trả lời chất vấn, không đọc lên slide |
 | [`filming.md`](filming.md) | Kế hoạch quay phim tại sự kiện |
@@ -63,10 +63,10 @@ Deep link theo slide: `...vercel.app/#10`
 
 | Việc | File | Ghi chú |
 |---|---|---|
-| **Video demo lễ tân AI** | `assets/demo.mp4` | Slide 18. Chưa có → deck hiện chỗ trống lịch sự. **Burn phụ đề vào video** — loa hội trường không đáng tin |
-| **Mã QR trang tài nguyên** | `assets/qr.png` | Slide 22. Chưa có → deck hiện ô trắng ghi "QR" |
-| **Số liệu case khách hàng** | `index.html` slide 16–17 | Đang dùng khung **Nghẽn → Hệ thống** (phương án (b) trong plan.md §3.2). Nếu có số thật thì đổi sang khung "Trước → Sau" |
-| **Xác minh năm giải nhất quốc gia** | `index.html` slide 14 | Đang ghi **2005**. Bài báo Phú Yên đăng 2015 nhưng nhắc kết quả 2005 — phải xác minh trước khi lên sân khấu |
+| **Video demo lễ tân AI** | `assets/demo.mp4` | Slide 19. Chưa có → deck hiện chỗ trống lịch sự. **Burn phụ đề vào video** — loa hội trường không đáng tin |
+| **Mã QR trang tài nguyên** | `assets/qr.png` | Slide 23. Chưa có → deck hiện ô trắng ghi "QR" |
+| **Số liệu case khách hàng** | `index.html` slide 17–18 | Đang dùng khung **Nghẽn → Hệ thống** (phương án (b) trong plan.md §3.2). Nếu có số thật thì đổi sang khung "Trước → Sau" |
+| **Xác minh năm giải nhất quốc gia** | `index.html` slide 15 | Đang ghi **2005**. Bài báo Phú Yên đăng 2015 nhưng nhắc kết quả 2005 — phải xác minh trước khi lên sân khấu |
 
 ## 📸 Về ảnh phòng trọ 8m² (slide 11)
 

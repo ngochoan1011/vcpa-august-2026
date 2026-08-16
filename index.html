@@ -298,6 +298,26 @@ strong{color:#fff;font-weight:800;}
 }
 .tl__i--now .tl__t b{color:var(--gold);font-size:25px;white-space:nowrap;}
 
+/* ---------- Đội ngũ Wizy — 16 khuôn mặt ---------- */
+.team{
+  list-style:none;margin:0;padding:0;flex:1;
+  display:grid;grid-template-columns:repeat(8,1fr);
+  gap:22px 6px;align-content:center;
+}
+.team li{text-align:center;}
+.team img{
+  width:94px;height:94px;border-radius:50%;object-fit:cover;display:block;margin:0 auto 11px;
+  box-shadow:0 0 0 2px var(--line), 0 8px 18px rgba(0,0,0,.4);
+}
+.team .nm{font-size:16px;font-weight:800;line-height:1.2;display:block;}
+.team .rl{font-size:12.5px;color:var(--sky-dim);line-height:1.28;display:block;margin-top:4px;}
+/* Hoan đứng đầu — viền vàng cho khớp avatar slide 1 */
+.team li:first-child img{box-shadow:0 0 0 2px var(--gold), 0 8px 18px rgba(0,0,0,.4);}
+.team li:first-child .nm{color:var(--gold);}
+.team-foot{
+  margin-top:26px;text-align:center;font-size:22px;color:var(--ink-dim);
+}
+
 /* ---------- Slide 8 : 3 chữ ---------- */
 .three{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;width:100%;margin-top:20px;}
 .three .card{
@@ -814,7 +834,32 @@ body.is-black #viewport{background:#000;}
     </ol>
   </section>
 
-  <!-- ══════════ 9 · BA THỨ ══════════ -->
+  <!-- ══════════ 9 · ĐỘI NGŨ WIZY ══════════ -->
+  <section class="slide" data-title="Đội ngũ Wizy — 16 người" data-part="WHY">
+    <p class="eyebrow">Đội ngũ Wizy</p>
+    <h2 style="margin-bottom:6px">Hôm nay tôi không còn làm một mình</h2>
+    <ul class="team">
+      <li><img src="assets/team/hoan-do-avatar-final.jpg" alt="Hoan Do"><span class="nm">Hoan Do</span><span class="rl">Operation Lead</span></li>
+      <li><img src="assets/team/loc-duong-avatar-clean.jpg" alt="Loc Duong"><span class="nm">Loc Duong</span><span class="rl">Business Lead</span></li>
+      <li><img src="assets/team/joey.jpg" alt="Joey"><span class="nm">Joey</span><span class="rl">Brand Ambassador</span></li>
+      <li><img src="assets/team/khoi-tran-avatar.jpg" alt="Khoi Tran"><span class="nm">Khoi Tran</span><span class="rl">Investor &amp; Advisor</span></li>
+      <li><img src="assets/team/angie-pham.jpg" alt="Angie Phạm"><span class="nm">Angie Phạm</span><span class="rl">Marketing Lead</span></li>
+      <li><img src="assets/team/phung-nguyen-avatar.jpg" alt="Phung Nguyen"><span class="nm">Phung Nguyen</span><span class="rl">Creative Marketing</span></li>
+      <li><img src="assets/team/kimmie-nguyen-avatar-square.jpg" alt="Kimmie Nguyen"><span class="nm">Kimmie Nguyen</span><span class="rl">Marketing Agent</span></li>
+      <li><img src="assets/team/annie-avatar.jpg" alt="Annie"><span class="nm">Annie</span><span class="rl">Marketing</span></li>
+      <li><img src="assets/team/nhi-avatar.jpg" alt="Nhi"><span class="nm">Nhi</span><span class="rl">Marketing</span></li>
+      <li><img src="assets/team/khoi-avatar.jpg" alt="Khoi"><span class="nm">Khoi</span><span class="rl">Marketing</span></li>
+      <li><img src="assets/team/michelle-avatar.jpg" alt="Michelle"><span class="nm">Michelle</span><span class="rl">Marketing</span></li>
+      <li><img src="assets/team/an-ho.jpg" alt="An Ho"><span class="nm">An Ho</span><span class="rl">Engineering Lead</span></li>
+      <li><img src="assets/team/khanh-ney-avatar.jpg" alt="Khanh Ney"><span class="nm">Khanh Ney</span><span class="rl">AI Lead</span></li>
+      <li><img src="assets/team/tai-huynh.jpg" alt="Tai Huynh"><span class="nm">Tai Huynh</span><span class="rl">AI Engineer</span></li>
+      <li><img src="assets/team/henry-nguyen-avatar.jpg" alt="Henry Nguyen"><span class="nm">Henry Nguyen</span><span class="rl">Senior Engineer</span></li>
+      <li><img src="assets/team/trong-nguyen-avatar.jpg" alt="Trong Nguyen"><span class="nm">Trong Nguyen</span><span class="rl">Senior Engineer</span></li>
+    </ul>
+    <p class="team-foot"><strong>16 người</strong> · chiến lược &amp; khách hàng tại <strong>Ontario</strong> · kỹ thuật &amp; AI tại <strong>Việt Nam</strong></p>
+  </section>
+
+  <!-- ══════════ 10 · BA THỨ ══════════ -->
   <section class="slide slide--center" data-title="Kỷ luật · Hệ thống · Công nghệ" data-part="WHY">
     <p class="eyebrow" style="justify-content:center">Không phải tài năng</p>
     <h2 style="margin-bottom:14px">Ba thứ đưa tôi ra khỏi ô vuông đó</h2>
@@ -1074,8 +1119,14 @@ var NOTES = [
   '<p><strong>Nhịp 3 — kết quả.</strong> Đọc lướt cả chuỗi, mỗi mốc một hơi:</p>'+
   '<span class="say">"Giải nhất quốc gia Tin học → tuyển thẳng Bách Khoa → học bổng Thuỵ Sĩ → Master EPFL → về Việt Nam khởi nghiệp, Wizy Vietnam chạy hơn mười năm → và bây giờ là Wizy Canada."</span>'+
   '<div class="warn">KỂ NHANH, giọng bình thường, KHÔNG tự hào. Đây là bằng chứng, không phải điểm nhấn.<br><br>Cả slide này chỉ nên tốn 45 giây. Dừng lâu ở đây = rơi đúng vào bẫy khoe thành công mà chính phương pháp anh tin đã cảnh báo.</div>'+
-  '<p><em>Chỉ tay lướt theo đường ray từ trái sang phải, dừng ở chấm vàng cuối cùng — Wizy Canada. Đó là điểm nối sang phần sau.</em></p>'+
+  '<p><em>Chỉ tay lướt theo đường ray từ trái sang phải, dừng ở chấm vàng cuối cùng — Wizy Canada. Đó là điểm nối sang slide sau.</em></p>'+
   '<div class="warn">Slide này KHÔNG ghi năm nào cả — cố ý, vì năm đoạt giải chưa xác minh (2005 hay 2015?). Đừng tự thêm mốc năm khi nói.</div>'},
+{t:"11:30 – 12:00 · WHY (30 giây)", h:
+  '<p>Vừa kể xong một cậu bé ngồi một mình trong phòng trọ 8 mét vuông. Giờ là 16 khuôn mặt. <strong>Để sự tương phản đó tự nói.</strong></p>'+
+  '<span class="say">"Hôm nay tôi không còn làm một mình nữa."</span>'+
+  '<p><em>Dừng 2 giây cho khán phòng quét hết các khuôn mặt.</em> Rồi mới đọc dòng dưới cùng: chiến lược và khách hàng tại Ontario, kỹ thuật và AI tại Việt Nam.</p>'+
+  '<div class="warn">ĐỪNG đọc tên từng người — mất cả phút và không ai nhớ. Chỉ nói con số và hai đầu cầu.</div>'+
+  '<p>💡 Đây cũng là chỗ trả lời trước câu hỏi <em>"agency này có thật không, hay một người ôm hết?"</em> mà không cần ai hỏi ra miệng.</p>'},
 {t:"11:30 – 12:30 · WHY (1 phút)", h:
   '<p><strong>HẠ GIỌNG.</strong> Đây mới là điểm nhấn của cả phần.</p>'+
   '<span class="say">"Xuất phát điểm của tôi thấp. Và thành tựu của tôi không lớn — chỉ là niềm tự hào khi so với chính mình của ngày hôm qua."</span>'+
