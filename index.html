@@ -418,6 +418,7 @@ strong{color:#fff;font-weight:800;}
   display:grid;place-items:center;position:relative;
 }
 .video-box video{width:100%;height:100%;object-fit:contain;background:#050F1B;}
+.video-box video[hidden]{display:none;}
 .video-missing{text-align:center;padding:40px;}
 .video-missing .ic{font-size:64px;margin-bottom:20px;opacity:.5;}
 .video-missing p{font-size:23px;color:var(--sky-dim);margin:0 0 8px;line-height:1.45;}
@@ -1476,11 +1477,29 @@ qrImg.addEventListener("error", function(){
   });
 });
 
-var vid = document.getElementById("demoVideo");
-vid.addEventListener("error", function(){
+/* Video demo.
+   Nghe lỗi ở pha capture để bắt được cả lỗi từ thẻ <source>. Nhưng KHÔNG
+   bỏ cuộc ngay: mạng chập chờn một nhịp là chuyện thường, mà một khi đã
+   hiện chỗ trống thì slide coi như chết. Thử nạp lại một lần trước đã,
+   và nếu sau đó video chạy được thì trả lại ngay. */
+var vid   = document.getElementById("demoVideo");
+var vidFb = document.getElementById("videoFallback");
+var vidRetried = false;
+
+function videoOk(){ vid.hidden = false; vidFb.hidden = true; }
+function videoFailed(){
+  if (vid.readyState >= 2) return;          // đã có dữ liệu → không phải hỏng thật
+  if (!vidRetried){
+    vidRetried = true;
+    setTimeout(function(){ try { vid.load(); } catch(e){} }, 600);
+    return;
+  }
   vid.hidden = true;
-  document.getElementById("videoFallback").hidden = false;
-}, true);
+  vidFb.hidden = false;
+}
+vid.addEventListener("error", videoFailed, true);
+vid.addEventListener("loadeddata", videoOk);
+vid.addEventListener("canplay", videoOk);
 
 /* ═══════════ Khởi động ═══════════ */
 var start = parseInt((location.hash || "").replace("#",""), 10);
