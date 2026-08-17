@@ -87,21 +87,19 @@ Vì ảnh rất nhỏ, slide cố ý trình bày nó **nhỏ như một tấm �
 >
 > Tốt nhất vẫn là **xin bản scan gốc từ gia đình hoặc toà soạn báo Phú Yên** — đây là slide quan trọng nhất của cả bài.
 
-## 📱 Ảnh chụp màn hình sản phẩm — CẦN BỔ SUNG
+## 📱 Ảnh chụp màn hình sản phẩm
 
-Ba slide 17, 19, 21 xen kẽ giữa các case study. Hiện **chưa có file**, deck đang hiện chỗ trống trung tính (chỉ tên sản phẩm, không lộ đường dẫn ra khán phòng).
+Ba slide 17, 19, 21 xen kẽ giữa các case study — cho khán giả thấy phần mềm thật đang chạy, không chỉ nghe kể.
 
-Thả đúng ba file này vào là tự hiện:
-
-| Slide | File cần | Nội dung ảnh |
+| Slide | File | Nội dung |
 |---|---|---|
-| 17 | `assets/shots/wizysalon-turns.png` | WizySalon — Bảng Turns (hàng đợi + lịch hẹn đang phục vụ) |
-| 19 | `assets/shots/wizyfnb-inventory.png` | WizyFNB — Tồn kho & cảnh báo sắp hết hàng |
-| 21 | `assets/shots/wizycrm-leads.png` | WIZY CRM — danh sách Leads theo giai đoạn |
+| 17 | `assets/salon.png` | WizySalon — Bảng Turns (hàng đợi + lịch hẹn đang phục vụ) |
+| 19 | `assets/fnb.png` | WizyFNB — Tồn kho & cảnh báo sắp hết hàng |
+| 21 | `assets/crm.png` | WIZY CRM — danh sách Leads theo giai đoạn |
 
-> 💡 Chụp ở tỉ lệ **ngang (khoảng 2:1)**, độ phân giải ≥ 1600px chiều rộng. Ảnh được `object-fit: contain` nên không bao giờ bị cắt mất giao diện.
->
-> ⚠️ Ảnh chụp có **dữ liệu demo** — kiểm tra không lộ tên/email/số điện thoại khách thật trước khi chiếu.
+Cả ba đều ~2860×1400 (tỉ lệ ~2:1). Ảnh dùng `object-fit: contain` nên **không bao giờ bị cắt mất giao diện**; muốn thay chỉ cần ghi đè đúng tên file, không phải sửa code.
+
+> ⚠️ Ảnh đang dùng **dữ liệu demo** (Wizy Demo Company / Demo Restaurant). Nếu sau này chụp lại từ workspace khách thật, **kiểm tra không lộ tên, email, số điện thoại khách** trước khi chiếu.
 
 ## 🔳 QR ở góc phải trên mọi slide
 
