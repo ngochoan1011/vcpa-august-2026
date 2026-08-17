@@ -5,7 +5,7 @@ VCPA Monthly Meeting & Networking · 20/08/2026 · Mississauga, ON.
 
 | File | Nội dung |
 |---|---|
-| [`index.html`](index.html) | Deck 23 slide — một file duy nhất, không phụ thuộc internet |
+| [`index.html`](index.html) | Deck 27 slide — một file duy nhất, không phụ thuộc internet |
 | [`plan.md`](plan.md) | Sườn nội dung v3 (nguồn của deck) |
 | [`nac-4.md`](nac-4.md) | Ghi chú nền về nấc 4 — để hiểu và trả lời chất vấn, không đọc lên slide |
 | [`filming.md`](filming.md) | Kế hoạch quay phim tại sự kiện |
@@ -63,9 +63,9 @@ Deep link theo slide: `...vercel.app/#10`
 
 | Việc | File | Ghi chú |
 |---|---|---|
-| **Video demo lễ tân AI** | `assets/demo.mp4` | Slide 19. Chưa có → deck hiện chỗ trống lịch sự. **Burn phụ đề vào video** — loa hội trường không đáng tin |
-| **Mã QR trang tài nguyên** | `assets/qr.png` | Slide 23. Chưa có → deck **tự dùng tạm** `assets/qr-slides.png` (mở chính bộ slide) và đổi nhãn thành "Quét để mở bộ slide này". Có file riêng thì thả vào là tự thay |
-| **Số liệu case khách hàng** | `index.html` slide 17–18 | Đang dùng khung **Nghẽn → Hệ thống** (phương án (b) trong plan.md §3.2). Nếu có số thật thì đổi sang khung "Trước → Sau" |
+| **Video demo lễ tân AI** | `assets/demo.mp4` | Slide 23. Chưa có → deck hiện chỗ trống lịch sự. **Burn phụ đề vào video** — loa hội trường không đáng tin |
+| **Mã QR trang tài nguyên** | `assets/qr.png` | Slide 27. Chưa có → deck **tự dùng tạm** `assets/qr-slides.png` (mở chính bộ slide) và đổi nhãn thành "Quét để mở bộ slide này". Có file riêng thì thả vào là tự thay |
+| **Số liệu case khách hàng** | `index.html` slide 18, 20, 22 | Đang dùng khung **Nghẽn → Hệ thống** (phương án (b) trong plan.md §3.2). Nếu có số thật thì đổi sang khung "Trước → Sau" |
 | **Xác minh năm giải nhất quốc gia** | `index.html` slide 15 | Đang ghi **2005**. Bài báo Phú Yên đăng 2015 nhưng nhắc kết quả 2005 — phải xác minh trước khi lên sân khấu |
 
 ## 📸 Về ảnh phòng trọ 8m² (slide 11)
@@ -86,6 +86,22 @@ Vì ảnh rất nhỏ, slide cố ý trình bày nó **nhỏ như một tấm �
 > 💡 Nếu muốn chiếu ảnh **to hơn**, đổi `src` ở slide 11 sang `assets/8m2-room-photo.jpg` và bỏ class `photo-frame`.
 >
 > Tốt nhất vẫn là **xin bản scan gốc từ gia đình hoặc toà soạn báo Phú Yên** — đây là slide quan trọng nhất của cả bài.
+
+## 📱 Ảnh chụp màn hình sản phẩm — CẦN BỔ SUNG
+
+Ba slide 17, 19, 21 xen kẽ giữa các case study. Hiện **chưa có file**, deck đang hiện chỗ trống trung tính (chỉ tên sản phẩm, không lộ đường dẫn ra khán phòng).
+
+Thả đúng ba file này vào là tự hiện:
+
+| Slide | File cần | Nội dung ảnh |
+|---|---|---|
+| 17 | `assets/shots/wizysalon-turns.png` | WizySalon — Bảng Turns (hàng đợi + lịch hẹn đang phục vụ) |
+| 19 | `assets/shots/wizyfnb-inventory.png` | WizyFNB — Tồn kho & cảnh báo sắp hết hàng |
+| 21 | `assets/shots/wizycrm-leads.png` | WIZY CRM — danh sách Leads theo giai đoạn |
+
+> 💡 Chụp ở tỉ lệ **ngang (khoảng 2:1)**, độ phân giải ≥ 1600px chiều rộng. Ảnh được `object-fit: contain` nên không bao giờ bị cắt mất giao diện.
+>
+> ⚠️ Ảnh chụp có **dữ liệu demo** — kiểm tra không lộ tên/email/số điện thoại khách thật trước khi chiếu.
 
 ## 🔳 QR ở góc phải trên mọi slide
 

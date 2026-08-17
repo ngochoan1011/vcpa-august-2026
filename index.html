@@ -393,6 +393,23 @@ strong{color:#fff;font-weight:800;}
   border-radius:12px;padding:18px 26px;font-size:21px;color:var(--ink-dim);line-height:1.42;
 }
 
+/* ---------- Slide ảnh màn hình sản phẩm ---------- */
+/* Chừa hẳn dải trên cho QR góc phải, để QR không đè lên ảnh chụp màn hình */
+.slide--shot{padding:124px 52px 40px;}
+.shot{
+  flex:1;min-height:0;border-radius:14px;overflow:hidden;
+  border:1px solid var(--line);background:#081A2D;
+  display:grid;place-items:center;
+  box-shadow:0 18px 50px rgba(0,0,0,.45);
+}
+.shot img{width:100%;height:100%;object-fit:contain;display:block;}
+.shot img[hidden]{display:none;} /* display:block ở trên đè mất [hidden] mặc định */
+.shot__ph{text-align:center;color:var(--sky-dim);}
+.shot__ph b{display:block;font-size:34px;color:var(--ink-dim);font-weight:800;}
+.shot__ph span{display:block;font-size:19px;margin-top:8px;}
+.shot__cap{margin:18px 0 0;text-align:center;font-size:20px;color:var(--ink-dim);line-height:1.4;}
+.shot__cap b{color:var(--gold);font-weight:800;}
+
 /* ---------- Slide 13 : video ---------- */
 .video-box{
   flex:1;margin-top:10px;border-radius:16px;overflow:hidden;
@@ -903,30 +920,66 @@ body.is-black #viewport{background:#000;}
     <p class="stats-foot">Không phải vì chúng tôi giỏi hơn ai — mà vì AI nằm trong <strong>toàn bộ quy trình phát triển</strong>, chứ không phải là một trợ lý viết caption.</p>
   </section>
 
-  <!-- ══════════ 11 · CASE 1 + 2 ══════════ -->
-  <section class="slide" data-title="Case ẩn danh — Salon &amp; Nhà hàng" data-part="Bằng chứng">
+  <!-- ══════════ 11 · ẢNH MÀN HÌNH WIZYSALON ══════════ -->
+  <section class="slide slide--shot" data-title="Ảnh màn hình — WizySalon" data-part="Bằng chứng">
+    <div class="shot">
+      <img src="assets/shots/wizysalon-turns.png" alt="WizySalon — Bảng Turns: hàng đợi khách và lịch hẹn đang phục vụ">
+      <div class="shot__ph" hidden><b>WizySalon</b><span>Bảng Turns</span></div>
+    </div>
+    <p class="shot__cap"><b>WizySalon</b> · Bảng Turns — hàng đợi khách, phân công thợ, đếm thời gian chờ</p>
+  </section>
+
+  <!-- ══════════ 12 · CASE NAIL SALON ══════════ -->
+  <section class="slide" data-title="Case — Nail salon (nấc 1 → 2)" data-part="Bằng chứng">
     <p class="eyebrow">Case thực tế · đã ẩn danh</p>
     <div class="cases">
-      <div class="case">
+      <div class="case case--solo">
         <span class="case__tag">Nail salon · nấc 1 → 2</span>
         <div class="case__ind">Cuộc gọi rơi mỗi ngày</div>
         <div class="case__row"><div class="lbl">Nghẽn</div><div class="val">Điện thoại reo khi thợ đang làm khách. Không ai bắt máy — khách gọi tiệm kế bên.</div></div>
-        <div class="case__row is-fix"><div class="lbl">Hệ thống</div><div class="val">Booking online một link · nhắc lịch tự động · lễ tân AI tiếng Việt trực 24/7.</div></div>
+        <div class="case__row is-fix"><div class="lbl">Hệ thống</div><div class="val">Booking online một link · nhắc lịch tự động · lễ tân AI tiếng Việt trực 24/7 · hàng đợi thợ tự xếp lượt.</div></div>
+        <p class="case__pull">Không thêm người nghe máy.<br>Chỉ là <span class="gold">không còn cuộc gọi nào rơi</span>.</p>
         <div class="case__step">Dòng chảy: Vận hành + Khách quay lại</div>
-      </div>
-      <div class="case">
-        <span class="case__tag">Nhà hàng dine-in · nấc 2 → 3</span>
-        <div class="case__ind">Ba hệ thống không nói chuyện với nhau</div>
-        <div class="case__row"><div class="lbl">Nghẽn</div><div class="val">Sàn, bếp và quầy ghi ba nơi. Sai order, hao hụt nguyên liệu không ai biết.</div></div>
-        <div class="case__row is-fix"><div class="lbl">Hệ thống</div><div class="val">POS + bàn + luồng bếp + tồn kho trong một hệ thống. Chạy cả khi Wi-Fi rớt.</div></div>
-        <div class="case__step">Dòng chảy: Vận hành</div>
       </div>
     </div>
     <p class="honest">Wizy mới 4 tháng. Đây là <strong>những gì đang chạy</strong>, không phải báo cáo 6 tháng — tôi sẽ mang số liệu quay lại VCPA lần sau.</p>
   </section>
 
-  <!-- ══════════ 12 · CASE 3 ══════════ -->
-  <section class="slide" data-title="Case ẩn danh — Professional" data-part="Bằng chứng">
+  <!-- ══════════ 13 · ẢNH MÀN HÌNH WIZYFNB ══════════ -->
+  <section class="slide slide--shot" data-title="Ảnh màn hình — WizyFNB" data-part="Bằng chứng">
+    <div class="shot">
+      <img src="assets/shots/wizyfnb-inventory.png" alt="WizyFNB — Tồn kho và cảnh báo sắp hết hàng">
+      <div class="shot__ph" hidden><b>WizyFNB</b><span>Tồn kho</span></div>
+    </div>
+    <p class="shot__cap"><b>WizyFNB</b> · Tồn kho — cảnh báo sắp hết, cận date, hao hụt theo nguyên liệu</p>
+  </section>
+
+  <!-- ══════════ 14 · CASE NHÀ HÀNG ══════════ -->
+  <section class="slide" data-title="Case — Nhà hàng dine-in (nấc 2 → 3)" data-part="Bằng chứng">
+    <p class="eyebrow">Case thực tế · đã ẩn danh</p>
+    <div class="cases">
+      <div class="case case--solo">
+        <span class="case__tag">Nhà hàng dine-in · nấc 2 → 3</span>
+        <div class="case__ind">Ba hệ thống không nói chuyện với nhau</div>
+        <div class="case__row"><div class="lbl">Nghẽn</div><div class="val">Sàn, bếp và quầy ghi ba nơi. Sai order, hao hụt nguyên liệu không ai biết cho tới lúc kiểm kho.</div></div>
+        <div class="case__row is-fix"><div class="lbl">Hệ thống</div><div class="val">POS + bàn + luồng bếp + tồn kho trong một hệ thống. Chạy cả khi Wi-Fi rớt.</div></div>
+        <p class="case__pull">Hao hụt giảm vì <span class="gold">hệ thống biết</span>,<br>không phải vì nhân viên siêng hơn.</p>
+        <div class="case__step">Dòng chảy: Vận hành</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ 15 · ẢNH MÀN HÌNH WIZY CRM ══════════ -->
+  <section class="slide slide--shot" data-title="Ảnh màn hình — WIZY CRM" data-part="Bằng chứng">
+    <div class="shot">
+      <img src="assets/shots/wizycrm-leads.png" alt="WIZY CRM — Pipeline lead theo từng giai đoạn">
+      <div class="shot__ph" hidden><b>WIZY CRM</b><span>Leads pipeline</span></div>
+    </div>
+    <p class="shot__cap"><b>WIZY CRM</b> · Leads — mỗi lead nằm ở một giai đoạn rõ ràng, không ai rơi qua kẽ tay</p>
+  </section>
+
+  <!-- ══════════ 16 · CASE PROFESSIONAL ══════════ -->
+  <section class="slide" data-title="Case — Professional (nấc 1 → 4)" data-part="Bằng chứng">
     <p class="eyebrow">Case thực tế · dành riêng cho khán phòng này</p>
     <div class="cases">
       <div class="case case--solo">
@@ -1152,12 +1205,25 @@ var NOTES = [
   '<span class="say">"Một công ty 4 tháng tuổi, đội nhỏ, làm ra 5 sản phẩm và 6 đơn hàng. Không phải vì chúng tôi giỏi hơn ai. Mà vì chúng tôi đứng ở nấc 4 — AI nằm trong toàn bộ quy trình phát triển, chứ không phải dùng AI như một trợ lý viết caption. Đó chính là cái thang tôi vừa vẽ cho anh chị 10 phút trước."</span>'+
   '<div class="warn">Chỗ dễ bị hỏi vặn nhất. Chuẩn bị sẵn:<br>· "MVP nghĩa là gì?" → chạy được, có khách dùng thật, không phải demo trình chiếu<br>· "AI làm khâu nào?" → viết code, thiết kế, nội dung, QA — nêu 2–3 ví dụ CỤ THỂ</div>'+
   '<p>Nói thêm (không có trên slide): đội ngũ &amp; kênh phân phối tại Ontario.</p>'},
-{t:"16:30 – 18:00 · Bằng chứng (1.5 phút)", h:
+{t:"16:30 – 16:50 · Bằng chứng (20 giây)", h:
+  '<p><strong>Phần mềm thật, đang chạy thật.</strong> Đừng giải thích từng nút — khán giả không cần hiểu giao diện, chỉ cần thấy nó có tồn tại.</p>'+
+  '<span class="say">"Đây là màn hình thợ ở một tiệm nail đang dùng mỗi ngày."</span>'+
+  '<p><em>Chỉ vào hàng đợi bên trái và cột đang phục vụ bên phải. Hai chỗ đó thôi.</em></p>'},
+{t:"16:50 – 17:40 · Bằng chứng (50 giây)", h:
   '<p>Khung <strong>Nghẽn → Hệ thống</strong>, không phải "kết quả sau 6 tháng". Đây là lựa chọn có chủ ý.</p>'+
   '<div class="warn">TUYỆT ĐỐI không bịa con số. Cộng đồng nhỏ, sẽ bị kiểm chứng qua truyền miệng.</div>'+
   '<p>Đọc to dòng cuối — sự trung thực này là điểm mạnh, không phải điểm yếu:</p>'+
   '<span class="say">"Wizy mới 4 tháng. Tôi sẽ mang số liệu quay lại VCPA lần sau."</span>'},
-{t:"18:00 – 19:00 · Bằng chứng (1 phút)", h:
+{t:"17:40 – 18:00 · Bằng chứng (20 giây)", h:
+  '<p><strong>Chỉ vào khối cảnh báo sắp hết hàng.</strong> Đó là thứ chủ nhà hàng nhìn phát hiểu ngay.</p>'+
+  '<span class="say">"Sáu món sắp hết. Hệ thống biết trước khi bếp biết."</span>'},
+{t:"18:00 – 18:40 · Bằng chứng (40 giây)", h:
+  '<p>Nhấn ý <em>ba hệ thống không nói chuyện với nhau</em> — chủ nhà hàng nào cũng đang sống với chuyện đó.</p>'+
+  '<p>Câu chốt của slide này quan trọng: hao hụt giảm vì <strong>hệ thống biết</strong>, không phải vì nhân viên siêng hơn. Đây là khác biệt giữa nấc 2 và nấc 3.</p>'},
+{t:"18:40 – 19:00 · Bằng chứng (20 giây)", h:
+  '<p>Slide này nói với <strong>người bán chuyên môn</strong> trong phòng — CPA, agent, broker.</p>'+
+  '<span class="say">"Mỗi người ở đây là một dòng trong bảng này. Câu hỏi là ai đang theo dõi họ."</span>'},
+{t:"19:00 – 19:40 · Bằng chứng (40 giây)", h:
   '<p><strong>Case ăn tiền nhất với khán phòng này</strong> — rất nhiều CPA, real estate agent, broker đang ngồi dưới.</p>'+
   '<p>Nhìn thẳng vào nhóm đó khi nói "giỏi nghề nhưng vô hình".</p>'+
   '<p><em>Cầu sang Nam Tran nếu anh ấy nói sau:</em> người bán chuyên môn.</p>'},
@@ -1396,6 +1462,16 @@ qrImg.addEventListener("error", function(){
   qrImg.hidden = true;
   document.getElementById("qrPh").hidden = false;
 });
+/* Ảnh chụp màn hình sản phẩm chưa có thì hiện chỗ trống trung tính,
+   KHÔNG lộ đường dẫn file ra khán phòng. */
+[].forEach.call(document.querySelectorAll(".shot img"), function(img){
+  img.addEventListener("error", function(){
+    img.hidden = true;
+    var ph = img.parentElement.querySelector(".shot__ph");
+    if (ph) ph.hidden = false;
+  });
+});
+
 var vid = document.getElementById("demoVideo");
 vid.addEventListener("error", function(){
   vid.hidden = true;

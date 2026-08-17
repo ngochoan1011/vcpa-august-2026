@@ -317,10 +317,10 @@ Mỗi câu kèm **hook mở** + **ý cần chạm** + **người trả lời** +
 
 **Deck & máy chiếu** *(xem [README.md](README.md))*
 - [ ] Mở `index.html` trên **đúng laptop sẽ dùng thứ Năm**, chạy toàn màn hình (`F`)
-- [ ] **Test remote trình chiếu (clicker) với deck** — bấm tới/lùi qua cả 23 slide. Deck nhận `→ ↓ Space PageDown` và `← ↑ PageUp`; nếu clicker không chuyển được slide thì phải biết TỐI NAY
+- [ ] **Test remote trình chiếu (clicker) với deck** — bấm tới/lùi qua cả 27 slide. Deck nhận `→ ↓ Space PageDown` và `← ↑ PageUp`; nếu clicker không chuyển được slide thì phải biết TỐI NAY
 - [ ] ⚠️ **Tập nhịp bấm ở slide 4–7 (thang 4 nấc hiện dần từng nấc)** — mỗi lần bấm chỉ thêm một nấc. Hoan phải quen: nói xong nấc nào mới bấm ra nấc đó, đừng nói trước cả bốn nấc khi màn hình mới hiện nấc 1
 - [ ] Bật ghi chú diễn giả (`S`), chạy đồng hồ (`T`), test đếm ngược 60 giây ở slide 10 (`C`)
-- [ ] **Phát video demo ở slide 19 từ file, ngắt Wi-Fi** để chắc chắn không phụ thuộc internet
+- [ ] **Phát video demo ở slide 23 từ file, ngắt Wi-Fi** để chắc chắn không phụ thuộc internet
 - [ ] Kiểm tra ảnh phòng trọ 8m² ở slide 11 khi chiếu lớn — có vỡ hạt không
 - [ ] Copy deck + video vào **USB và laptop thứ hai**
 - [ ] Thử cáp HDMI / adapter sẽ mang theo
