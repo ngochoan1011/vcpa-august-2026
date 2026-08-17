@@ -394,8 +394,9 @@ strong{color:#fff;font-weight:800;}
 }
 
 /* ---------- Slide ảnh màn hình sản phẩm ---------- */
-/* Chừa hẳn dải trên cho QR góc phải, để QR không đè lên ảnh chụp màn hình */
-.slide--shot{padding:124px 52px 40px;}
+/* Slide ảnh: BỎ QR để lấy trọn khung cho ảnh, và thu sát lề để ảnh to nhất có thể */
+.slide--shot::before{display:none;}
+.slide--shot{padding:30px 32px 26px;}
 .shot{
   flex:1;min-height:0;border-radius:14px;overflow:hidden;
   border:1px solid var(--line);background:#081A2D;
@@ -407,7 +408,7 @@ strong{color:#fff;font-weight:800;}
 .shot__ph{text-align:center;color:var(--sky-dim);}
 .shot__ph b{display:block;font-size:34px;color:var(--ink-dim);font-weight:800;}
 .shot__ph span{display:block;font-size:19px;margin-top:8px;}
-.shot__cap{margin:18px 0 0;text-align:center;font-size:20px;color:var(--ink-dim);line-height:1.4;}
+.shot__cap{margin:14px 0 0;text-align:center;font-size:20px;color:var(--ink-dim);line-height:1.35;}
 .shot__cap b{color:var(--gold);font-weight:800;}
 
 /* ---------- Slide 13 : video ---------- */
@@ -998,7 +999,7 @@ body.is-black #viewport{background:#000;}
     <p class="eyebrow">Nấc 3 · nhìn tận mắt</p>
     <h2 style="margin-bottom:16px">Lễ tân AI nói tiếng Việt, trực 24/7</h2>
     <div class="video-box">
-      <video id="demoVideo" controls preload="metadata" playsinline>
+      <video id="demoVideo" controls preload="auto" playsinline poster="assets/demo-poster.jpg">
         <source src="assets/demo.mp4" type="video/mp4">
       </video>
       <!-- Chỗ trống trung tính: nếu lỡ thiếu file video lúc trình chiếu thì
@@ -1228,8 +1229,11 @@ var NOTES = [
   '<p>Nhìn thẳng vào nhóm đó khi nói "giỏi nghề nhưng vô hình".</p>'+
   '<p><em>Cầu sang Nam Tran nếu anh ấy nói sau:</em> người bán chuyên môn.</p>'},
 {t:"19:00 – 21:30 · Bằng chứng (2.5 phút)", h:
-  '<p>Phát video. <strong>Không demo live</strong> — đã chốt.</p>'+
-  '<div class="warn">Test video trên đúng máy chiếu hội trường trước 6:45 PM. Phụ đề phải burn sẵn — giả định loa hỏng.<br><br>Nếu slide chỉ hiện ô trống: chưa có file <b>assets/demo.mp4</b>.</div>'+
+  '<p>Phát video. <strong>Không demo live</strong> — đã chốt. Video dài <strong>1 phút 18</strong>, phát từ file trên máy.</p>'+
+  '<p><em>Đây là bản ghi màn hình một cuộc gọi thật:</em> bên trái là lịch hẹn, bên phải là transcript AI nói chuyện với khách <strong>bằng tiếng Việt</strong>.</p>'+
+  '<span class="say">"Đây không phải mô phỏng. Đây là một cuộc gọi thật, lễ tân AI đang nói tiếng Việt với khách."</span>'+
+  '<p>⭐ <strong>Khoảnh khắc đắt nhất ở khoảng giây 55</strong> — cuộc hẹn hiện lên trên lịch trong lúc AI vẫn đang nói. <em>Chỉ tay vào đó.</em> Đó là thứ chủ tiệm sẽ nhớ.</p>'+
+  '<div class="warn">Test video trên đúng máy chiếu hội trường trước 6:45 PM — cả tiếng loa.<br><br>Nếu loa hỏng vẫn cứu được: transcript hiện ngay trên màn hình, khán giả đọc được cuộc hội thoại.</div>'+
   '<p>Sau video, để im 2 giây rồi mới nói tiếp. Để chủ tiệm ngấm.</p>'},
 {t:"21:30 – 24:30 · Cỗ máy nhu cầu (3 phút)", h:
   '<p><strong>Nói chay trên slide này suốt 3 phút.</strong> Không đổi slide.</p>'+

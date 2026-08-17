@@ -63,7 +63,6 @@ Deep link theo slide: `...vercel.app/#10`
 
 | Việc | File | Ghi chú |
 |---|---|---|
-| **Video demo lễ tân AI** | `assets/demo.mp4` | Slide 23. Chưa có → deck hiện chỗ trống lịch sự. **Burn phụ đề vào video** — loa hội trường không đáng tin |
 | **Mã QR trang tài nguyên** | `assets/qr.png` | Slide 27. Chưa có → deck **tự dùng tạm** `assets/qr-slides.png` (mở chính bộ slide) và đổi nhãn thành "Quét để mở bộ slide này". Có file riêng thì thả vào là tự thay |
 | **Số liệu case khách hàng** | `index.html` slide 18, 20, 22 | Đang dùng khung **Nghẽn → Hệ thống** (phương án (b) trong plan.md §3.2). Nếu có số thật thì đổi sang khung "Trước → Sau" |
 | **Xác minh năm giải nhất quốc gia** | `index.html` slide 15 | Đang ghi **2005**. Bài báo Phú Yên đăng 2015 nhưng nhắc kết quả 2005 — phải xác minh trước khi lên sân khấu |
@@ -87,6 +86,14 @@ Vì ảnh rất nhỏ, slide cố ý trình bày nó **nhỏ như một tấm �
 >
 > Tốt nhất vẫn là **xin bản scan gốc từ gia đình hoặc toà soạn báo Phú Yên** — đây là slide quan trọng nhất của cả bài.
 
+## 🎬 Video demo — slide 23
+
+`assets/demo.mp4` (1280 × 832, **1 phút 18**) — bản ghi màn hình một cuộc gọi thật của lễ tân AI: bên trái là lịch hẹn, bên phải là transcript AI nói chuyện với khách bằng tiếng Việt. Khoảng **giây 55** cuộc hẹn hiện lên trên lịch trong lúc AI vẫn đang nói — đó là khoảnh khắc đắt nhất, chỉ tay vào đó.
+
+- Remux **lossless** (`-c copy`) từ `AI-receptionist.MOV` sang MP4 + `faststart` để chạy được trên mọi trình duyệt và phát ngay không phải nạp hết file.
+- `assets/demo-poster.jpg` là khung hình đại diện — slide không bị đen trước khi bấm play.
+- Không cần burn phụ đề: **transcript đã hiện sẵn trên màn hình**, loa hỏng vẫn đọc được cuộc hội thoại.
+
 ## 📱 Ảnh chụp màn hình sản phẩm
 
 Ba slide 17, 19, 21 xen kẽ giữa các case study — cho khán giả thấy phần mềm thật đang chạy, không chỉ nghe kể.
@@ -99,6 +106,8 @@ Ba slide 17, 19, 21 xen kẽ giữa các case study — cho khán giả thấy p
 
 Cả ba đều ~2860×1400 (tỉ lệ ~2:1). Ảnh dùng `object-fit: contain` nên **không bao giờ bị cắt mất giao diện**; muốn thay chỉ cần ghi đè đúng tên file, không phải sửa code.
 
+Ba slide này **không có QR** và thu sát lề, nên ảnh hiển thị ở **~1214 × 595** — gần trọn chiều ngang khung slide.
+
 > ⚠️ Ảnh đang dùng **dữ liệu demo** (Wizy Demo Company / Demo Restaurant). Nếu sau này chụp lại từ workspace khách thật, **kiểm tra không lộ tên, email, số điện thoại khách** trước khi chiếu.
 
 ## 🔳 QR ở góc phải trên mọi slide
@@ -107,7 +116,8 @@ Cả ba đều ~2860×1400 (tỉ lệ ~2:1). Ảnh dùng `object-fit: contain` n
 
 - Sinh bằng [segno](https://pypi.org/project/segno/), mức sửa lỗi **M (15%)**, 25 module, navy trên nền trắng — 396 bytes.
 - Đã kiểm tra decode đúng URL **cả ở kích thước 92px**, nên chiếu lên màn lớn là thừa sức quét.
-- Chèn bằng `.slide::before` nên **tự lặp trên mọi slide** và in ra PDF cũng có đủ. Muốn bỏ ở một slide nào đó: thêm `.slide.no-qr::before{display:none}`.
+- Chèn bằng `.slide::before` nên **tự lặp trên mọi slide** và in ra PDF cũng có đủ.
+- **Trừ 3 slide ảnh màn hình (17, 19, 21)** — đã tắt QR ở đó (`.slide--shot::before{display:none}`) để ảnh sản phẩm chiếm trọn khung. Muốn tắt thêm slide nào: thêm class và một dòng `::before{display:none}` tương tự.
 
 Đổi link: sinh lại file bằng
 
