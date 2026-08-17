@@ -64,7 +64,7 @@ Deep link theo slide: `...vercel.app/#10`
 | Việc | File | Ghi chú |
 |---|---|---|
 | **Video demo lễ tân AI** | `assets/demo.mp4` | Slide 19. Chưa có → deck hiện chỗ trống lịch sự. **Burn phụ đề vào video** — loa hội trường không đáng tin |
-| **Mã QR trang tài nguyên** | `assets/qr.png` | Slide 23. Chưa có → deck hiện ô trắng ghi "QR" |
+| **Mã QR trang tài nguyên** | `assets/qr.png` | Slide 23. Chưa có → deck **tự dùng tạm** `assets/qr-slides.png` (mở chính bộ slide) và đổi nhãn thành "Quét để mở bộ slide này". Có file riêng thì thả vào là tự thay |
 | **Số liệu case khách hàng** | `index.html` slide 17–18 | Đang dùng khung **Nghẽn → Hệ thống** (phương án (b) trong plan.md §3.2). Nếu có số thật thì đổi sang khung "Trước → Sau" |
 | **Xác minh năm giải nhất quốc gia** | `index.html` slide 15 | Đang ghi **2005**. Bài báo Phú Yên đăng 2015 nhưng nhắc kết quả 2005 — phải xác minh trước khi lên sân khấu |
 
@@ -86,6 +86,20 @@ Vì ảnh rất nhỏ, slide cố ý trình bày nó **nhỏ như một tấm �
 > 💡 Nếu muốn chiếu ảnh **to hơn**, đổi `src` ở slide 11 sang `assets/8m2-room-photo.jpg` và bỏ class `photo-frame`.
 >
 > Tốt nhất vẫn là **xin bản scan gốc từ gia đình hoặc toà soạn báo Phú Yên** — đây là slide quan trọng nhất của cả bài.
+
+## 🔳 QR ở góc phải trên mọi slide
+
+`assets/qr-slides.png` mã hoá **https://aug.dongochoan.com** — khán giả quét được bất cứ lúc nào để mở bộ slide trên điện thoại.
+
+- Sinh bằng [segno](https://pypi.org/project/segno/), mức sửa lỗi **M (15%)**, 25 module, navy trên nền trắng — 396 bytes.
+- Đã kiểm tra decode đúng URL **cả ở kích thước 92px**, nên chiếu lên màn lớn là thừa sức quét.
+- Chèn bằng `.slide::before` nên **tự lặp trên mọi slide** và in ra PDF cũng có đủ. Muốn bỏ ở một slide nào đó: thêm `.slide.no-qr::before{display:none}`.
+
+Đổi link: sinh lại file bằng
+
+```bash
+python3 -c "import segno; segno.make('https://link-moi', error='m').save('assets/qr-slides.png', scale=12, border=2, dark='#0A1D33', light='#FFFFFF')"
+```
 
 ## 👤 Avatar slide 1
 
