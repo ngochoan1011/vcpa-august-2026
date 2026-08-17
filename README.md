@@ -47,9 +47,9 @@ Deck là static thuần: `index.html` ở thư mục gốc, không build step.
 | `→` `↓` `Space` `PageDown` / `←` `↑` `PageUp` | Chuyển slide — nhận cả **remote trình chiếu** |
 | `B` | Màn hình đen — khi muốn khán giả nhìn mình, không nhìn slide |
 | `S` | **Ghi chú diễn giả** (kịch bản + mốc thời gian từng slide) |
-| `T` | Chạy / dừng đồng hồ bài nói (mục tiêu **28:30**) |
-| `R` | Đặt lại đồng hồ |
-| `C` | Đếm ngược **60 giây** — dùng ở slide 10 (bài tập tại chỗ) |
+| `T` | Tạm dừng / chạy tiếp đồng hồ bài nói — **đồng hồ tự chạy ngay khi mở trang** (mục tiêu **28:30**, quá giờ thì đổi đỏ) |
+| `R` | Đặt lại đồng hồ về 00:00 rồi chạy tiếp — tải lại trang cũng về 00:00 |
+| `C` | Đếm ngược **60 giây** ở slide 10 — chỉ hiện một vệt chạy, không hiện số |
 | `O` | Xem toàn bộ slide, bấm để nhảy tới |
 | `F` | Toàn màn hình |
 | `?` | Bảng phím tắt |

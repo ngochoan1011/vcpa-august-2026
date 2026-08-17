@@ -244,8 +244,9 @@ strong{color:#fff;font-weight:800;}
   font-variant-numeric:tabular-nums;letter-spacing:-.03em;margin:22px 0 10px;
 }
 .timer-big.is-done{color:var(--red);}
-.timer-ring{width:100%;max-width:520px;height:8px;border-radius:99px;background:var(--navy-600);overflow:hidden;margin:0 auto 26px;}
+.timer-ring{width:100%;max-width:560px;height:10px;border-radius:99px;background:var(--navy-600);overflow:hidden;margin:44px auto 34px;}
 .timer-ring i{display:block;height:100%;width:100%;background:linear-gradient(90deg,var(--gold),var(--gold-dim));transition:width 1s linear;}
+.timer-ring i.is-done{background:var(--red);}
 .timer-hint{font-size:19px;color:var(--sky-dim);}
 .examples{display:flex;gap:14px;flex-wrap:wrap;justify-content:center;margin-top:34px;}
 .chip{
@@ -791,8 +792,9 @@ body.is-black #viewport{background:#000;}
   <!-- ══════════ 6 · BÀI TẬP 60 GIÂY ══════════ -->
   <section class="slide slide--center" data-title="Bài tập 60 giây" data-part="Khung" data-timer="60">
     <p class="eyebrow" style="justify-content:center">Bài tập tại chỗ</p>
-    <h2 style="max-width:22ch">Viết ra <span class="gold">một con số</span><br>bạn KHÔNG biết về tiệm mình.</h2>
-    <div class="timer-big" data-countdown>60</div>
+    <h2 style="max-width:26ch">Viết ra <span class="gold">một con số</span><br>bạn KHÔNG biết về tiệm/doanh&nbsp;nghiệp mình.</h2>
+    <!-- Không hiện con số đếm ngược — chỉ một vệt chạy, để khán giả tập trung
+         vào việc nghĩ chứ không ngồi đếm giây. Bấm C để chạy. -->
     <div class="timer-ring"><i data-countbar></i></div>
     <div class="examples">
       <span class="chip">% khách quay lại</span>
@@ -1043,7 +1045,7 @@ body.is-black #viewport{background:#000;}
   <div class="n-body" id="nBody"></div>
   <div class="n-foot">
     <kbd>←</kbd> <kbd>→</kbd> chuyển slide · <kbd>S</kbd> đóng ghi chú<br>
-    <kbd>T</kbd> chạy/dừng đồng hồ · <kbd>R</kbd> đặt lại<br>
+    <kbd>T</kbd> tạm dừng đồng hồ · <kbd>R</kbd> đặt lại về 0<br>
     <kbd>C</kbd> đếm ngược 60 giây · <kbd>O</kbd> xem toàn bộ · <kbd>F</kbd> toàn màn hình
   </div>
 </aside>
@@ -1060,8 +1062,8 @@ body.is-black #viewport{background:#000;}
       <dt>← → ↑ ↓ · Space</dt><dd>Chuyển slide (hỗ trợ remote trình chiếu)</dd>
       <dt>B</dt><dd>Màn hình đen — khi muốn khán giả nhìn mình</dd>
       <dt>S</dt><dd>Ghi chú diễn giả</dd>
-      <dt>T</dt><dd>Chạy / dừng đồng hồ bài nói</dd>
-      <dt>R</dt><dd>Đặt lại đồng hồ</dd>
+      <dt>T</dt><dd>Tạm dừng / chạy tiếp đồng hồ bài nói</dd>
+      <dt>R</dt><dd>Đặt lại đồng hồ về 00:00</dd>
       <dt>C</dt><dd>Đếm ngược 60 giây (slide bài tập)</dd>
       <dt>O</dt><dd>Xem toàn bộ slide</dd>
       <dt>F</dt><dd>Toàn màn hình</dd>
@@ -1265,14 +1267,19 @@ function paintClock(){
   clockEl.classList.toggle("over", elapsed > TARGET);
   clockEl.classList.toggle("run", running && elapsed <= TARGET);
 }
-function toggleClock(){
-  running = !running;
-  if (running) tick = setInterval(function(){ elapsed++; paintClock(); }, 1000);
-  else clearInterval(tick);
+function startClock(){
+  if (running) return;
+  running = true;
+  tick = setInterval(function(){ elapsed++; paintClock(); }, 1000);
   paintClock();
 }
-function resetClock(){
-  running = false; clearInterval(tick); elapsed = 0; paintClock();
+function toggleClock(){        /* T = tạm dừng / chạy tiếp */
+  if (running){ running = false; clearInterval(tick); paintClock(); }
+  else startClock();
+}
+function resetClock(){         /* R = về 00:00 rồi chạy lại từ đầu */
+  clearInterval(tick); running = false; elapsed = 0; paintClock();
+  startClock();
 }
 paintClock();
 
@@ -1284,10 +1291,14 @@ function cdEls(){
 }
 function paintCountdown(){
   var e = cdEls();
-  if (!e.num) return;
-  e.num.textContent = cdLeft;
-  e.num.classList.toggle("is-done", cdLeft === 0);
-  if (e.bar) e.bar.style.width = (cdLeft / 60 * 100) + "%";
+  if (e.num){                       /* slide có thể không hiện số */
+    e.num.textContent = cdLeft;
+    e.num.classList.toggle("is-done", cdLeft === 0);
+  }
+  if (e.bar){
+    e.bar.style.width = (cdLeft / 60 * 100) + "%";
+    e.bar.classList.toggle("is-done", cdLeft === 0);
+  }
 }
 function toggleCountdown(){
   var s = slides[cur];
@@ -1394,6 +1405,10 @@ vid.addEventListener("error", function(){
 /* ═══════════ Khởi động ═══════════ */
 var start = parseInt((location.hash || "").replace("#",""), 10);
 show(isNaN(start) ? 0 : start - 1, false);
+
+/* Đồng hồ bài nói tự chạy ngay khi mở trang — tải lại trang là về 00:00.
+   T tạm dừng / chạy tiếp, R đặt lại về 0 rồi chạy tiếp. */
+startClock();
 
 })();
 </script>
