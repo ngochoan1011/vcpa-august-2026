@@ -389,6 +389,30 @@ strong{color:#fff;font-weight:800;}
   font-size:31px;line-height:1.34;font-weight:700;text-align:center;
 }
 
+/* ---------- Slide quà tặng (2 slide cuối) ---------- */
+.slide--offer::before{display:none;}   /* bỏ QR góc — tránh khán giả quét nhầm */
+.offer{flex:1;display:grid;grid-template-columns:1fr auto;gap:56px;align-items:center;min-height:0;}
+.offer h2{font-size:52px;line-height:1.1;margin:0 0 18px;}
+.offer__sub{font-size:25px;line-height:1.4;color:var(--ink-dim);margin:0 0 26px;max-width:34ch;}
+.offer__list{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:13px;}
+.offer__list li{
+  font-size:22px;line-height:1.34;color:var(--ink-dim);padding-left:34px;position:relative;
+}
+.offer__list li::before{
+  content:"✓";position:absolute;left:0;top:-1px;
+  color:var(--gold);font-weight:800;font-size:21px;
+}
+.offer__note{margin:24px 0 0;font-size:19px;color:var(--sky-dim);}
+.offer__right{text-align:center;}
+.offer__qr{
+  width:326px;height:326px;background:#fff;border-radius:16px;padding:14px;
+  box-shadow:0 16px 44px rgba(0,0,0,.5);
+}
+.offer__qr img{width:100%;height:100%;display:block;}
+.offer__url{
+  margin-top:18px;font-size:21px;font-weight:800;color:var(--gold);letter-spacing:.01em;
+}
+
 /* ---------- Slide ảnh màn hình sản phẩm ---------- */
 /* Slide ảnh: BỎ QR để lấy trọn khung cho ảnh, và thu sát lề để ảnh to nhất có thể */
 .slide--shot::before{display:none;}
@@ -446,28 +470,7 @@ strong{color:#fff;font-weight:800;}
 }
 .qitem .txt{font-size:29px;line-height:1.32;font-weight:600;padding-top:8px;}
 
-/* ---------- Slide 17 : chốt ---------- */
-.close{display:grid;grid-template-columns:1fr auto;gap:56px;flex:1;align-items:center;min-height:0;}
-.commit{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:20px;}
-.commit li{display:flex;gap:20px;align-items:flex-start;font-size:26px;line-height:1.34;}
-.commit .n{
-  flex:none;width:44px;height:44px;border-radius:11px;display:grid;place-items:center;
-  background:rgba(240,194,74,.15);border:1px solid rgba(240,194,74,.4);
-  color:var(--gold);font-weight:800;font-size:21px;
-}
-.qr-card{
-  background:linear-gradient(170deg,var(--navy-600),var(--navy-700));
-  border:1px solid var(--line);border-radius:18px;padding:26px;text-align:center;
-  width:292px;
-}
-.qr-slot{
-  width:240px;height:240px;border-radius:12px;background:#fff;
-  display:grid;place-items:center;overflow:hidden;margin:0 auto 18px;
-}
-.qr-slot img{width:100%;height:100%;object-fit:contain;}
-.qr-ph{color:#0A1D33;text-align:center;padding:20px;}
-.qr-ph b{display:block;font-size:22px;letter-spacing:.1em;}
-.qr-card .lbl{font-size:20px;font-weight:700;line-height:1.35;}
+/* ---------- Dòng liên hệ cuối slide ---------- */
 .contact{margin-top:22px;padding-top:20px;border-top:1px solid var(--line);font-size:19px;color:var(--sky-dim);line-height:1.7;}
 .contact b{color:var(--gold);font-weight:700;}
 
@@ -1052,25 +1055,48 @@ body.is-black #viewport{background:#000;}
     </div>
   </section>
 
-  <!-- ══════════ 17 · CHỐT ══════════ -->
-  <section class="slide" data-title="Cam kết 7 ngày + QR" data-part="Chốt">
-    <p class="eyebrow">Bắt đầu từ tối nay</p>
-    <h2 style="margin-bottom:26px">Cam kết 7 ngày</h2>
-    <div class="close">
-      <ul class="commit">
-        <li><span class="n">1</span><span>Đo <strong>1 con số</strong> bạn đang không biết.</span></li>
-        <li><span class="n">2</span><span>Tự động hoá <strong>1 việc</strong> bạn làm tay mỗi ngày.</span></li>
-        <li><span class="n">3</span><span>Đăng <strong>1 câu chuyện thật</strong> — không phải khoe thành tích.</span></li>
-      </ul>
-      <div class="qr-card">
-        <div class="qr-slot">
-          <img id="qrImg" src="assets/qr.png" alt="Mã QR trang tài nguyên">
-          <!-- Chỗ trống trung tính, không hiện đường dẫn file ra màn hình. -->
-          <div class="qr-ph" id="qrPh" hidden>
-            <b>QR</b>
-          </div>
-        </div>
-        <div class="lbl" id="qrLbl">Slide · checklist 3 câu hỏi<br>· tư vấn 15 phút</div>
+  <!-- ══════════ 17 · QUÀ TẶNG 1 — AUDIT MIỄN PHÍ ══════════ -->
+  <section class="slide slide--offer" data-title="Quà tặng 1 — Audit miễn phí" data-part="Chốt">
+    <p class="eyebrow">Quà tặng riêng cho thành viên VCPA</p>
+    <div class="offer">
+      <div class="offer__left">
+        <h2>Báo cáo Marketing AI<br><span class="gold">miễn phí</span></h2>
+        <p class="offer__sub">Phân tích riêng cho doanh nghiệp của anh chị — <strong>10–20 trang</strong>, nhận trong <strong>2 ngày làm việc</strong>.</p>
+        <ul class="offer__list">
+          <li>Top 3 đối thủ đang làm tốt gì, hở chỗ nào</li>
+          <li>Audit Facebook · Instagram · TikTok</li>
+          <li>Google Maps: hạng hiện tại &amp; lộ trình lên top 3</li>
+          <li>Điểm yếu website đang làm khách bỏ đi</li>
+          <li><strong>Lộ trình 90 ngày</strong> có thứ tự ưu tiên</li>
+        </ul>
+        <p class="offer__note">Bảo mật NDA · không cần thẻ · không ràng buộc</p>
+      </div>
+      <div class="offer__right">
+        <div class="offer__qr"><img src="assets/qr-audit.png" alt="QR nhận báo cáo marketing AI miễn phí"></div>
+        <div class="offer__url">wizy.ca/vi/audit</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ 18 · QUÀ TẶNG 2 — WEBSITE MIỄN PHÍ ══════════ -->
+  <section class="slide slide--offer" data-title="Quà tặng 2 — Website miễn phí" data-part="Chốt">
+    <p class="eyebrow">Quà tặng riêng cho thành viên VCPA</p>
+    <div class="offer">
+      <div class="offer__left">
+        <h2>Website 1 trang<br><span class="gold">miễn phí</span></h2>
+        <p class="offer__sub">Wizy thiết kế, viết nội dung và đưa lên mạng. Xong trong <strong>7 ngày</strong>.</p>
+        <ul class="offer__list">
+          <li>Thiết kế riêng, xem đẹp trên điện thoại</li>
+          <li>Nội dung <strong>song ngữ Việt – Anh</strong></li>
+          <li>Nút gọi · nhắn Zalo · chỉ đường Google Maps</li>
+          <li>Kết nối Google Maps + SEO cơ bản</li>
+          <li>Hosting &amp; tên miền phụ — Wizy lo hết</li>
+        </ul>
+        <p class="offer__note">Tổng giá trị hơn <strong>$1,500 CAD</strong> · anh chị trả <strong>$0</strong></p>
+      </div>
+      <div class="offer__right">
+        <div class="offer__qr"><img src="assets/qr-website.png" alt="QR nhận website 1 trang miễn phí"></div>
+        <div class="offer__url">wizy.ca/vi/free-website</div>
       </div>
     </div>
     <div class="contact">
@@ -1246,11 +1272,19 @@ var NOTES = [
 {t:"26:30 – 27:30 · Chốt (1 phút)", h:
   '<p>Đây là thứ khán giả mang về nhà. Đọc chậm, rõ từng câu.</p>'+
   '<p>Nói thêm: <em>"Ba câu này dùng được với bất kỳ ai đang chào hàng công nghệ cho anh chị — kể cả Wizy."</em></p>'},
-{t:"27:30 – 28:30 · Chốt (1 phút)", h:
-  '<p>Ba cam kết — nhỏ, ai cũng làm được.</p>'+
-  '<p><strong>Câu kết — quay lại tấm ảnh trong đầu khán giả:</strong></p>'+
+{t:"27:30 – 28:15 · Quà tặng 1 (45 giây)", h:
+  '<p><strong>Câu kết nói TRƯỚC khi chuyển sang slide này</strong> — đừng để lời chốt bị nuốt bởi hai slide quà tặng:</p>'+
   '<span class="say">"Tôi bắt đầu ở nấc 1, với một chiếc máy tính cũ, trong căn phòng 8 mét vuông. Anh chị hôm nay có công cụ mạnh hơn cái máy đó hàng triệu lần — ngay trong túi áo. Câu hỏi không phải là anh chị đã có đủ công cụ chưa. Câu hỏi là đã có hệ thống chưa."</span>'+
-  '<div class="warn">KHÔNG bán trên sân khấu. Để slide này trên màn suốt Q&amp;A.<br><br>Nếu ô QR trống: chưa có file <b>assets/qr.png</b>.</div>'}
+  '<p>Rồi mới sang quà tặng:</p>'+
+  '<span class="say">"Tôi có hai món dành riêng cho phòng này. Món thứ nhất: báo cáo marketing 10 đến 20 trang, phân tích riêng cho tiệm của anh chị. Miễn phí, không ràng buộc."</span>'+
+  '<p><em>Để slide này đủ lâu cho mọi người rút điện thoại ra quét — ít nhất 20 giây im lặng.</em></p>'+
+  '<div class="warn">Slide này KHÔNG có QR góc — chỉ một mã duy nhất giữa slide, để không ai quét nhầm.</div>'},
+{t:"28:15 – 29:00 · Quà tặng 2 (45 giây)", h:
+  '<span class="say">"Món thứ hai: nếu tiệm anh chị chưa có website, Wizy làm tặng một trang hoàn chỉnh. Chúng tôi thiết kế, viết nội dung song ngữ, đưa lên mạng. Bảy ngày, không tốn đồng nào."</span>'+
+  '<p>Nhắc rõ <strong>hai mã QR khác nhau</strong> — ai muốn cả hai thì quét lần lượt, đừng vội.</p>'+
+  '<p><em>Lại để im khoảng 20 giây cho mọi người quét.</em></p>'+
+  '<div class="warn">ĐỂ SLIDE NÀY TRÊN MÀN SUỐT Q&amp;A. Người đến muộn hoặc chưa kịp quét vẫn còn cơ hội.</div>'+
+  '<p>💡 Cả hai trang đều <strong>giới hạn suất</strong> (10 báo cáo/tuần · 20 website). Nói ra con số đó — nó là lý do để người ta quét ngay bây giờ thay vì để mai.</p>'}
 ];
 
 /* ═══════════ Trạng thái ═══════════ */
@@ -1447,21 +1481,6 @@ addEventListener("touchend", function(e){
 }, {passive:true});
 
 /* ═══════════ Ảnh thiếu → hiện chỗ trống lịch sự ═══════════ */
-/* Chưa có assets/qr.png (trang tài nguyên) thì dùng tạm QR mở chính bộ slide,
-   để slide chốt không bao giờ hiện một ô trắng trống lúc đang chiếu. */
-var qrImg = document.getElementById("qrImg");
-var qrFallenBack = false;
-qrImg.addEventListener("error", function(){
-  if (!qrFallenBack){
-    qrFallenBack = true;
-    qrImg.src = "assets/qr-slides.png";
-    var lbl = document.getElementById("qrLbl");
-    if (lbl) lbl.textContent = "Quét để mở bộ slide này";
-    return;
-  }
-  qrImg.hidden = true;
-  document.getElementById("qrPh").hidden = false;
-});
 /* Ảnh chụp màn hình sản phẩm chưa có thì hiện chỗ trống trung tính,
    KHÔNG lộ đường dẫn file ra khán phòng. */
 [].forEach.call(document.querySelectorAll(".shot img"), function(img){

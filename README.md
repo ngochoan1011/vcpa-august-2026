@@ -5,7 +5,7 @@ VCPA Monthly Meeting & Networking · 20/08/2026 · Mississauga, ON.
 
 | File | Nội dung |
 |---|---|
-| [`index.html`](index.html) | Deck 27 slide — một file duy nhất, không phụ thuộc internet |
+| [`index.html`](index.html) | Deck 28 slide — một file duy nhất, không phụ thuộc internet |
 | [`plan.md`](plan.md) | Sườn nội dung v3 (nguồn của deck) |
 | [`nac-4.md`](nac-4.md) | Ghi chú nền về nấc 4 — để hiểu và trả lời chất vấn, không đọc lên slide |
 | [`filming.md`](filming.md) | Kế hoạch quay phim tại sự kiện |
@@ -63,7 +63,6 @@ Deep link theo slide: `...vercel.app/#10`
 
 | Việc | File | Ghi chú |
 |---|---|---|
-| **Mã QR trang tài nguyên** | `assets/qr.png` | Slide 27. Chưa có → deck **tự dùng tạm** `assets/qr-slides.png` (mở chính bộ slide) và đổi nhãn thành "Quét để mở bộ slide này". Có file riêng thì thả vào là tự thay |
 | **Số liệu case khách hàng** | `index.html` slide 18, 20, 22 | Đang dùng khung **Nghẽn → Hệ thống** (phương án (b) trong plan.md §3.2). Nếu có số thật thì đổi sang khung "Trước → Sau" |
 | **Xác minh năm giải nhất quốc gia** | `index.html` slide 15 | Đang ghi **2005**. Bài báo Phú Yên đăng 2015 nhưng nhắc kết quả 2005 — phải xác minh trước khi lên sân khấu |
 
@@ -110,6 +109,19 @@ Ba slide này **không có QR** và thu sát lề, nên ảnh hiển thị ở *
 
 > ⚠️ Ảnh đang dùng **dữ liệu demo** (Wizy Demo Company / Demo Restaurant). Nếu sau này chụp lại từ workspace khách thật, **kiểm tra không lộ tên, email, số điện thoại khách** trước khi chiếu.
 
+## 🎁 Hai slide quà tặng cuối (27, 28)
+
+Mỗi slide **một mã QR duy nhất, cỡ lớn giữa slide** — cố ý tách làm hai slide để không ai quét nhầm.
+
+| Slide | Quà tặng | QR trỏ tới | File |
+|---|---|---|---|
+| 27 | Báo cáo Marketing AI 10–20 trang, nhận trong 2 ngày | `wizy.ca/vi/audit` | `assets/qr-audit.png` |
+| 28 | Website 1 trang, xong trong 7 ngày | `wizy.ca/vi/free-website` | `assets/qr-website.png` |
+
+Nội dung gạch đầu dòng lấy **nguyên từ hai trang đích**, không tự bịa — nếu sửa nội dung trên web thì nhớ sửa lại slide cho khớp.
+
+> ⚠️ Cả hai trang đều **giới hạn suất** (10 báo cáo/tuần · 20 website). Trước khi lên sân khấu **kiểm tra còn suất không** — hết suất mà vẫn mời quét thì phản tác dụng.
+
 ## 🔳 QR ở góc phải trên mọi slide
 
 `assets/qr-slides.png` mã hoá **https://aug.dongochoan.com** — khán giả quét được bất cứ lúc nào để mở bộ slide trên điện thoại.
@@ -117,7 +129,7 @@ Ba slide này **không có QR** và thu sát lề, nên ảnh hiển thị ở *
 - Sinh bằng [segno](https://pypi.org/project/segno/), mức sửa lỗi **M (15%)**, 25 module, navy trên nền trắng — 396 bytes.
 - Đã kiểm tra decode đúng URL **cả ở kích thước 92px**, nên chiếu lên màn lớn là thừa sức quét.
 - Chèn bằng `.slide::before` nên **tự lặp trên mọi slide** và in ra PDF cũng có đủ.
-- **Trừ 3 slide ảnh màn hình (17, 19, 21)** — đã tắt QR ở đó (`.slide--shot::before{display:none}`) để ảnh sản phẩm chiếm trọn khung. Muốn tắt thêm slide nào: thêm class và một dòng `::before{display:none}` tương tự.
+- **Trừ 5 slide:** 3 slide ảnh màn hình (17, 19, 21) để ảnh chiếm trọn khung, và **2 slide quà tặng cuối (27, 28)** để khán giả không quét nhầm mã. Tắt bằng `.slide--shot::before` và `.slide--offer::before`.
 
 Đổi link: sinh lại file bằng
 
