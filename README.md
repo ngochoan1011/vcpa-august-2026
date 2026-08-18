@@ -6,6 +6,7 @@ VCPA Monthly Meeting & Networking · 20/08/2026 · Mississauga, ON.
 | File | Nội dung |
 |---|---|
 | [`index.html`](index.html) | Deck 28 slide — một file duy nhất, không phụ thuộc internet |
+| [`script.md`](script.md) | **Script hoàn chỉnh để tập nói** — lời thoại từng slide, mốc giờ, chỉ dẫn sân khấu |
 | [`plan.md`](plan.md) | Sườn nội dung v3 (nguồn của deck) |
 | [`nac-4.md`](nac-4.md) | Ghi chú nền về nấc 4 — để hiểu và trả lời chất vấn, không đọc lên slide |
 | [`filming.md`](filming.md) | Kế hoạch quay phim tại sự kiện |
