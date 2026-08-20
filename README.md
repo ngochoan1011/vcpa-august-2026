@@ -10,6 +10,7 @@ VCPA Monthly Meeting & Networking · 20/08/2026 · Mississauga, ON.
 | [`plan.md`](plan.md) | Sườn nội dung v3 (nguồn của deck) |
 | [`nac-4.md`](nac-4.md) | Ghi chú nền về nấc 4 — để hiểu và trả lời chất vấn, không đọc lên slide |
 | [`filming.md`](filming.md) | Kế hoạch quay phim tại sự kiện |
+| [`cau-hoi-cho-anh-john.md`](cau-hoi-cho-anh-john.md) | Câu hỏi cho anh John — chủ tịch VCPA kiêm khách hàng Wizy |
 | [`about_me.md`](about_me.md) | Hồ sơ nền |
 | `assets/` | Ảnh & video |
 
